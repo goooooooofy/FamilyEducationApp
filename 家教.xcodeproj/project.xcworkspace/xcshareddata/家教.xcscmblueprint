@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0B62AB67B7453DE29F3BBA14543BA036368D44CB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0B62AB67B7453DE29F3BBA14543BA036368D44CB" : 0,
+    "2A8CC76D0984F5186F869B6CBF35034B58A5ACD9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "05D1D08F-B886-4D58-AF24-0107B1AA890C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0B62AB67B7453DE29F3BBA14543BA036368D44CB" : "swiftPro\/",
+    "2A8CC76D0984F5186F869B6CBF35034B58A5ACD9" : "swiftPro\/shiZhan\/%E5%AE%B6%E6%95%99\/%E5%AE%B6%E6%95%99\/MJRefresh\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "家教",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "shiZhan\/家教\/家教.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/goooooooofy\/NSURLSession-Download.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0B62AB67B7453DE29F3BBA14543BA036368D44CB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CoderMJLee\/MJRefresh.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2A8CC76D0984F5186F869B6CBF35034B58A5ACD9"
+    }
+  ]
+}
