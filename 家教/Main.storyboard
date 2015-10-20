@@ -50,6 +50,17 @@
                                 </connections>
                             </button>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="9yz-Yl-2UV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jbS-Xc-rV6">
+                                <rect key="frame" x="550" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <inset key="contentEdgeInsets" minX="-18" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" backgroundImage="message">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="barButton" destination="ixD-Qa-kYA" id="XZq-mp-Aay"/>
@@ -98,7 +109,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="资料设置" image="ic_profile@3x.png">
+                                        <state key="normal" title="资料设置" image="ic_profile.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -269,8 +280,9 @@
         <image name="ic_activity@3x.png" width="75" height="57"/>
         <image name="ic_feed@3x.png" width="63" height="66"/>
         <image name="ic_menuRotated@3x.png" width="590" height="590"/>
-        <image name="ic_profile@3x.png" width="51" height="72"/>
+        <image name="ic_profile.png" width="17" height="24"/>
         <image name="ic_settings@3x.png" width="69" height="69"/>
+        <image name="message" width="51" height="45"/>
         <image name="touxiang" width="590" height="590"/>
     </resources>
 </document>

@@ -256,8 +256,8 @@
 		FC3F27DE1BD502FC00CE0737 /* Home(首页面) */ = {
 			isa = PBXGroup;
 			children = (
-				FC3F27E11BD5030E00CE0737 /* Model */,
 				FC3F27E01BD5030900CE0737 /* Controller */,
+				FC3F27E11BD5030E00CE0737 /* Model */,
 				FC3F27DF1BD5030300CE0737 /* View */,
 			);
 			name = "Home(首页面)";
