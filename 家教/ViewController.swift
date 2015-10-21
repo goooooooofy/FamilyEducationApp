@@ -31,11 +31,9 @@ class ViewController: UIViewController{
         destinationVC.hostTitleText = self.navigationItem.title
         destinationVC.view.backgroundColor = self.navigationController!.navigationBar.barTintColor
         destinationVC.setMenuButtonWithImage(barButton.imageView!.image!)
+        
     }
     
-    func getCellHeight(cellHeight: CGFloat) {
-        print("hello")
-    }
     
     //MARK: - 初始化视图控制器
     
@@ -68,7 +66,19 @@ class ViewController: UIViewController{
         header.stateLabel?.textColor = UIColor(white: 1, alpha: 0.9)
         header.lastUpdatedTimeLabel?.textColor = UIColor(white: 1, alpha: 0.9)
         self.tableViewFraulein.header = header
+        self.initTabBar()
     }
+    
+    //初始化底部tabBar
+    func initTabBar() {
+        let tabBarView = UIView(frame: CGRectMake(0, DeviceData.height - 49, DeviceData.width, 49))
+        tabBarView.backgroundColor = UIColor.redColor()
+        self.view.addSubview(tabBarView)
+    }
+    func getCellHeight(cellHeight: CGFloat) {
+        print("hello")
+    }
+
     func headerRefreshGetNewInfo() {
         //self.tableViewFraulein.header.endRefreshing()
     }
@@ -96,8 +106,9 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CustomFrauleinViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.FrauleinDetailContent.text = content[indexPath.row]
-       cell.contentView.layer.cornerRadius = 10
+        cell.contentView.layer.cornerRadius = 10
         cell.contentView.layer.masksToBounds = true
+        cell.FrauleinLevel.getLevelStar(3)
         return cell
         
     }
@@ -116,7 +127,12 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         return rowHeight
     }
     
+    //MARK: -button action
     
+    @IBAction func rightNavigationItemAction(sender: UIButton) {
+        self.presentViewController(ChatListViewController(), animated: true, completion: nil)
+        
+    }
    
 
     

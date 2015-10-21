@@ -7,11 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="151" id="MT8-aJ-Can" customClass="CustomFrauleinViewCell" customModule="家教" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="319" height="151"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="160" id="MT8-aJ-Can" customClass="CustomFrauleinViewCell" customModule="家教" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="160"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MT8-aJ-Can" id="YDE-do-psF">
-                <rect key="frame" x="0.0" y="0.0" width="319" height="150"/>
+                <rect key="frame" x="0.0" y="0.0" width="319" height="159"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touxiang" translatesAutoresizingMaskIntoConstraints="NO" id="1yv-p6-PJk">
@@ -35,7 +35,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCZ-41-dgW">
                         <rect key="frame" x="76" y="31" width="100" height="20"/>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="0.21924405250000001" blue="0.26644447989999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="h6j-cr-Q50"/>
                             <constraint firstAttribute="height" constant="20" id="jx3-bR-yEG"/>
@@ -92,33 +91,32 @@
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTZ-xM-oqI">
                         <rect key="frame" x="0.0" y="127" width="320" height="30"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAL-N8-bFU">
-                                <rect key="frame" x="0.0" y="0.0" width="107" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAL-N8-bFU">
+                                <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UQe-24-h5z"/>
+                                </constraints>
+                                <state key="normal" image="cellCollect.png"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-0h-YV7">
-                                <rect key="frame" x="107" y="0.0" width="106" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-0h-YV7">
+                                <rect key="frame" x="106" y="0.0" width="107" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="uZD-Ic-37w"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="cellComment.png"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZA-4n-Q4Y">
-                                <rect key="frame" x="213" y="0.0" width="106" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZA-4n-Q4Y">
+                                <rect key="frame" x="214" y="0.0" width="106" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="iVT-dg-OlO"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="cellLike.png"/>
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="W6f-0h-YV7" firstAttribute="leading" secondItem="NAL-N8-bFU" secondAttribute="trailing" id="AUt-bi-DKh"/>
                             <constraint firstItem="W6f-0h-YV7" firstAttribute="top" secondItem="cTZ-xM-oqI" secondAttribute="top" id="Dbx-Pr-do0"/>
@@ -183,10 +181,13 @@
                 <outlet property="likeButton" destination="FZA-4n-Q4Y" id="rFd-Rj-9ij"/>
                 <outlet property="recentFrauleinTime" destination="uCY-qV-bRv" id="ChN-cR-4FI"/>
             </connections>
-            <point key="canvasLocation" x="460.5" y="328.5"/>
+            <point key="canvasLocation" x="460.5" y="333"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="cellCollect.png" width="15" height="14"/>
+        <image name="cellComment.png" width="15" height="15"/>
+        <image name="cellLike.png" width="15" height="15"/>
         <image name="touxiang" width="590" height="590"/>
     </resources>
 </document>

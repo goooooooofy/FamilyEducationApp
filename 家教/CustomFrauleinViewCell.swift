@@ -45,7 +45,16 @@ class CustomFrauleinViewCell: UITableViewCell {
         self.layer.masksToBounds = true
         avaterImage.layer.cornerRadius = avaterImage.bounds.height/2
         avaterImage.layer.masksToBounds = true
-        let height = CGRectGetMaxY(barView.frame)
+        barView.layer.borderWidth = 1
+        barView.layer.borderColor = UIColor(white: 0.5, alpha: 0.5).CGColor
+        collectButton.layer.borderWidth = 1
+        collectButton.layer.borderColor = UIColor(white: 0.5, alpha: 0.1).CGColor
+        commentButton.layer.borderWidth = 1
+        commentButton.layer.borderColor = UIColor(white: 0.5, alpha: 0.1).CGColor
+        likeButton.layer.borderWidth = 1
+        likeButton.layer.borderColor = UIColor(white: 0.5, alpha: 0.1).CGColor
+
+        
         
     }
     

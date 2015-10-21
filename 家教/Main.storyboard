@@ -25,15 +25,78 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="92P-xI-5Wd"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPS-kd-BGR">
+                                <rect key="frame" x="0.0" y="487" width="600" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkl-g8-3rA">
+                                        <rect key="frame" x="200" y="0.0" width="200" height="49"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="uf1-nE-cAN"/>
+                                        </constraints>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qam-HI-bnT">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="49"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="IdF-SQ-fx4"/>
+                                        </constraints>
+                                        <state key="normal" title="找老师"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gc-Ia-qlO">
+                                        <rect key="frame" x="400" y="0.0" width="200" height="49"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="f6w-Ve-LoH"/>
+                                        </constraints>
+                                        <state key="normal" title="找学生"/>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.21924405250000001" blue="0.26644447989999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="5Gc-Ia-qlO" firstAttribute="leading" secondItem="Dkl-g8-3rA" secondAttribute="trailing" id="234-KH-W4G"/>
+                                    <constraint firstItem="qam-HI-bnT" firstAttribute="top" secondItem="BPS-kd-BGR" secondAttribute="top" id="9u0-cz-KiO"/>
+                                    <constraint firstItem="qam-HI-bnT" firstAttribute="leading" secondItem="BPS-kd-BGR" secondAttribute="leading" id="Be8-Kv-e9b"/>
+                                    <constraint firstItem="Dkl-g8-3rA" firstAttribute="width" secondItem="5Gc-Ia-qlO" secondAttribute="width" id="Mgt-tY-Wj0"/>
+                                    <constraint firstItem="Dkl-g8-3rA" firstAttribute="top" secondItem="BPS-kd-BGR" secondAttribute="top" id="YH2-A5-DVd"/>
+                                    <constraint firstItem="5Gc-Ia-qlO" firstAttribute="top" secondItem="BPS-kd-BGR" secondAttribute="top" id="eAg-ge-4YB"/>
+                                    <constraint firstItem="Dkl-g8-3rA" firstAttribute="width" secondItem="5Gc-Ia-qlO" secondAttribute="width" id="fDc-t1-Hgm"/>
+                                    <constraint firstAttribute="height" constant="49" id="gCQ-9h-fAL"/>
+                                    <constraint firstItem="Dkl-g8-3rA" firstAttribute="leading" secondItem="qam-HI-bnT" secondAttribute="trailing" id="q3j-7t-5ua"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Gc-Ia-qlO" secondAttribute="trailing" id="ro0-KD-Olw"/>
+                                    <constraint firstItem="qam-HI-bnT" firstAttribute="width" secondItem="Dkl-g8-3rA" secondAttribute="width" id="wko-3j-w6V"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fDc-t1-Hgm"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cCm-OK-LdN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="1gb-rT-lZ2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cCm-OK-LdN" secondAttribute="bottom" constant="49" id="aFw-cu-hIt"/>
+                            <constraint firstAttribute="bottom" secondItem="BPS-kd-BGR" secondAttribute="bottom" id="azs-dv-0PF"/>
+                            <constraint firstItem="BPS-kd-BGR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i9W-C4-XRb"/>
+                            <constraint firstAttribute="trailing" secondItem="BPS-kd-BGR" secondAttribute="trailing" id="jWR-tE-C2X"/>
                             <constraint firstItem="cCm-OK-LdN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xKr-7g-dvi"/>
+                            <constraint firstItem="BPS-kd-BGR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yiD-De-0Dr"/>
                             <constraint firstAttribute="trailing" secondItem="cCm-OK-LdN" secondAttribute="trailing" id="zCH-tA-iaJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="yiD-De-0Dr"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="昵称" id="HgO-3H-kmd">
                         <barButtonItem key="leftBarButtonItem" id="CbN-f2-knl">
@@ -50,15 +113,18 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" id="9yz-Yl-2UV">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="9yz-Yl-2UV">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jbS-Xc-rV6">
-                                <rect key="frame" x="550" y="7" width="30" height="30"/>
+                                <rect key="frame" x="558" y="2" width="22" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <inset key="contentEdgeInsets" minX="-18" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" backgroundImage="message">
+                                <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="-11" maxY="0.0"/>
+                                <state key="normal" image="message">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="rightNavigationItemAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vgK-uK-2FM"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -69,7 +135,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950" y="484"/>
+            <point key="canvasLocation" x="1094" y="477"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4Y3-JU-fBQ">
+            <objects>
+                <viewController id="o1B-vT-Y33" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6pV-Q3-kCg"/>
+                        <viewControllerLayoutGuide type="bottom" id="dYd-xY-XFq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fXA-4n-zkH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ld4-k2-iyh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iwS-Hd-jgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805" y="585"/>
         </scene>
         <!--Guillotine Menu View Controller-->
         <scene sceneID="ZlZ-2M-K3G">
@@ -100,7 +186,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nN6-jJ-Etz">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nN6-jJ-Etz">
                                         <rect key="frame" x="50" y="90" width="200" height="30"/>
                                         <animations/>
                                         <constraints>
@@ -123,7 +209,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="我的收藏" image="ic_feed@3x.png">
+                                        <state key="normal" title="我的收藏" image="collect">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -253,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eey-Au-nRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="484"/>
+            <point key="canvasLocation" x="1900" y="365"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zrU-IG-XyS">
@@ -277,12 +363,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="collect" width="34" height="34"/>
         <image name="ic_activity@3x.png" width="75" height="57"/>
-        <image name="ic_feed@3x.png" width="63" height="66"/>
-        <image name="ic_menuRotated@3x.png" width="590" height="590"/>
+        <image name="ic_menuRotated@3x.png" width="270" height="480"/>
         <image name="ic_profile.png" width="17" height="24"/>
         <image name="ic_settings@3x.png" width="69" height="69"/>
-        <image name="message" width="51" height="45"/>
+        <image name="message" width="20" height="20"/>
         <image name="touxiang" width="590" height="590"/>
     </resources>
 </document>

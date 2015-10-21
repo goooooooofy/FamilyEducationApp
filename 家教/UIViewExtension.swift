@@ -45,7 +45,7 @@ extension UIView
             var imageView = UIImageView()
             imageView.bounds.size = CGSizeMake(20, 20)
             imageView.image = UIImage(named: "xingxing")
-            imageView.center = CGPoint(x: CGFloat(i * 20 + 10), y: 15)
+            imageView.center = CGPoint(x: CGFloat(i * 20 + 10), y: 10)
             self.addSubview(imageView)
         }
         
