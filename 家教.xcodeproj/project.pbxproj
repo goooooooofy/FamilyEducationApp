@@ -15,6 +15,10 @@
 		FC1458B11BD7624300F74DE9 /* cellLike.png in Resources */ = {isa = PBXBuildFile; fileRef = FC1458AE1BD7624300F74DE9 /* cellLike.png */; settings = {ASSET_TAGS = (); }; };
 		FC1458B31BD763C500F74DE9 /* HomeTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1458B21BD763C500F74DE9 /* HomeTabBarView.swift */; settings = {ASSET_TAGS = (); }; };
 		FC1458B91BD76DFD00F74DE9 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1458B81BD76DFD00F74DE9 /* ChatListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FC1458D31BD783C900F74DE9 /* FreeTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1458D21BD783C900F74DE9 /* FreeTimeTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FC1458D51BD783FA00F74DE9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1458D41BD783FA00F74DE9 /* UIColorExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		FC1458D71BD784AF00F74DE9 /* RealName ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1458D61BD784AF00F74DE9 /* RealName ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FC1458D91BD784D900F74DE9 /* FootMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1458D81BD784D900F74DE9 /* FootMarkViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FC3F27931BD4F2BB00CE0737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27921BD4F2BB00CE0737 /* AppDelegate.swift */; };
 		FC3F27951BD4F2BB00CE0737 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27941BD4F2BB00CE0737 /* ViewController.swift */; };
 		FC3F279B1BD4F2BB00CE0737 /* __.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27991BD4F2BB00CE0737 /* __.xcdatamodeld */; };
@@ -93,6 +97,10 @@
 		FC1458AE1BD7624300F74DE9 /* cellLike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellLike.png; sourceTree = "<group>"; };
 		FC1458B21BD763C500F74DE9 /* HomeTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarView.swift; sourceTree = "<group>"; };
 		FC1458B81BD76DFD00F74DE9 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		FC1458D21BD783C900F74DE9 /* FreeTimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeTimeTableViewController.swift; sourceTree = "<group>"; };
+		FC1458D41BD783FA00F74DE9 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		FC1458D61BD784AF00F74DE9 /* RealName ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealName ViewController.swift"; sourceTree = "<group>"; };
+		FC1458D81BD784D900F74DE9 /* FootMarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootMarkViewController.swift; sourceTree = "<group>"; };
 		FC3F278F1BD4F2BB00CE0737 /* 家教.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "家教.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3F27921BD4F2BB00CE0737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3F27941BD4F2BB00CE0737 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -196,14 +204,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC1458B41BD76C9000F74DE9 /* Chat */ = {
+		FC1458B41BD76C9000F74DE9 /* Chat(聊天) */ = {
 			isa = PBXGroup;
 			children = (
 				FC1458B71BD76CA700F74DE9 /* Controller */,
 				FC1458B61BD76CA300F74DE9 /* View */,
 				FC1458B51BD76C9A00F74DE9 /* Model */,
 			);
-			name = Chat;
+			name = "Chat(聊天)";
 			sourceTree = "<group>";
 		};
 		FC1458B51BD76C9A00F74DE9 /* Model */ = {
@@ -226,6 +234,195 @@
 				FC1458B81BD76DFD00F74DE9 /* ChatListViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		FC1458BA1BD7820700F74DE9 /* ProfileSetting(资料设置) */ = {
+			isa = PBXGroup;
+			children = (
+				FC1458BD1BD7822F00F74DE9 /* Model */,
+				FC1458BC1BD7822800F74DE9 /* Controller */,
+				FC1458BB1BD7822300F74DE9 /* View */,
+			);
+			name = "ProfileSetting(资料设置)";
+			sourceTree = "<group>";
+		};
+		FC1458BB1BD7822300F74DE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FC1458BC1BD7822800F74DE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FC1458BD1BD7822F00F74DE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FC1458BE1BD7826000F74DE9 /* Collection(我的收藏) */ = {
+			isa = PBXGroup;
+			children = (
+				FC1458C11BD7827A00F74DE9 /* Controller */,
+				FC1458C01BD7827400F74DE9 /* Model */,
+				FC1458BF1BD7827000F74DE9 /* View */,
+			);
+			name = "Collection(我的收藏)";
+			sourceTree = "<group>";
+		};
+		FC1458BF1BD7827000F74DE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FC1458C01BD7827400F74DE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FC1458C11BD7827A00F74DE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FC1458C21BD7829500F74DE9 /* HistoryActivity(历史活动) */ = {
+			isa = PBXGroup;
+			children = (
+				FC1458C51BD782D100F74DE9 /* Model */,
+				FC1458C41BD782CC00F74DE9 /* Controller */,
+				FC1458C31BD782C500F74DE9 /* View */,
+			);
+			name = "HistoryActivity(历史活动)";
+			sourceTree = "<group>";
+		};
+		FC1458C31BD782C500F74DE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FC1458C41BD782CC00F74DE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FC1458C51BD782D100F74DE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FC1458C61BD782DC00F74DE9 /* FootMark(我的足迹) */ = {
+			isa = PBXGroup;
+			children = (
+				FC1458C91BD7830A00F74DE9 /* Model */,
+				FC1458C81BD782FD00F74DE9 /* Controller */,
+				FC1458C71BD782F900F74DE9 /* View */,
+			);
+			name = "FootMark(我的足迹)";
+			sourceTree = "<group>";
+		};
+		FC1458C71BD782F900F74DE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FC1458C81BD782FD00F74DE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC1458D81BD784D900F74DE9 /* FootMarkViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FC1458C91BD7830A00F74DE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FC1458CA1BD7831300F74DE9 /* RealName(实名认证) */ = {
+			isa = PBXGroup;
+			children = (
+				FC1458CD1BD7833300F74DE9 /* Model */,
+				FC1458CC1BD7832D00F74DE9 /* Controller */,
+				FC1458CB1BD7832800F74DE9 /* View */,
+			);
+			name = "RealName(实名认证)";
+			sourceTree = "<group>";
+		};
+		FC1458CB1BD7832800F74DE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FC1458CC1BD7832D00F74DE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC1458D61BD784AF00F74DE9 /* RealName ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FC1458CD1BD7833300F74DE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FC1458CE1BD7833900F74DE9 /* FreeTimeTable(空闲表) */ = {
+			isa = PBXGroup;
+			children = (
+				FC1458D11BD7835700F74DE9 /* Model */,
+				FC1458D01BD7835200F74DE9 /* View */,
+				FC1458CF1BD7834C00F74DE9 /* Controller */,
+			);
+			name = "FreeTimeTable(空闲表)";
+			sourceTree = "<group>";
+		};
+		FC1458CF1BD7834C00F74DE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC1458D21BD783C900F74DE9 /* FreeTimeTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FC1458D01BD7835200F74DE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FC1458D11BD7835700F74DE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		FC3F27861BD4F2BB00CE0737 = {
@@ -251,10 +448,10 @@
 		FC3F27911BD4F2BB00CE0737 /* 家教 */ = {
 			isa = PBXGroup;
 			children = (
-				FC1458B41BD76C9000F74DE9 /* Chat */,
+				FC1458B41BD76C9000F74DE9 /* Chat(聊天) */,
 				FCFA13CA1BD6943900FAD9CC /* image */,
 				FC3F27E61BD503BC00CE0737 /* Other */,
-				FC3F27E21BD5031600CE0737 /* Profile(资料) */,
+				FC3F27E21BD5031600CE0737 /* Drawer(旋转抽屉) */,
 				FC3F27DE1BD502FC00CE0737 /* Home(首页面) */,
 				FC3F27CD1BD4F33800CE0737 /* imageE */,
 				FC3F279C1BD4F2BB00CE0737 /* Assets.xcassets */,
@@ -341,38 +538,44 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		FC3F27E21BD5031600CE0737 /* Profile(资料) */ = {
+		FC3F27E21BD5031600CE0737 /* Drawer(旋转抽屉) */ = {
 			isa = PBXGroup;
 			children = (
-				FC3F27E51BD5036200CE0737 /* Model */,
-				FC3F27E41BD5035D00CE0737 /* Controller */,
-				FC3F27E31BD5031D00CE0737 /* View */,
+				FC1458CE1BD7833900F74DE9 /* FreeTimeTable(空闲表) */,
+				FC1458CA1BD7831300F74DE9 /* RealName(实名认证) */,
+				FC1458C61BD782DC00F74DE9 /* FootMark(我的足迹) */,
+				FC1458C21BD7829500F74DE9 /* HistoryActivity(历史活动) */,
+				FC1458BE1BD7826000F74DE9 /* Collection(我的收藏) */,
+				FC1458BA1BD7820700F74DE9 /* ProfileSetting(资料设置) */,
+				FC3F27E51BD5036200CE0737 /* Model(旋转抽屉) */,
+				FC3F27E41BD5035D00CE0737 /* Controller(旋转抽屉) */,
+				FC3F27E31BD5031D00CE0737 /* View(旋转抽屉) */,
 			);
-			name = "Profile(资料)";
+			name = "Drawer(旋转抽屉)";
 			sourceTree = "<group>";
 		};
-		FC3F27E31BD5031D00CE0737 /* View */ = {
+		FC3F27E31BD5031D00CE0737 /* View(旋转抽屉) */ = {
 			isa = PBXGroup;
 			children = (
 				FC3F27C31BD4F2EA00CE0737 /* GuillotineMenuSegue.swift */,
 				FC3F27C41BD4F2EA00CE0737 /* GuillotineMenuTransitionAnimation.swift */,
 			);
-			name = View;
+			name = "View(旋转抽屉)";
 			sourceTree = "<group>";
 		};
-		FC3F27E41BD5035D00CE0737 /* Controller */ = {
+		FC3F27E41BD5035D00CE0737 /* Controller(旋转抽屉) */ = {
 			isa = PBXGroup;
 			children = (
 				FC3F27C51BD4F2EA00CE0737 /* GuillotineMenuViewController.swift */,
 			);
-			name = Controller;
+			name = "Controller(旋转抽屉)";
 			sourceTree = "<group>";
 		};
-		FC3F27E51BD5036200CE0737 /* Model */ = {
+		FC3F27E51BD5036200CE0737 /* Model(旋转抽屉) */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Model;
+			name = "Model(旋转抽屉)";
 			sourceTree = "<group>";
 		};
 		FC3F27E61BD503BC00CE0737 /* Other */ = {
@@ -391,6 +594,7 @@
 			children = (
 				FC5121081BD6097700DF1EC2 /* MJRefresh */,
 				FC3F27C61BD4F2EA00CE0737 /* UIViewExtension.swift */,
+				FC1458D41BD783FA00F74DE9 /* UIColorExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -665,6 +869,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1458D91BD784D900F74DE9 /* FootMarkViewController.swift in Sources */,
 				FC3F279B1BD4F2BB00CE0737 /* __.xcdatamodeld in Sources */,
 				FC5121421BD6097700DF1EC2 /* MJRefreshStateHeader.m in Sources */,
 				FC3F27EC1BD5061700CE0737 /* CustomFrauleinViewCell.swift in Sources */,
@@ -673,6 +878,7 @@
 				FC1458B31BD763C500F74DE9 /* HomeTabBarView.swift in Sources */,
 				FC3F27C71BD4F2EA00CE0737 /* GuillotineMenuSegue.swift in Sources */,
 				FC5121461BD6097700DF1EC2 /* UIScrollView+MJRefresh.m in Sources */,
+				FC1458D51BD783FA00F74DE9 /* UIColorExtension.swift in Sources */,
 				FC3F27C91BD4F2EA00CE0737 /* GuillotineMenuViewController.swift in Sources */,
 				FC51213E1BD6097700DF1EC2 /* MJRefreshBackNormalFooter.m in Sources */,
 				FC1458A31BD7588200F74DE9 /* HomeTabBarViewController.swift in Sources */,
@@ -690,9 +896,11 @@
 				FC5121391BD6097700DF1EC2 /* MJRefreshHeader.m in Sources */,
 				FC3F27C81BD4F2EA00CE0737 /* GuillotineMenuTransitionAnimation.swift in Sources */,
 				FC3F27931BD4F2BB00CE0737 /* AppDelegate.swift in Sources */,
+				FC1458D71BD784AF00F74DE9 /* RealName ViewController.swift in Sources */,
 				FC1458B91BD76DFD00F74DE9 /* ChatListViewController.swift in Sources */,
 				FC5121351BD6097700DF1EC2 /* MJRefreshAutoFooter.m in Sources */,
 				FC5121381BD6097700DF1EC2 /* MJRefreshFooter.m in Sources */,
+				FC1458D31BD783C900F74DE9 /* FreeTimeTableViewController.swift in Sources */,
 				FCBC96241BD6AB4B00149C70 /* Teacher.swift in Sources */,
 				FC51213F1BD6097700DF1EC2 /* MJRefreshBackStateFooter.m in Sources */,
 				FC5121441BD6097700DF1EC2 /* MJRefreshConst.m in Sources */,

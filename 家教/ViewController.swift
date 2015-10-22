@@ -26,11 +26,11 @@ class ViewController: UIViewController{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Your Menu View Controller vew must know the following data for the proper animatio
-        let destinationVC = segue.destinationViewController as! GuillotineMenuViewController
-        destinationVC.hostNavigationBarHeight = self.navigationController!.navigationBar.frame.size.height
-        destinationVC.hostTitleText = self.navigationItem.title
-        destinationVC.view.backgroundColor = self.navigationController!.navigationBar.barTintColor
-        destinationVC.setMenuButtonWithImage(barButton.imageView!.image!)
+        let destinationVC = segue.destinationViewController as? GuillotineMenuViewController
+        destinationVC?.hostNavigationBarHeight = self.navigationController!.navigationBar.frame.size.height
+        destinationVC?.hostTitleText = self.navigationItem.title
+        destinationVC?.view.backgroundColor = self.navigationController!.navigationBar.barTintColor
+        destinationVC?.setMenuButtonWithImage(barButton.imageView!.image!)
         
     }
     
@@ -80,7 +80,7 @@ class ViewController: UIViewController{
     }
 
     func headerRefreshGetNewInfo() {
-        //self.tableViewFraulein.header.endRefreshing()
+        self.tableViewFraulein.header.endRefreshing()
     }
     
     

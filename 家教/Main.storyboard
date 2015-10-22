@@ -123,7 +123,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="rightNavigationItemAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vgK-uK-2FM"/>
+                                    <segue destination="WSu-GU-0Hy" kind="push" id="MJW-Ev-Cff"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -135,27 +135,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1094" y="477"/>
+            <point key="canvasLocation" x="1726" y="337"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="4Y3-JU-fBQ">
+        <!--Chat List View Controller-->
+        <scene sceneID="tTR-X2-zpi">
             <objects>
-                <viewController id="o1B-vT-Y33" sceneMemberID="viewController">
+                <viewController id="WSu-GU-0Hy" customClass="ChatListViewController" customModule="家教" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6pV-Q3-kCg"/>
-                        <viewControllerLayoutGuide type="bottom" id="dYd-xY-XFq"/>
+                        <viewControllerLayoutGuide type="top" id="6MG-7b-lP8"/>
+                        <viewControllerLayoutGuide type="bottom" id="oXz-Z3-tID"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fXA-4n-zkH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="RZj-Hq-0pA">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ld4-k2-iyh"/>
+                    <navigationItem key="navigationItem" id="WYa-7e-go7"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iwS-Hd-jgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WwV-YO-FpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1805" y="585"/>
+            <point key="canvasLocation" x="2908" y="647"/>
         </scene>
         <!--Guillotine Menu View Controller-->
         <scene sceneID="ZlZ-2M-K3G">
@@ -339,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eey-Au-nRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="365"/>
+            <point key="canvasLocation" x="2908" y="-111"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zrU-IG-XyS">
@@ -359,13 +359,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4na-XP-9gu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="283" y="484"/>
+            <point key="canvasLocation" x="939" y="365"/>
         </scene>
     </scenes>
     <resources>
         <image name="collect" width="34" height="34"/>
         <image name="ic_activity@3x.png" width="75" height="57"/>
-        <image name="ic_menuRotated@3x.png" width="270" height="480"/>
+        <image name="ic_menuRotated@3x.png" width="750" height="432"/>
         <image name="ic_profile.png" width="17" height="24"/>
         <image name="ic_settings@3x.png" width="69" height="69"/>
         <image name="message" width="20" height="20"/>
