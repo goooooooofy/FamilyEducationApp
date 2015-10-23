@@ -10,9 +10,17 @@ import UIKit
 
 class ChatListViewController: UIViewController {
 
+    @IBOutlet weak var chatTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.redColor()
+        //navigation设置
+        self.chatTableView.delegate = self
+        self.chatTableView.dataSource = self
+        let navBar = self.navigationController?.navigationBar
+        navBar?.barTintColor = UIColor(red: 65.0 / 255.0, green: 62.0 / 255.0, blue: 79.0 / 255.0, alpha: 1)
+        navBar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.title = "好友列表"
+        
         // Do any additional setup after loading the view.
     }
 
@@ -22,4 +30,22 @@ class ChatListViewController: UIViewController {
     }
     
 
+}
+
+extension ChatListViewController:UITableViewDelegate,UITableViewDataSource {
+    
+    internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        cell.textLabel?.text = "\(indexPath.row)"
+        return cell
+    }
+    
+    internal func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+       
+    }
+    
+    
+    internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
 }
