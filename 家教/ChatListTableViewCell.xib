@@ -1,21 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B22c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="82" id="KGk-i7-Jjw" customClass="ChatListTableViewCell" customModule="家教" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="314" height="82"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="KGk-i7-Jjw" customClass="ChatListTableViewCell" customModule="家教" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="314" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="314" height="81"/>
+                <rect key="frame" x="0.0" y="0.0" width="314" height="59"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touxiang" translatesAutoresizingMaskIntoConstraints="NO" id="Th2-FE-ZLb">
+                        <rect key="frame" x="8" y="5" width="50" height="50"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Qon-Ss-RYf"/>
+                            <constraint firstAttribute="width" constant="50" id="pR2-ds-07j"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goofyy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zi-ot-ltf">
+                        <rect key="frame" x="68" y="6" width="150" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="EYM-un-vRW"/>
+                            <constraint firstAttribute="height" constant="21" id="Slv-N9-2FG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最近还好吗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vD8-JY-KcH">
+                        <rect key="frame" x="68" y="30" width="150" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="BvA-CJ-3vj"/>
+                            <constraint firstAttribute="width" constant="150" id="EWF-TK-VXN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.40165485965794528" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="下午:5:03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdz-w3-y4r">
+                        <rect key="frame" x="247" y="8" width="52" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
                 <animations/>
+                <constraints>
+                    <constraint firstItem="Th2-FE-ZLb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="K0I-LI-9dW"/>
+                    <constraint firstItem="vD8-JY-KcH" firstAttribute="leading" secondItem="Th2-FE-ZLb" secondAttribute="trailing" constant="10" id="Ra5-0R-19P"/>
+                    <constraint firstItem="5zi-ot-ltf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="amW-K5-qoe"/>
+                    <constraint firstItem="vD8-JY-KcH" firstAttribute="top" secondItem="5zi-ot-ltf" secondAttribute="bottom" constant="3" id="kie-Ms-96D"/>
+                    <constraint firstItem="Th2-FE-ZLb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lyH-Me-doe"/>
+                    <constraint firstItem="5zi-ot-ltf" firstAttribute="leading" secondItem="Th2-FE-ZLb" secondAttribute="trailing" constant="10" id="tbe-zZ-z4A"/>
+                </constraints>
             </tableViewCellContentView>
             <animations/>
-            <point key="canvasLocation" x="254" y="286"/>
+            <connections>
+                <outlet property="chatAvaterImage" destination="Th2-FE-ZLb" id="Dpk-Y8-Dh3"/>
+                <outlet property="chatNickName" destination="5zi-ot-ltf" id="DBR-ke-qHB"/>
+                <outlet property="chatRecentMessage" destination="vD8-JY-KcH" id="B1g-hC-iwp"/>
+                <outlet property="chatRecentTime" destination="wdz-w3-y4r" id="OTW-jf-9ew"/>
+            </connections>
+            <point key="canvasLocation" x="250" y="208"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="touxiang" width="590" height="590"/>
+    </resources>
 </document>

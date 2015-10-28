@@ -63,18 +63,11 @@
 		FC5121451BD6097700DF1EC2 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5121301BD6097700DF1EC2 /* UIScrollView+MJExtension.m */; };
 		FC5121461BD6097700DF1EC2 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5121321BD6097700DF1EC2 /* UIScrollView+MJRefresh.m */; };
 		FC5121471BD6097700DF1EC2 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5121341BD6097700DF1EC2 /* UIView+MJExtension.m */; };
-		FC51214A1BD611C700DF1EC2 /* qiu.gif in Resources */ = {isa = PBXBuildFile; fileRef = FC5121491BD611C700DF1EC2 /* qiu.gif */; };
 		FCBC96241BD6AB4B00149C70 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC96231BD6AB4B00149C70 /* Teacher.swift */; };
 		FCF89EFA1BD9D67E00625635 /* UUChatLeftMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF89EF61BD9D67E00625635 /* UUChatLeftMessageCell.swift */; };
 		FCF89EFB1BD9D67E00625635 /* UUChatRightMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF89EF71BD9D67E00625635 /* UUChatRightMessageCell.swift */; };
 		FCF89EFC1BD9D67E00625635 /* UUInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF89EF81BD9D67E00625635 /* UUInputView.swift */; };
 		FCF89EFE1BD9D68900625635 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF89EFD1BD9D68900625635 /* ChatViewController.swift */; };
-		FCFA13D11BD6944100FAD9CC /* qiu1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA13CB1BD6944100FAD9CC /* qiu1.png */; };
-		FCFA13D21BD6944100FAD9CC /* qiu2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA13CC1BD6944100FAD9CC /* qiu2.png */; };
-		FCFA13D31BD6944100FAD9CC /* qiu5.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA13CD1BD6944100FAD9CC /* qiu5.png */; };
-		FCFA13D41BD6944100FAD9CC /* qiu6.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA13CE1BD6944100FAD9CC /* qiu6.png */; };
-		FCFA13D51BD6944100FAD9CC /* qiu4.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA13CF1BD6944100FAD9CC /* qiu4.png */; };
-		FCFA13D61BD6944100FAD9CC /* qiu3.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFA13D01BD6944100FAD9CC /* qiu3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,18 +170,11 @@
 		FC5121331BD6097700DF1EC2 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		FC5121341BD6097700DF1EC2 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		FC5121481BD609DB00DF1EC2 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		FC5121491BD611C700DF1EC2 /* qiu.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = qiu.gif; sourceTree = "<group>"; };
 		FCBC96231BD6AB4B00149C70 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		FCF89EF61BD9D67E00625635 /* UUChatLeftMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUChatLeftMessageCell.swift; sourceTree = "<group>"; };
 		FCF89EF71BD9D67E00625635 /* UUChatRightMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUChatRightMessageCell.swift; sourceTree = "<group>"; };
 		FCF89EF81BD9D67E00625635 /* UUInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUInputView.swift; sourceTree = "<group>"; };
 		FCF89EFD1BD9D68900625635 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		FCFA13CB1BD6944100FAD9CC /* qiu1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qiu1.png; sourceTree = "<group>"; };
-		FCFA13CC1BD6944100FAD9CC /* qiu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qiu2.png; sourceTree = "<group>"; };
-		FCFA13CD1BD6944100FAD9CC /* qiu5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qiu5.png; sourceTree = "<group>"; };
-		FCFA13CE1BD6944100FAD9CC /* qiu6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qiu6.png; sourceTree = "<group>"; };
-		FCFA13CF1BD6944100FAD9CC /* qiu4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qiu4.png; sourceTree = "<group>"; };
-		FCFA13D01BD6944100FAD9CC /* qiu3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qiu3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -464,7 +450,6 @@
 			isa = PBXGroup;
 			children = (
 				FC1458B41BD76C9000F74DE9 /* Chat(聊天) */,
-				FCFA13CA1BD6943900FAD9CC /* image */,
 				FC3F27E61BD503BC00CE0737 /* Other */,
 				FC3F27E21BD5031600CE0737 /* Drawer(旋转抽屉) */,
 				FC3F27DE1BD502FC00CE0737 /* Home(首页面) */,
@@ -474,7 +459,6 @@
 				FC1458AC1BD7624300F74DE9 /* cellCollect.png */,
 				FC1458AD1BD7624300F74DE9 /* cellComment.png */,
 				FC1458AE1BD7624300F74DE9 /* cellLike.png */,
-				FC5121491BD611C700DF1EC2 /* qiu.gif */,
 				FC3F27CB1BD4F32600CE0737 /* Main.storyboard */,
 				FC3F279E1BD4F2BB00CE0737 /* LaunchScreen.storyboard */,
 				FC3F27A11BD4F2BB00CE0737 /* Info.plist */,
@@ -727,19 +711,6 @@
 			path = UUChat;
 			sourceTree = "<group>";
 		};
-		FCFA13CA1BD6943900FAD9CC /* image */ = {
-			isa = PBXGroup;
-			children = (
-				FCFA13CB1BD6944100FAD9CC /* qiu1.png */,
-				FCFA13CC1BD6944100FAD9CC /* qiu2.png */,
-				FCFA13CD1BD6944100FAD9CC /* qiu5.png */,
-				FCFA13CE1BD6944100FAD9CC /* qiu6.png */,
-				FCFA13CF1BD6944100FAD9CC /* qiu4.png */,
-				FCFA13D01BD6944100FAD9CC /* qiu3.png */,
-			);
-			name = image;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -848,10 +819,7 @@
 			files = (
 				FC1458AF1BD7624300F74DE9 /* cellCollect.png in Resources */,
 				FC3F27CC1BD4F32600CE0737 /* Main.storyboard in Resources */,
-				FCFA13D61BD6944100FAD9CC /* qiu3.png in Resources */,
 				FC3F27D71BD4F34400CE0737 /* content_2@3x.png in Resources */,
-				FCFA13D41BD6944100FAD9CC /* qiu6.png in Resources */,
-				FC51214A1BD611C700DF1EC2 /* qiu.gif in Resources */,
 				FC3F27D61BD4F34400CE0737 /* content_1@3x.png in Resources */,
 				FC3F27F01BD50E1700CE0737 /* CustomFrauleinViewCell.xib in Resources */,
 				FC3F27A01BD4F2BB00CE0737 /* LaunchScreen.storyboard in Resources */,
@@ -860,12 +828,8 @@
 				FC5121431BD6097700DF1EC2 /* MJRefresh.bundle in Resources */,
 				FC14589F1BD751FB00F74DE9 /* collect@3x.png in Resources */,
 				FC3F27DC1BD4F34400CE0737 /* ic_profile@3x.png in Resources */,
-				FCFA13D31BD6944100FAD9CC /* qiu5.png in Resources */,
-				FCFA13D51BD6944100FAD9CC /* qiu4.png in Resources */,
 				FC3F27D81BD4F34400CE0737 /* ic_activity@3x.png in Resources */,
 				FC2BA38B1BD8AB81004F6B47 /* ChatListTableViewCell.xib in Resources */,
-				FCFA13D11BD6944100FAD9CC /* qiu1.png in Resources */,
-				FCFA13D21BD6944100FAD9CC /* qiu2.png in Resources */,
 				FC3F279D1BD4F2BB00CE0737 /* Assets.xcassets in Resources */,
 				FC14589D1BD74FBB00F74DE9 /* message.png in Resources */,
 				FC1458B01BD7624300F74DE9 /* cellComment.png in Resources */,

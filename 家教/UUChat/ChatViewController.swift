@@ -20,9 +20,9 @@ class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navBar = self.navigationController!.navigationBar
-        navBar.barTintColor = UIColor(red: 65.0 / 255.0, green: 62.0 / 255.0, blue: 79.0 / 255.0, alpha: 1)
-        navBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        let navBar = self.navigationController?.navigationBar
+        navBar?.barTintColor = UIColor(red: 65.0 / 255.0, green: 62.0 / 255.0, blue: 79.0 / 255.0, alpha: 1)
+        navBar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
 
         self.dataArray = NSMutableArray(array: [])
