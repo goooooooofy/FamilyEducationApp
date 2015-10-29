@@ -34,7 +34,8 @@ class GuillotineMenuViewController: UIViewController {
         avaterImageView.layer.cornerRadius = avaterImageView.bounds.height/2
         avaterImageView.layer.masksToBounds = true
         levelStartView.getLevelStar(5)
-        print(levelStartView.subviews)
+        
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -46,6 +47,25 @@ class GuillotineMenuViewController: UIViewController {
 
     }
     
+    @IBAction func action(sender: UIButton) {
+
+        let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let freeStoryBoard:FreeTimeTableViewController = storyBoadrd.instantiateViewControllerWithIdentifier("freeTimeView") as! FreeTimeTableViewController
+            self.presentViewController(freeStoryBoard, animated: true) { () -> Void in
+                var i = 0
+                //内存管理-处理视图叠加导致内存暴增
+                let window = UIApplication.sharedApplication().keyWindow?.subviews
+                if let _ = window {
+                    for var view:UIView in (window)! {
+                        if i != (window?.count)! - 1 {
+                            view.removeFromSuperview()
+                        }
+                        i++
+                    }
+                }
+            }
+        
+    }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }

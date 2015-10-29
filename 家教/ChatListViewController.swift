@@ -47,6 +47,7 @@ extension ChatListViewController:UITableViewDelegate,UITableViewDataSource {
        let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let chatViewstoryBoard:ChatViewController = storyBoadrd.instantiateViewControllerWithIdentifier("chatContentView") as! ChatViewController
         self.navigationController?.pushViewController(chatViewstoryBoard, animated: true)
+        
 //        self.navigationController?.presentViewController(ChatViewController(), animated: true, completion: nil)
     
     }
@@ -57,7 +58,6 @@ extension ChatListViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        print("**********");
         return 60
     }
     

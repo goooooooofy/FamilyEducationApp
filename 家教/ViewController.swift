@@ -40,9 +40,9 @@ class ViewController: UIViewController{
     
     func initView() {
         //navigation设置
-        let navBar = self.navigationController!.navigationBar
-        navBar.barTintColor = UIColor(red: 65.0 / 255.0, green: 62.0 / 255.0, blue: 79.0 / 255.0, alpha: 1)
-        navBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        let navBar = self.navigationController?.navigationBar
+        navBar?.barTintColor = UIColor(red: 65.0 / 255.0, green: 62.0 / 255.0, blue: 79.0 / 255.0, alpha: 1)
+        navBar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         //tableview 注册添加代理
         tableViewFraulein.delegate = self
         tableViewFraulein.dataSource = self
@@ -57,7 +57,7 @@ class ViewController: UIViewController{
         var refreshImage = [UIImage]()
         for var i = 1; i <= 60; i++ {
             let string = NSString(format: "dropdown_anim__000%zd.png", i) as String
-            print(string)
+           
             refreshImage.append(UIImage(named: string)!)
         }
         header.setImages(refreshImage, forState: MJRefreshStateIdle)
@@ -77,7 +77,7 @@ class ViewController: UIViewController{
         self.view.addSubview(tabBarView)
     }
     func getCellHeight(cellHeight: CGFloat) {
-        print("hello")
+        
     }
 
     func headerRefreshGetNewInfo() {
@@ -115,7 +115,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath.row)
+        
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if let rowHeight = cellHeightCache.objectForKey(indexPath.row) as? CGFloat {

@@ -207,23 +207,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nk8-hr-2jo">
+                                <rect key="frame" x="10" y="560" width="80" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="8eP-od-U0h"/>
+                                    <constraint firstAttribute="height" constant="30" id="psl-0Y-GhN"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="10" minY="5" maxX="50" maxY="5"/>
+                                <state key="normal" title="设置" image="setting.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKF-z9-rVR">
                                 <rect key="frame" x="150" y="135" width="300" height="330"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0N-Sn-nKz">
-                                        <rect key="frame" x="50" y="281" width="200" height="30"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="FuH-Qu-DO6"/>
-                                            <constraint firstAttribute="width" constant="200" id="Nd0-bY-aoZ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="空闲表" image="freeTimeTable.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nN6-jJ-Etz">
                                         <rect key="frame" x="50" y="90" width="200" height="30"/>
                                         <animations/>
@@ -320,6 +319,24 @@
                                             <constraint firstAttribute="height" constant="30" id="Io1-7p-81o"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0N-Sn-nKz">
+                                        <rect key="frame" x="50" y="281" width="200" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="FuH-Qu-DO6"/>
+                                            <constraint firstAttribute="width" constant="200" id="Nd0-bY-aoZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="空闲表" image="freeTimeTable.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="action:" destination="fth-R5-ROZ" eventType="touchUpInside" id="X4K-qF-c5u"/>
+                                            <segue destination="scY-Wm-IAA" kind="show" id="QT0-sd-OUx"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -354,19 +371,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nk8-hr-2jo">
-                                <rect key="frame" x="10" y="560" width="80" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="8eP-od-U0h"/>
-                                    <constraint firstAttribute="height" constant="30" id="psl-0Y-GhN"/>
-                                </constraints>
-                                <inset key="titleEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="10" minY="5" maxX="50" maxY="5"/>
-                                <state key="normal" title="设置" image="setting.png">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -395,6 +399,40 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3262" y="-205"/>
+        </scene>
+        <!--Free Time Table View Controller-->
+        <scene sceneID="eaH-3S-VLC">
+            <objects>
+                <viewController storyboardIdentifier="freeTimeView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="scY-Wm-IAA" customClass="FreeTimeTableViewController" customModule="家教" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hAJ-Gl-Ao3"/>
+                        <viewControllerLayoutGuide type="bottom" id="aaC-tB-XCG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="80F-0J-kCT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PS-SS-ImV">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="HV9-Uq-kvX" kind="show" id="oa7-5P-dH2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9PS-SS-ImV" firstAttribute="centerX" secondItem="80F-0J-kCT" secondAttribute="centerX" id="G94-t2-LOq"/>
+                            <constraint firstItem="9PS-SS-ImV" firstAttribute="centerY" secondItem="80F-0J-kCT" secondAttribute="centerY" id="jmU-jM-g7e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dJS-jl-OT9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ybv-0p-qgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3947" y="-268"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zrU-IG-XyS">
@@ -716,7 +754,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7b-sg-g9P" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4746" y="450"/>
+            <point key="canvasLocation" x="3986" y="482"/>
         </scene>
     </scenes>
     <resources>
