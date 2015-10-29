@@ -23,6 +23,11 @@ class GuillotineMenuViewController: UIViewController {
     private let hostNavigationBarHeightLandscape: CGFloat = 32
     private let hostNavigationBarHeightPortrait: CGFloat = 44
     
+    @IBAction func swipeGestureAction(sender: UISwipeGestureRecognizer) {
+        
+        self.closeMenuButtonTapped()
+        
+    }
     @IBOutlet weak var levelStartView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
