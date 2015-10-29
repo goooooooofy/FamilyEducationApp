@@ -20,7 +20,7 @@ class ViewController: UIViewController{
     @IBOutlet var barButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
        self.initView()
 
     }

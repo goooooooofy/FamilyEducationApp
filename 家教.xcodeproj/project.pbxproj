@@ -32,12 +32,8 @@
 		FC3F27C91BD4F2EA00CE0737 /* GuillotineMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27C51BD4F2EA00CE0737 /* GuillotineMenuViewController.swift */; };
 		FC3F27CA1BD4F2EA00CE0737 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27C61BD4F2EA00CE0737 /* UIViewExtension.swift */; };
 		FC3F27CC1BD4F32600CE0737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27CB1BD4F32600CE0737 /* Main.storyboard */; };
-		FC3F27D81BD4F34400CE0737 /* ic_activity@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27D01BD4F34400CE0737 /* ic_activity@3x.png */; };
-		FC3F27D91BD4F34400CE0737 /* ic_feed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27D11BD4F34400CE0737 /* ic_feed@3x.png */; };
 		FC3F27DA1BD4F34400CE0737 /* ic_menuL@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27D21BD4F34400CE0737 /* ic_menuL@3x.png */; };
 		FC3F27DB1BD4F34400CE0737 /* ic_menuRotatedL@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27D31BD4F34400CE0737 /* ic_menuRotatedL@3x.png */; };
-		FC3F27DC1BD4F34400CE0737 /* ic_profile@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27D41BD4F34400CE0737 /* ic_profile@3x.png */; };
-		FC3F27DD1BD4F34400CE0737 /* ic_settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27D51BD4F34400CE0737 /* ic_settings@3x.png */; };
 		FC3F27EA1BD5044500CE0737 /* DeviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27E91BD5044500CE0737 /* DeviceData.swift */; };
 		FC3F27EC1BD5061700CE0737 /* CustomFrauleinViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27EB1BD5061700CE0737 /* CustomFrauleinViewCell.swift */; };
 		FC3F27F01BD50E1700CE0737 /* CustomFrauleinViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27EF1BD50E1700CE0737 /* CustomFrauleinViewCell.xib */; };
@@ -117,12 +113,8 @@
 		FC3F27C51BD4F2EA00CE0737 /* GuillotineMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuillotineMenuViewController.swift; sourceTree = "<group>"; };
 		FC3F27C61BD4F2EA00CE0737 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FC3F27CB1BD4F32600CE0737 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		FC3F27D01BD4F34400CE0737 /* ic_activity@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_activity@3x.png"; sourceTree = "<group>"; };
-		FC3F27D11BD4F34400CE0737 /* ic_feed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_feed@3x.png"; sourceTree = "<group>"; };
 		FC3F27D21BD4F34400CE0737 /* ic_menuL@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_menuL@3x.png"; sourceTree = "<group>"; };
 		FC3F27D31BD4F34400CE0737 /* ic_menuRotatedL@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_menuRotatedL@3x.png"; sourceTree = "<group>"; };
-		FC3F27D41BD4F34400CE0737 /* ic_profile@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_profile@3x.png"; sourceTree = "<group>"; };
-		FC3F27D51BD4F34400CE0737 /* ic_settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_settings@3x.png"; sourceTree = "<group>"; };
 		FC3F27E91BD5044500CE0737 /* DeviceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceData.swift; sourceTree = "<group>"; };
 		FC3F27EB1BD5061700CE0737 /* CustomFrauleinViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFrauleinViewCell.swift; sourceTree = "<group>"; };
 		FC3F27EF1BD50E1700CE0737 /* CustomFrauleinViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomFrauleinViewCell.xib; sourceTree = "<group>"; };
@@ -485,12 +477,8 @@
 		FC3F27CD1BD4F33800CE0737 /* imageE */ = {
 			isa = PBXGroup;
 			children = (
-				FC3F27D01BD4F34400CE0737 /* ic_activity@3x.png */,
-				FC3F27D11BD4F34400CE0737 /* ic_feed@3x.png */,
 				FC3F27D21BD4F34400CE0737 /* ic_menuL@3x.png */,
 				FC3F27D31BD4F34400CE0737 /* ic_menuRotatedL@3x.png */,
-				FC3F27D41BD4F34400CE0737 /* ic_profile@3x.png */,
-				FC3F27D51BD4F34400CE0737 /* ic_settings@3x.png */,
 			);
 			name = imageE;
 			sourceTree = "<group>";
@@ -815,18 +803,14 @@
 				FC3F27CC1BD4F32600CE0737 /* Main.storyboard in Resources */,
 				FC3F27F01BD50E1700CE0737 /* CustomFrauleinViewCell.xib in Resources */,
 				FC3F27A01BD4F2BB00CE0737 /* LaunchScreen.storyboard in Resources */,
-				FC3F27DD1BD4F34400CE0737 /* ic_settings@3x.png in Resources */,
 				FC3F27DA1BD4F34400CE0737 /* ic_menuL@3x.png in Resources */,
 				FC5121431BD6097700DF1EC2 /* MJRefresh.bundle in Resources */,
-				FC3F27DC1BD4F34400CE0737 /* ic_profile@3x.png in Resources */,
-				FC3F27D81BD4F34400CE0737 /* ic_activity@3x.png in Resources */,
 				FC2BA38B1BD8AB81004F6B47 /* ChatListTableViewCell.xib in Resources */,
 				FCE0A0361BE1EED600257372 /* setting.png in Resources */,
 				FC3F279D1BD4F2BB00CE0737 /* Assets.xcassets in Resources */,
 				FC14589D1BD74FBB00F74DE9 /* message.png in Resources */,
 				FC1458B01BD7624300F74DE9 /* cellComment.png in Resources */,
 				FC3F27DB1BD4F34400CE0737 /* ic_menuRotatedL@3x.png in Resources */,
-				FC3F27D91BD4F34400CE0737 /* ic_feed@3x.png in Resources */,
 				FC1458B11BD7624300F74DE9 /* cellLike.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
