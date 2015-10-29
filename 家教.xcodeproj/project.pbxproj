@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FC14589D1BD74FBB00F74DE9 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = FC14589C1BD74FBB00F74DE9 /* message.png */; };
-		FC14589F1BD751FB00F74DE9 /* collect@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC14589E1BD751FB00F74DE9 /* collect@3x.png */; };
 		FC1458A31BD7588200F74DE9 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1458A21BD7588200F74DE9 /* HomeTabBarViewController.swift */; };
 		FC1458AF1BD7624300F74DE9 /* cellCollect.png in Resources */ = {isa = PBXBuildFile; fileRef = FC1458AC1BD7624300F74DE9 /* cellCollect.png */; };
 		FC1458B01BD7624300F74DE9 /* cellComment.png in Resources */ = {isa = PBXBuildFile; fileRef = FC1458AD1BD7624300F74DE9 /* cellComment.png */; };
@@ -33,8 +32,6 @@
 		FC3F27C91BD4F2EA00CE0737 /* GuillotineMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27C51BD4F2EA00CE0737 /* GuillotineMenuViewController.swift */; };
 		FC3F27CA1BD4F2EA00CE0737 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27C61BD4F2EA00CE0737 /* UIViewExtension.swift */; };
 		FC3F27CC1BD4F32600CE0737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27CB1BD4F32600CE0737 /* Main.storyboard */; };
-		FC3F27D61BD4F34400CE0737 /* content_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27CE1BD4F34400CE0737 /* content_1@3x.png */; };
-		FC3F27D71BD4F34400CE0737 /* content_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27CF1BD4F34400CE0737 /* content_2@3x.png */; };
 		FC3F27D81BD4F34400CE0737 /* ic_activity@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27D01BD4F34400CE0737 /* ic_activity@3x.png */; };
 		FC3F27D91BD4F34400CE0737 /* ic_feed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27D11BD4F34400CE0737 /* ic_feed@3x.png */; };
 		FC3F27DA1BD4F34400CE0737 /* ic_menuL@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27D21BD4F34400CE0737 /* ic_menuL@3x.png */; };
@@ -64,6 +61,7 @@
 		FC5121461BD6097700DF1EC2 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5121321BD6097700DF1EC2 /* UIScrollView+MJRefresh.m */; };
 		FC5121471BD6097700DF1EC2 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5121341BD6097700DF1EC2 /* UIView+MJExtension.m */; };
 		FCBC96241BD6AB4B00149C70 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC96231BD6AB4B00149C70 /* Teacher.swift */; };
+		FCE0A0361BE1EED600257372 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE0A0351BE1EED600257372 /* setting.png */; };
 		FCF89EFA1BD9D67E00625635 /* UUChatLeftMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF89EF61BD9D67E00625635 /* UUChatLeftMessageCell.swift */; };
 		FCF89EFB1BD9D67E00625635 /* UUChatRightMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF89EF71BD9D67E00625635 /* UUChatRightMessageCell.swift */; };
 		FCF89EFC1BD9D67E00625635 /* UUInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF89EF81BD9D67E00625635 /* UUInputView.swift */; };
@@ -89,7 +87,6 @@
 
 /* Begin PBXFileReference section */
 		FC14589C1BD74FBB00F74DE9 /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
-		FC14589E1BD751FB00F74DE9 /* collect@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collect@3x.png"; sourceTree = "<group>"; };
 		FC1458A21BD7588200F74DE9 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		FC1458AC1BD7624300F74DE9 /* cellCollect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellCollect.png; sourceTree = "<group>"; };
 		FC1458AD1BD7624300F74DE9 /* cellComment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellComment.png; sourceTree = "<group>"; };
@@ -120,8 +117,6 @@
 		FC3F27C51BD4F2EA00CE0737 /* GuillotineMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuillotineMenuViewController.swift; sourceTree = "<group>"; };
 		FC3F27C61BD4F2EA00CE0737 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FC3F27CB1BD4F32600CE0737 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		FC3F27CE1BD4F34400CE0737 /* content_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "content_1@3x.png"; sourceTree = "<group>"; };
-		FC3F27CF1BD4F34400CE0737 /* content_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "content_2@3x.png"; sourceTree = "<group>"; };
 		FC3F27D01BD4F34400CE0737 /* ic_activity@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_activity@3x.png"; sourceTree = "<group>"; };
 		FC3F27D11BD4F34400CE0737 /* ic_feed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_feed@3x.png"; sourceTree = "<group>"; };
 		FC3F27D21BD4F34400CE0737 /* ic_menuL@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_menuL@3x.png"; sourceTree = "<group>"; };
@@ -171,6 +166,7 @@
 		FC5121341BD6097700DF1EC2 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		FC5121481BD609DB00DF1EC2 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		FCBC96231BD6AB4B00149C70 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
+		FCE0A0351BE1EED600257372 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		FCF89EF61BD9D67E00625635 /* UUChatLeftMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUChatLeftMessageCell.swift; sourceTree = "<group>"; };
 		FCF89EF71BD9D67E00625635 /* UUChatRightMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUChatRightMessageCell.swift; sourceTree = "<group>"; };
 		FCF89EF81BD9D67E00625635 /* UUInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUInputView.swift; sourceTree = "<group>"; };
@@ -458,6 +454,7 @@
 				FC14589C1BD74FBB00F74DE9 /* message.png */,
 				FC1458AC1BD7624300F74DE9 /* cellCollect.png */,
 				FC1458AD1BD7624300F74DE9 /* cellComment.png */,
+				FCE0A0351BE1EED600257372 /* setting.png */,
 				FC1458AE1BD7624300F74DE9 /* cellLike.png */,
 				FC3F27CB1BD4F32600CE0737 /* Main.storyboard */,
 				FC3F279E1BD4F2BB00CE0737 /* LaunchScreen.storyboard */,
@@ -488,14 +485,11 @@
 		FC3F27CD1BD4F33800CE0737 /* imageE */ = {
 			isa = PBXGroup;
 			children = (
-				FC3F27CE1BD4F34400CE0737 /* content_1@3x.png */,
-				FC3F27CF1BD4F34400CE0737 /* content_2@3x.png */,
 				FC3F27D01BD4F34400CE0737 /* ic_activity@3x.png */,
 				FC3F27D11BD4F34400CE0737 /* ic_feed@3x.png */,
 				FC3F27D21BD4F34400CE0737 /* ic_menuL@3x.png */,
 				FC3F27D31BD4F34400CE0737 /* ic_menuRotatedL@3x.png */,
 				FC3F27D41BD4F34400CE0737 /* ic_profile@3x.png */,
-				FC14589E1BD751FB00F74DE9 /* collect@3x.png */,
 				FC3F27D51BD4F34400CE0737 /* ic_settings@3x.png */,
 			);
 			name = imageE;
@@ -819,17 +813,15 @@
 			files = (
 				FC1458AF1BD7624300F74DE9 /* cellCollect.png in Resources */,
 				FC3F27CC1BD4F32600CE0737 /* Main.storyboard in Resources */,
-				FC3F27D71BD4F34400CE0737 /* content_2@3x.png in Resources */,
-				FC3F27D61BD4F34400CE0737 /* content_1@3x.png in Resources */,
 				FC3F27F01BD50E1700CE0737 /* CustomFrauleinViewCell.xib in Resources */,
 				FC3F27A01BD4F2BB00CE0737 /* LaunchScreen.storyboard in Resources */,
 				FC3F27DD1BD4F34400CE0737 /* ic_settings@3x.png in Resources */,
 				FC3F27DA1BD4F34400CE0737 /* ic_menuL@3x.png in Resources */,
 				FC5121431BD6097700DF1EC2 /* MJRefresh.bundle in Resources */,
-				FC14589F1BD751FB00F74DE9 /* collect@3x.png in Resources */,
 				FC3F27DC1BD4F34400CE0737 /* ic_profile@3x.png in Resources */,
 				FC3F27D81BD4F34400CE0737 /* ic_activity@3x.png in Resources */,
 				FC2BA38B1BD8AB81004F6B47 /* ChatListTableViewCell.xib in Resources */,
+				FCE0A0361BE1EED600257372 /* setting.png in Resources */,
 				FC3F279D1BD4F2BB00CE0737 /* Assets.xcassets in Resources */,
 				FC14589D1BD74FBB00F74DE9 /* message.png in Resources */,
 				FC1458B01BD7624300F74DE9 /* cellComment.png in Resources */,
