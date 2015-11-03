@@ -334,7 +334,7 @@
                                         </state>
                                         <connections>
                                             <action selector="action:" destination="fth-R5-ROZ" eventType="touchUpInside" id="X4K-qF-c5u"/>
-                                            <segue destination="scY-Wm-IAA" kind="show" id="QT0-sd-OUx"/>
+                                            <segue destination="L0q-YT-oj1" kind="show" id="QT0-sd-OUx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -400,7 +400,7 @@
             </objects>
             <point key="canvasLocation" x="3262" y="-205"/>
         </scene>
-        <!--Free Time Table View Controller-->
+        <!--第9周-->
         <scene sceneID="eaH-3S-VLC">
             <objects>
                 <viewController storyboardIdentifier="freeTimeView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="scY-Wm-IAA" customClass="FreeTimeTableViewController" customModule="家教" customModuleProvider="target" sceneMemberID="viewController">
@@ -411,28 +411,47 @@
                     <view key="view" contentMode="scaleToFill" id="80F-0J-kCT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PS-SS-ImV">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="HV9-Uq-kvX" kind="show" id="oa7-5P-dH2"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="9PS-SS-ImV" firstAttribute="centerX" secondItem="80F-0J-kCT" secondAttribute="centerX" id="G94-t2-LOq"/>
-                            <constraint firstItem="9PS-SS-ImV" firstAttribute="centerY" secondItem="80F-0J-kCT" secondAttribute="centerY" id="jmU-jM-g7e"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dJS-jl-OT9"/>
+                    <navigationItem key="navigationItem" title="第9周" id="dJS-jl-OT9">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fan-c0-0eJ">
+                            <connections>
+                                <segue destination="HV9-Uq-kvX" kind="showDetail" id="dN7-CM-nbE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="设置" id="Gn2-ta-s0Z">
+                            <connections>
+                                <segue destination="T5N-Q1-R9F" kind="push" id="zzl-yh-mVc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ybv-0p-qgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3947" y="-268"/>
+            <point key="canvasLocation" x="4747" y="-466"/>
+        </scene>
+        <!--设置-->
+        <scene sceneID="tGx-Nx-Iyz">
+            <objects>
+                <viewController id="T5N-Q1-R9F" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2eh-DS-zxD"/>
+                        <viewControllerLayoutGuide type="bottom" id="O2q-jr-9n5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eHH-bR-K7v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="设置" id="7Bt-lu-7Hd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hAt-mb-Qbl"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8H-tb-0y6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5447" y="-731"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zrU-IG-XyS">
@@ -755,6 +774,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7b-sg-g9P" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3986" y="482"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fYB-pg-ZON">
+            <objects>
+                <navigationController storyboardIdentifier="freeTimeViewNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L0q-YT-oj1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hdz-fp-3gk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="scY-Wm-IAA" kind="relationship" relationship="rootViewController" id="dRk-WS-n9j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s4n-2Z-BA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4039" y="-436"/>
         </scene>
     </scenes>
     <resources>

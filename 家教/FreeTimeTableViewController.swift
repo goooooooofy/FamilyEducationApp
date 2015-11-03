@@ -12,15 +12,121 @@ class FreeTimeTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.randColor(1)
+        self.initView()
         
-
-        
-        
-        // Do any additional setup after loading the view.
     }
 
-  
-   
+  //MARK: -初始化当前视图
+    func initView() {
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "kechengbiaoBg.png")!)
+        /**
+        *   画线
+        */
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.strokeColor = UIColor.blueColor().CGColor
+        shapeLayer.lineWidth = 0.5
+        let bezier = UIBezierPath()
+        bezier.moveToPoint(CGPointMake(0, 95))
+        bezier.addLineToPoint(CGPointMake(DeviceData.width, 95))
+        shapeLayer.path = bezier.CGPath
+        self.view.layer.addSublayer(shapeLayer)
+        
+        bezier.moveToPoint(CGPointMake(30, 0))
+        bezier.addLineToPoint(CGPointMake(30, DeviceData.height))
+        shapeLayer.path = bezier.CGPath
+        self.view.layer.addSublayer(shapeLayer)
+        let monthLabel = UILabel()
+        monthLabel.frame = CGRectMake(3, 65, 40, 30)
+        monthLabel.textColor = UIColor.whiteColor()
+        monthLabel.text = "11月"
+        monthLabel.font = UIFont.systemFontOfSize(10)
+        self.view.addSubview(monthLabel)
+        
+        for i in 1...6 {
+            bezier.moveToPoint(CGPointMake(30 + ((DeviceData.width - 30)/7) * CGFloat(i), 0))
+            print(((DeviceData.width )))
+            bezier.addLineToPoint(CGPointMake(30 + ((DeviceData.width - 30)/7) * CGFloat(i), 95))
+            shapeLayer.path = bezier.CGPath
+            self.view.layer.addSublayer(shapeLayer)
+
+        }
+        
+        for i in 1...4 {
+           
+            bezier.moveToPoint(CGPointMake(0, 95 + ((DeviceData.height - 95)/5) * CGFloat(i)))
+            print(((DeviceData.width )))
+            bezier.addLineToPoint(CGPointMake(30,95 + ((DeviceData.height - 95)/5) * CGFloat(i)))
+            shapeLayer.path = bezier.CGPath
+            self.view.layer.addSublayer(shapeLayer)
+        }
+        
+        for i in 1...5 {
+            //一天第几节课标记
+            let courseLabel = UILabel()
+            courseLabel.text = "\(i)"
+            courseLabel.textColor = UIColor.whiteColor()
+            courseLabel.frame = CGRectMake(10, 95 + ((DeviceData.height - 95)/5) * CGFloat(Double(i) - 0.55), 15, 15)
+            self.view.addSubview(courseLabel)
+
+        }
+        
+        for i in 1...7 {
+            //一天第几节课标记
+            let weekLabel = UILabel()
+            weekLabel.font = UIFont.systemFontOfSize(10)
+            weekLabel.text = "1              星期四"
+            weekLabel.numberOfLines = 0
+            weekLabel.textColor = UIColor.whiteColor()
+            weekLabel.frame = CGRectMake(30 + ((DeviceData.width - 30)/7) * CGFloat(Double(i) - 0.95), 55, 40, 40)
+            self.view.addSubview(weekLabel)
+            
+        }
+        
+        
+        self.createClass(4, whichClass: 1, courseName: "信号与系统@北主楼")
+        self.createClass(3, whichClass: 2, courseName: "信号与系统@北主楼")
+        self.createClass(1, whichClass: 1, courseName: "信号与系统@北主楼")
+        self.createClass(5, whichClass: 4, courseName: "信号与系统@北主楼")
+        self.createClass(4, whichClass: 3, courseName: "信号与系统@北主楼")
+        self.createClass(7, whichClass: 2, courseName: "信号与系统@北主楼")
+    }
+    
+    /**
+     创建课程view
+     
+     - parameter whichWeekDay: 一周的第几天
+     - parameter whichClass:   哪一节课 1、2、3、4、5
+     - parameter courseName:   课程名字
+     */
+    func createClass(whichWeekDay:Int,whichClass:Int,courseName:String) {
+        let bgView = UIView()
+        bgView.frame.size = CGSizeMake(((DeviceData.width - 30)/7), (DeviceData.height - 95)/5)
+        bgView.frame.origin = CGPointMake(30 + ((DeviceData.width - 30)/7) * CGFloat(whichWeekDay - 1) , 95 + ((DeviceData.height - 95)/5) * CGFloat(whichClass - 1))
+        bgView.backgroundColor = UIColor.clearColor()
+        self.view.addSubview(bgView)
+        
+        let bgImageView = UIImageView(frame: bgView.bounds)
+        let randNum = arc4random_uniform(15)
+        bgImageView.image = UIImage(named: NSString(format: "ic_week_course_half_bg_%d", randNum) as String)
+        bgView.addSubview(bgImageView)
+        
+        let courseNameTittle = UILabel(frame: bgView.bounds)
+        courseNameTittle.text = courseName
+        courseNameTittle.font = UIFont.systemFontOfSize(12)
+        courseNameTittle.textColor = UIColor.whiteColor()
+        courseNameTittle.numberOfLines = 3
+        bgImageView.addSubview(courseNameTittle)
+    }
 
 }
+
+
+
+
+
+
+
+
+

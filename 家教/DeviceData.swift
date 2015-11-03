@@ -10,6 +10,6 @@ import UIKit
 
 struct DeviceData {
     static let height = UIScreen.mainScreen().bounds.height
-    static let width  = UIScreen.mainScreen().bounds.height
+    static let width  = UIScreen.mainScreen().bounds.width
     static let bound  = UIScreen.mainScreen().bounds
 }

@@ -56,6 +56,7 @@
 		FC5121451BD6097700DF1EC2 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5121301BD6097700DF1EC2 /* UIScrollView+MJExtension.m */; };
 		FC5121461BD6097700DF1EC2 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5121321BD6097700DF1EC2 /* UIScrollView+MJRefresh.m */; };
 		FC5121471BD6097700DF1EC2 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5121341BD6097700DF1EC2 /* UIView+MJExtension.m */; };
+		FC6E29D71BE329990016CEF9 /* kechengbiaoBg.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6E29D61BE329990016CEF9 /* kechengbiaoBg.png */; };
 		FCBC96241BD6AB4B00149C70 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC96231BD6AB4B00149C70 /* Teacher.swift */; };
 		FCE0A0361BE1EED600257372 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE0A0351BE1EED600257372 /* setting.png */; };
 		FCF89EFA1BD9D67E00625635 /* UUChatLeftMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF89EF61BD9D67E00625635 /* UUChatLeftMessageCell.swift */; };
@@ -157,6 +158,7 @@
 		FC5121331BD6097700DF1EC2 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		FC5121341BD6097700DF1EC2 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		FC5121481BD609DB00DF1EC2 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		FC6E29D61BE329990016CEF9 /* kechengbiaoBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kechengbiaoBg.png; sourceTree = "<group>"; };
 		FCBC96231BD6AB4B00149C70 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		FCE0A0351BE1EED600257372 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		FCF89EF61BD9D67E00625635 /* UUChatLeftMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUChatLeftMessageCell.swift; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 				FC3F279C1BD4F2BB00CE0737 /* Assets.xcassets */,
 				FC14589C1BD74FBB00F74DE9 /* message.png */,
 				FC1458AC1BD7624300F74DE9 /* cellCollect.png */,
+				FC6E29D61BE329990016CEF9 /* kechengbiaoBg.png */,
 				FC1458AD1BD7624300F74DE9 /* cellComment.png */,
 				FCE0A0351BE1EED600257372 /* setting.png */,
 				FC1458AE1BD7624300F74DE9 /* cellLike.png */,
@@ -812,6 +815,7 @@
 				FC1458B01BD7624300F74DE9 /* cellComment.png in Resources */,
 				FC3F27DB1BD4F34400CE0737 /* ic_menuRotatedL@3x.png in Resources */,
 				FC1458B11BD7624300F74DE9 /* cellLike.png in Resources */,
+				FC6E29D71BE329990016CEF9 /* kechengbiaoBg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

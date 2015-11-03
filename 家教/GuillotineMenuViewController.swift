@@ -50,7 +50,9 @@ class GuillotineMenuViewController: UIViewController {
     @IBAction func action(sender: UIButton) {
 
         let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        let freeStoryBoard:FreeTimeTableViewController = storyBoadrd.instantiateViewControllerWithIdentifier("freeTimeView") as! FreeTimeTableViewController
+        let freeStoryBoard:UINavigationController = storyBoadrd.instantiateViewControllerWithIdentifier("freeTimeViewNavigation") as! UINavigationController
+//        self.navigationController?.pushViewController(freeStoryBoard, animated: true)
+        
             self.presentViewController(freeStoryBoard, animated: true) { () -> Void in
                 var i = 0
                 //内存管理-处理视图叠加导致内存暴增
