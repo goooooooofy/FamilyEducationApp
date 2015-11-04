@@ -39,6 +39,9 @@
                                         </constraints>
                                         <state key="normal" image="tabbar_compose_icon_add"/>
                                         <state key="highlighted" image="tabbar_compose_icon_add_highlighted"/>
+                                        <connections>
+                                            <segue destination="Jw2-nS-1tD" kind="push" id="szv-e2-SjV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qam-HI-bnT">
                                         <rect key="frame" x="0.0" y="1" width="199" height="48"/>
@@ -142,6 +145,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2538" y="337"/>
+        </scene>
+        <!--发招聘-->
+        <scene sceneID="1jy-E9-CLo">
+            <objects>
+                <viewController id="Jw2-nS-1tD" customClass="AddMessageViewController" customModule="家教" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PCn-lX-gcV"/>
+                        <viewControllerLayoutGuide type="bottom" id="3eS-gy-YFo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dcu-EJ-tOi">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkm-TW-Mh4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lkm-TW-Mh4" firstAttribute="top" secondItem="PCn-lX-gcV" secondAttribute="bottom" id="ABK-x5-lZU"/>
+                            <constraint firstItem="3eS-gy-YFo" firstAttribute="top" secondItem="lkm-TW-Mh4" secondAttribute="bottom" id="WN5-LU-X5g"/>
+                            <constraint firstItem="lkm-TW-Mh4" firstAttribute="leading" secondItem="dcu-EJ-tOi" secondAttribute="leading" id="bdo-fp-hDW"/>
+                            <constraint firstAttribute="trailing" secondItem="lkm-TW-Mh4" secondAttribute="trailing" id="yGc-fN-8oC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="发招聘" id="Vqb-N1-aCj">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="53c-sn-Tfe">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="js8-ZW-Nhs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2558" y="1027"/>
         </scene>
         <!--Chat List View Controller-->
         <scene sceneID="tTR-X2-zpi">
@@ -415,12 +461,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="第9周" id="dJS-jl-OT9">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fan-c0-0eJ">
+                        <barButtonItem key="leftBarButtonItem" title="返回主界面" id="fan-c0-0eJ">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                    <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <segue destination="HV9-Uq-kvX" kind="showDetail" id="dN7-CM-nbE"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="设置" id="Gn2-ta-s0Z">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                    <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <segue destination="T5N-Q1-R9F" kind="push" id="zzl-yh-mVc"/>
                             </connections>
