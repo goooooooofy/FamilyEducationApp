@@ -10,6 +10,8 @@ import UIKit
 
 class GuillotineMenuViewController: UIViewController {
 
+    @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var settingButton: UIButton!
     @IBOutlet weak var avaterImageView: UIImageView!
     var hostNavigationBarHeight: CGFloat!
     var hostTitleText: NSString!
@@ -34,8 +36,7 @@ class GuillotineMenuViewController: UIViewController {
         avaterImageView.layer.cornerRadius = avaterImageView.bounds.height/2
         avaterImageView.layer.masksToBounds = true
         levelStartView.getLevelStar(5)
-        
-        
+    
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -47,12 +48,38 @@ class GuillotineMenuViewController: UIViewController {
 
     }
     
-    @IBAction func action(sender: UIButton) {
+  
+    
+    @IBAction func systemSetting(sender: UIButton) {
+        
+        let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let systemSettingStoryBoard:SystemSettingVewController = storyBoadrd.instantiateViewControllerWithIdentifier("systemSetting") as! SystemSettingVewController
+        self.bgView.removeFromSuperview()
+        self.settingButton.removeFromSuperview()
+        self.menuButton.removeFromSuperview()
+        self.presentViewController(systemSettingStoryBoard, animated: true) { () -> Void in
+            var i = 0
+            //内存管理-处理视图叠加导致内存暴增
+            let window = UIApplication.sharedApplication().keyWindow?.subviews
+            if let _ = window {
+                for var view:UIView in (window)! {
+                    if i != (window?.count)! - 1 {
+                        view.removeFromSuperview()
+                    }
+                    i++
+                }
+            }
+        }
+
+        
+    }
+    @IBAction func FreeTimeAction(sender: UIButton) {
 
         let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let freeStoryBoard:UINavigationController = storyBoadrd.instantiateViewControllerWithIdentifier("freeTimeViewNavigation") as! UINavigationController
-//        self.navigationController?.pushViewController(freeStoryBoard, animated: true)
-        
+        self.bgView.removeFromSuperview()
+        self.settingButton.removeFromSuperview()
+        self.menuButton.removeFromSuperview()
             self.presentViewController(freeStoryBoard, animated: true) { () -> Void in
                 var i = 0
                 //内存管理-处理视图叠加导致内存暴增

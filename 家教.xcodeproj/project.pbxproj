@@ -37,6 +37,7 @@
 		FC3F27EA1BD5044500CE0737 /* DeviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27E91BD5044500CE0737 /* DeviceData.swift */; };
 		FC3F27EC1BD5061700CE0737 /* CustomFrauleinViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27EB1BD5061700CE0737 /* CustomFrauleinViewCell.swift */; };
 		FC3F27F01BD50E1700CE0737 /* CustomFrauleinViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27EF1BD50E1700CE0737 /* CustomFrauleinViewCell.xib */; };
+		FC49E4981BEA0D8200A865FC /* SystemSettingVewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC49E4971BEA0D8200A865FC /* SystemSettingVewController.swift */; };
 		FC5121351BD6097700DF1EC2 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = FC51210B1BD6097700DF1EC2 /* MJRefreshAutoFooter.m */; };
 		FC5121361BD6097700DF1EC2 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = FC51210D1BD6097700DF1EC2 /* MJRefreshBackFooter.m */; };
 		FC5121371BD6097700DF1EC2 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = FC51210F1BD6097700DF1EC2 /* MJRefreshComponent.m */; };
@@ -120,6 +121,7 @@
 		FC3F27E91BD5044500CE0737 /* DeviceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceData.swift; sourceTree = "<group>"; };
 		FC3F27EB1BD5061700CE0737 /* CustomFrauleinViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFrauleinViewCell.swift; sourceTree = "<group>"; };
 		FC3F27EF1BD50E1700CE0737 /* CustomFrauleinViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomFrauleinViewCell.xib; sourceTree = "<group>"; };
+		FC49E4971BEA0D8200A865FC /* SystemSettingVewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemSettingVewController.swift; sourceTree = "<group>"; };
 		FC51210A1BD6097700DF1EC2 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		FC51210B1BD6097700DF1EC2 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		FC51210C1BD6097700DF1EC2 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -528,6 +530,7 @@
 		FC3F27E21BD5031600CE0737 /* Drawer(旋转抽屉) */ = {
 			isa = PBXGroup;
 			children = (
+				FC49E4931BEA0D4200A865FC /* SystemSetting设置 */,
 				FC1458CE1BD7833900F74DE9 /* FreeTimeTable(空闲表) */,
 				FC1458CA1BD7831300F74DE9 /* RealName(实名认证) */,
 				FC1458C61BD782DC00F74DE9 /* FootMark(我的足迹) */,
@@ -593,6 +596,38 @@
 				FCBC96231BD6AB4B00149C70 /* Teacher.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		FC49E4931BEA0D4200A865FC /* SystemSetting设置 */ = {
+			isa = PBXGroup;
+			children = (
+				FC49E4961BEA0D6A00A865FC /* Controller */,
+				FC49E4951BEA0D6500A865FC /* View */,
+				FC49E4941BEA0D5500A865FC /* Model */,
+			);
+			name = "SystemSetting设置";
+			sourceTree = "<group>";
+		};
+		FC49E4941BEA0D5500A865FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FC49E4951BEA0D6500A865FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FC49E4961BEA0D6A00A865FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC49E4971BEA0D8200A865FC /* SystemSettingVewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		FC5121081BD6097700DF1EC2 /* MJRefresh */ = {
@@ -879,6 +914,7 @@
 				FCF89EFB1BD9D67E00625635 /* UUChatRightMessageCell.swift in Sources */,
 				FC1458D31BD783C900F74DE9 /* FreeTimeTableViewController.swift in Sources */,
 				FCBC96241BD6AB4B00149C70 /* Teacher.swift in Sources */,
+				FC49E4981BEA0D8200A865FC /* SystemSettingVewController.swift in Sources */,
 				FCF89EFE1BD9D68900625635 /* ChatViewController.swift in Sources */,
 				FC2BA38A1BD8AB81004F6B47 /* ChatListTableViewCell.swift in Sources */,
 				FC51213F1BD6097700DF1EC2 /* MJRefreshBackStateFooter.m in Sources */,

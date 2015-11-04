@@ -265,6 +265,9 @@
                                 <state key="normal" title="设置" image="setting.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="systemSetting:" destination="fth-R5-ROZ" eventType="touchUpInside" id="22x-8v-Gdf"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKF-z9-rVR">
                                 <rect key="frame" x="150" y="135" width="300" height="330"/>
@@ -319,8 +322,8 @@
                                             <constraint firstAttribute="height" constant="60" id="y2N-9W-dNj"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nta-qr-Boi">
-                                        <rect key="frame" x="50" y="205" width="200" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nta-qr-Boi">
+                                        <rect key="frame" x="50" y="204" width="200" height="30"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="2sr-Ra-mHq"/>
@@ -379,7 +382,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="action:" destination="fth-R5-ROZ" eventType="touchUpInside" id="X4K-qF-c5u"/>
+                                            <action selector="FreeTimeAction:" destination="fth-R5-ROZ" eventType="touchUpInside" id="j2j-hg-ln1"/>
                                             <segue destination="L0q-YT-oj1" kind="show" id="QT0-sd-OUx"/>
                                         </connections>
                                     </button>
@@ -434,7 +437,9 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="avaterImageView" destination="aco-Dp-yAB" id="Fx4-OJ-1ZK"/>
+                        <outlet property="bgView" destination="qKF-z9-rVR" id="bjO-Pp-mst"/>
                         <outlet property="levelStartView" destination="eaE-oh-sWB" id="9lN-O9-KZn"/>
+                        <outlet property="settingButton" destination="nk8-hr-2jo" id="xZP-ak-NIC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eey-Au-nRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -461,7 +466,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="第9周" id="dJS-jl-OT9">
-                        <barButtonItem key="leftBarButtonItem" title="返回主界面" id="fan-c0-0eJ">
+                        <barButtonItem key="leftBarButtonItem" title="&lt;返回主界面" id="fan-c0-0eJ">
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                     <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -508,6 +513,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8H-tb-0y6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5447" y="-731"/>
+        </scene>
+        <!--System Setting Vew Controller-->
+        <scene sceneID="VJi-k4-gZ2">
+            <objects>
+                <viewController storyboardIdentifier="systemSetting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fl4-zg-VvL" customClass="SystemSettingVewController" customModule="家教" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="531-eG-tCb"/>
+                        <viewControllerLayoutGuide type="bottom" id="7o3-IO-5Ow"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UbS-Sv-ybd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I7p-MC-ezv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2255" y="-408"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zrU-IG-XyS">
