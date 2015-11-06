@@ -53,7 +53,7 @@ class GuillotineMenuViewController: UIViewController {
     @IBAction func systemSetting(sender: UIButton) {
         
         let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        let systemSettingStoryBoard:SystemSettingVewController = storyBoadrd.instantiateViewControllerWithIdentifier("systemSetting") as! SystemSettingVewController
+        let systemSettingStoryBoard:UINavigationController = storyBoadrd.instantiateViewControllerWithIdentifier("navigationSystemSetting") as! UINavigationController
         self.bgView.removeFromSuperview()
         self.settingButton.removeFromSuperview()
         self.menuButton.removeFromSuperview()
