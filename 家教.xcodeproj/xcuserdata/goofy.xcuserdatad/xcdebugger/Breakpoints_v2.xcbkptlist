@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5bb6;&#x6559;/ViewController.swift"
-            timestampString = "467789786.755837"
+            timestampString = "469042599.351308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "initView()"
             landmarkType = "5">
          </BreakpointContent>
@@ -61,6 +61,20 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "10"
             endingLineNumber = "10">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x5bb6;&#x6559;/Bridging-Header.h"
+            timestampString = "468997945.975128"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

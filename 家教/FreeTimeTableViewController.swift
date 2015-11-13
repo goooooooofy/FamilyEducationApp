@@ -18,8 +18,12 @@ class FreeTimeTableViewController: UIViewController {
 
   //MARK: -初始化当前视图
     func initView() {
+        self.view.backgroundColor = UIColor(red: 65.0 / 255.0, green: 62.0 / 255.0, blue: 79.0 / 255.0, alpha: 1)
+        let navBar = self.navigationController?.navigationBar
+        navBar?.barTintColor = UIColor(red: 65.0 / 255.0, green: 62.0 / 255.0, blue: 79.0 / 255.0, alpha: 1)
+        navBar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "kechengbiaoBg.png")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "kechengbiaoBg.png")!)
         /**
         *   画线
         */

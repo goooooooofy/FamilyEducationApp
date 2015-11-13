@@ -10,5 +10,10 @@
 #define Bridging_Header_h
 
 #import "MJRefresh/MJRefresh.h"
+#import "MJExtension/MJExtension.h"
+#import "AFNetworking/AFNetworking.h"
+#import "Student.h"
+#import "Parents.h"
+
 
 #endif /* Bridging_Header_h */

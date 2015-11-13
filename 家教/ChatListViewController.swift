@@ -23,9 +23,14 @@ class ChatListViewController: UIViewController {
         navBar?.barTintColor = UIColor(red: 65.0 / 255.0, green: 62.0 / 255.0, blue: 79.0 / 255.0, alpha: 1)
         navBar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.title = "好友列表"
-//        self.chatTableView.
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+//        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+
     }
+    
+//    func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer!) -> Bool {
+//        return false;
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

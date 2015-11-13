@@ -57,6 +57,8 @@ class GuillotineMenuViewController: UIViewController {
         self.bgView.removeFromSuperview()
         self.settingButton.removeFromSuperview()
         self.menuButton.removeFromSuperview()
+        
+       // self.navigationController?.presentViewController(systemSettingStoryBoard, animated: true, completion: nil)
         self.presentViewController(systemSettingStoryBoard, animated: true) { () -> Void in
             var i = 0
             //内存管理-处理视图叠加导致内存暴增

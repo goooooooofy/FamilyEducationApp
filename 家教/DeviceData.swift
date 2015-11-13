@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ *  建立系统数据单例模式
+ */
 struct DeviceData {
     static let height = UIScreen.mainScreen().bounds.height
     static let width  = UIScreen.mainScreen().bounds.width
