@@ -75,7 +75,7 @@
 /**
  *  发布人专业
  */
-//@property (nonatomic,copy) NSString *stu_major;
+@property (nonatomic,copy) NSString *stu_major;
 /**
  *  发布人可辅导课程
  */
@@ -124,6 +124,24 @@
 @property (nonatomic,copy) NSString *updated_at;
 
 @property (nonatomic,copy) NSString *stu_grade;
+
+@property (nonatomic,copy) NSNumber *stu_star;
+
+@property (nonatomic,copy) NSString *stu_edu;
+
+@property (nonatomic,copy) NSString *real_sign;
+
+@property (nonatomic,copy) NSString *stu_freHis;
+
+@property (nonatomic,copy) NSString *stu_school;
+
+@property (nonatomic,assign) int num;
+
+@property (nonatomic,copy) NSString *stu_history;
+
+
+
+//@property (nonatomic,copy) NSString *
 
 -(id)initWithDict:(NSDictionary *)dict;
 +(instancetype)cellWithDict:(NSDictionary *)dict;

@@ -75,6 +75,7 @@
 		FC5121471BD6097700DF1EC2 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5121341BD6097700DF1EC2 /* UIView+MJExtension.m */; };
 		FC69473D1BE9E2E4002347D7 /* AddMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69473C1BE9E2E4002347D7 /* AddMessageViewController.swift */; };
 		FC6E29D71BE329990016CEF9 /* kechengbiaoBg.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6E29D61BE329990016CEF9 /* kechengbiaoBg.png */; };
+		FC9497431BF72DCD00368E9F /* GetData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9497421BF72DCD00368E9F /* GetData.m */; };
 		FC9B60D31BEF9888002812C0 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9B60D11BEF9888002812C0 /* 16.png */; };
 		FC9B60D41BEF9888002812C0 /* 18.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9B60D21BEF9888002812C0 /* 18.png */; };
 		FCDF832C1BF07E350044E78B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDF831D1BF07C990044E78B /* Alamofire.framework */; };
@@ -291,6 +292,8 @@
 		FC5121481BD609DB00DF1EC2 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		FC69473C1BE9E2E4002347D7 /* AddMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMessageViewController.swift; sourceTree = "<group>"; };
 		FC6E29D61BE329990016CEF9 /* kechengbiaoBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kechengbiaoBg.png; sourceTree = "<group>"; };
+		FC9497411BF72DCD00368E9F /* GetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetData.h; sourceTree = "<group>"; };
+		FC9497421BF72DCD00368E9F /* GetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetData.m; sourceTree = "<group>"; };
 		FC9B60D11BEF9888002812C0 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
 		FC9B60D21BEF9888002812C0 /* 18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 18.png; sourceTree = "<group>"; };
 		FCDF83121BF07C990044E78B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../../Downloads/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
@@ -706,6 +709,8 @@
 			isa = PBXGroup;
 			children = (
 				FC3F27941BD4F2BB00CE0737 /* ViewController.swift */,
+				FC9497411BF72DCD00368E9F /* GetData.h */,
+				FC9497421BF72DCD00368E9F /* GetData.m */,
 				FC1458A21BD7588200F74DE9 /* HomeTabBarViewController.swift */,
 				FC69473C1BE9E2E4002347D7 /* AddMessageViewController.swift */,
 			);
@@ -1194,6 +1199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9497431BF72DCD00368E9F /* GetData.m in Sources */,
 				FC1458D91BD784D900F74DE9 /* FootMarkViewController.swift in Sources */,
 				FC2206B91BF223FD004698B5 /* MJPropertyKey.m in Sources */,
 				FC2206BD1BF223FD004698B5 /* NSObject+MJKeyValue.m in Sources */,

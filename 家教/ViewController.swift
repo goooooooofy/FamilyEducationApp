@@ -9,13 +9,14 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController{
+class ViewController: UIViewController,HttpProtocol{
     
     @IBOutlet weak var searchStudent: UIButton!
     @IBOutlet weak var searchTeacher: UIButton!
     @IBOutlet weak var addButton: UIButton!
     var studentStatus:NSMutableArray?
-    let requestExa = HttpRequest()
+    let requestHttp = HttpRequest()
+    
     let reuseIdentifier = "ContentCell"
    
     //测试数据
@@ -24,14 +25,21 @@ class ViewController: UIViewController{
     let place = ["五邑大学对面","丰乐小区","鹤翔小区","礼乐镇万福小区","卜蜂莲花对面"]
     //cell行高缓存
     var cellHeightCache = NSCache()
+    var dataCount = 5
     //展示家教信息的TableView
     @IBOutlet weak var tableViewFraulein: UITableView!
     @IBOutlet var barButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
        self.initView()
-        self.loadNewData()
+        requestHttp.delegate = self
+        requestHttp.loadNewData(0)
+        requestHttp.loadNewData(1)
+        requestHttp.loadNewData(2)
+        requestHttp.loadNewData(3)
+        
 }
 
     
@@ -78,7 +86,6 @@ class ViewController: UIViewController{
         header.lastUpdatedTimeLabel?.textColor = UIColor(white: 1, alpha: 0.9)
         
         self.tableViewFraulein.header = header
-       // self.tableViewFraulein.header.beginRefreshing()
         self.initTabBar()
     }
     
@@ -116,39 +123,22 @@ class ViewController: UIViewController{
 
     func headerRefreshGetNewInfo() {
         self.tableViewFraulein.header.endRefreshing()
+        requestHttp.loadNewData(2)
+        self.tableViewFraulein.reloadData()
     }
     //MARK: - 用来加载找教师数据 - tabbar
     func searchTeachAction() {
+        
         self.tableViewFraulein.header.beginRefreshing()
     }
     //MARK: - 用来加载找学生数据 - tabbar
     func searchStudentAction() {
-        self.tableViewFraulein.header.beginRefreshing()
-    }
-    
-    //网络请求数据
-    
-    func httpPostData() {
-        Alamofire.request(.POST, "http://115.29.54.119:888/Post/requryInfo", parameters: ["num":"0"], encoding: ParameterEncoding.JSON, headers: nil).responseJSON { response -> Void in
-        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) {
-            if response.result.isSuccess {
-                let jsonDic = response.result.value as! NSDictionary
-                let dictArr:NSArray = jsonDic["stu"] as! NSArray
-                let array = [Student]()
-                self.studentStatus = NSMutableArray(array: array)
-                for var dict in dictArr {
-                    let studentBody = Student(dict: dict as! [NSObject : AnyObject])
-                    self.studentStatus?.addObject(studentBody)
-                }
-                print(self.studentStatus?[1].created_at)
-           
-            }
-        }
-           print(self.studentStatus?[1].created_at)
-        }
-        
 
+        self.dataCount += 5
+        self.tableViewFraulein.header.beginRefreshing()
+        self.tableViewFraulein.reloadData()
     }
+
 }
 
 
@@ -164,19 +154,26 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     
       func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        if self.studentStatus?.count == nil {
+            return 1
+        }
+        return (self.studentStatus?.count)!
     }
     
       func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CustomFrauleinViewCell
+        
         cell.selectionStyle = UITableViewCellSelectionStyle.None
-        cell.FrauleinDetailContent.text = self.studentStatus?[indexPath.row].stu_intro
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.layer.masksToBounds = true
-        cell.StudentFrauleinTittle.text = self.studentStatus?[indexPath.row].stu_course
-        cell.FrauleinPlace.text = self.studentStatus?[indexPath.row].stu_addr
+       
+        cell.StudentFrauleinTittle.text = self.content[indexPath.row]
+        cell.FrauleinPlace.text = self.content[indexPath.row]
+         cell.FrauleinDetailContent.text = self.studentStatus?[indexPath.row].stu_intro!
         cell.FrauleinLevel.getLevelStar(Int(arc4random_uniform(6)))
-        print(self.studentStatus?[1].created_at)
+    
+        //把行高放进缓存
+        cellHeightCache.setObject(cell.heightForCell("\(self.studentStatus?[indexPath.row].stu_intro)") + 2, forKey: indexPath.row)
         return cell
         
     }
@@ -186,13 +183,13 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if let rowHeight = cellHeightCache.objectForKey(indexPath.row) as? CGFloat {
+            
             return rowHeight
         }
-        let cell = tableViewFraulein.dequeueReusableCellWithIdentifier(reuseIdentifier) as! CustomFrauleinViewCell
-        let rowHeight = cell.heightForCell(content[indexPath.row]) + 2
-        //把行高放进缓存
-        cellHeightCache.setObject(cell.heightForCell(content[indexPath.row]) + 2, forKey: indexPath.row)
-        return rowHeight
+        
+        let rowHeight = cellHeightCache.objectForKey(indexPath.row) as? CGFloat
+        
+        return 100
     }
     
     //MARK: -button action
@@ -201,31 +198,24 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         self.presentViewController(ChatListViewController(), animated: true, completion: nil)
         
     }
-   
+ 
     
-    func loadNewData() {
-
-        let manager = AFHTTPRequestOperationManager()
-        manager.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
-        let params:NSDictionary = ["num":"0"]
-        manager.POST("http://115.29.54.119:888/Post/requryInfo", parameters: params, success: { (operation, response) -> Void in
-            let responseDic = response as? NSDictionary
-            let dictArr:NSArray = (responseDic!["stu"] as? NSArray)!
-            let array = [Student]()
+    func didReceiveResults(result: NSMutableArray) {
+        if studentStatus?.count == nil {
+            var array = [Student]()
             self.studentStatus = NSMutableArray(array: array)
-            for var dict in dictArr {
-                let studentBody = Student(dict: dict as! [NSObject : AnyObject])
-                self.studentStatus?.addObject(studentBody)
-                self.tableViewFraulein.reloadData()
-            }
-            print(self.studentStatus?.count)
-            
-            }) { (operation, error) -> Void in
-                
+        }
+      
+        for i in 0...result.count - 1{
+            self.studentStatus?.addObject(result[i])
+        }
+        let cell = tableViewFraulein.dequeueReusableCellWithIdentifier(reuseIdentifier) as! CustomFrauleinViewCell
+        cellHeightCache.setObject(cell.heightForCell("\(self.studentStatus?[((self.studentStatus?.count)! - 1)].stu_intro)"), forKey: (self.studentStatus?.count)! - 1)
+        if result.count != 0 {
+            self.tableViewFraulein.reloadData()
         }
         
     }
-    
 }
 
 

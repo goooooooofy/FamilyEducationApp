@@ -14,6 +14,6 @@
 #import "AFNetworking/AFNetworking.h"
 #import "Student.h"
 #import "Parents.h"
-
+#import "GetData.h"
 
 #endif /* Bridging_Header_h */
