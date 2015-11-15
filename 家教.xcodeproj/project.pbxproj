@@ -51,6 +51,7 @@
 		FC3F27EA1BD5044500CE0737 /* DeviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27E91BD5044500CE0737 /* DeviceData.swift */; };
 		FC3F27EC1BD5061700CE0737 /* CustomFrauleinViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27EB1BD5061700CE0737 /* CustomFrauleinViewCell.swift */; };
 		FC3F27F01BD50E1700CE0737 /* CustomFrauleinViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3F27EF1BD50E1700CE0737 /* CustomFrauleinViewCell.xib */; };
+		FC45AC361BF8C9F2000BB194 /* CannotLoginViiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45AC351BF8C9F2000BB194 /* CannotLoginViiewController.swift */; };
 		FC49E4981BEA0D8200A865FC /* SystemSettingVewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC49E4971BEA0D8200A865FC /* SystemSettingVewController.swift */; };
 		FC4F72751BF44C5E001D8FF9 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F72741BF44C5E001D8FF9 /* HttpRequest.swift */; };
 		FC4F72781BF452F6001D8FF9 /* Parents.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4F72771BF452F6001D8FF9 /* Parents.m */; };
@@ -251,6 +252,7 @@
 		FC3F27E91BD5044500CE0737 /* DeviceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceData.swift; sourceTree = "<group>"; };
 		FC3F27EB1BD5061700CE0737 /* CustomFrauleinViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFrauleinViewCell.swift; sourceTree = "<group>"; };
 		FC3F27EF1BD50E1700CE0737 /* CustomFrauleinViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomFrauleinViewCell.xib; sourceTree = "<group>"; };
+		FC45AC351BF8C9F2000BB194 /* CannotLoginViiewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CannotLoginViiewController.swift; sourceTree = "<group>"; };
 		FC49E4971BEA0D8200A865FC /* SystemSettingVewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemSettingVewController.swift; sourceTree = "<group>"; };
 		FC4F72741BF44C5E001D8FF9 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		FC4F72761BF452F6001D8FF9 /* Parents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parents.h; sourceTree = "<group>"; };
@@ -968,6 +970,7 @@
 			isa = PBXGroup;
 			children = (
 				FC94975A1BF7659800368E9F /* LoginViewController.swift */,
+				FC45AC351BF8C9F2000BB194 /* CannotLoginViiewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1287,6 +1290,7 @@
 				FCF89EFA1BD9D67E00625635 /* UUChatLeftMessageCell.swift in Sources */,
 				FC51213D1BD6097700DF1EC2 /* MJRefreshBackGifFooter.m in Sources */,
 				FC5121371BD6097700DF1EC2 /* MJRefreshComponent.m in Sources */,
+				FC45AC361BF8C9F2000BB194 /* CannotLoginViiewController.swift in Sources */,
 				FCF89EFC1BD9D67E00625635 /* UUInputView.swift in Sources */,
 				FC4F72751BF44C5E001D8FF9 /* HttpRequest.swift in Sources */,
 				FC3F27EA1BD5044500CE0737 /* DeviceData.swift in Sources */,

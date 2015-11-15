@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UINavigationControllerDelegate {
 
     let avaterImageView = UIImageView()
     
@@ -24,6 +24,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.delegate = self
+        self.navigationController?.navigationBarHidden = true
+        self.navigationController?.toolbarHidden = true
         self.initView()
 //        let time = NSTimer(timeInterval: 2, target: self, selector: "timerAction", userInfo: nil, repeats: true)
         NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "timerAction", userInfo: nil, repeats: true)
@@ -92,9 +95,7 @@ class LoginViewController: UIViewController {
     }
     
     func timerAction() {
-       
-        
-        
+    
         UIView.animateWithDuration(1, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
              self.avaterImageView.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI_2), 0, 1, 0)
             }) { (bool:Bool) -> Void in
@@ -102,6 +103,12 @@ class LoginViewController: UIViewController {
                     print("heh")
                     self.avaterImageView.layer.transform = CATransform3DMakeRotation(CGFloat(-M_PI_4), 0, 1, 0)
                 }
+        }
+    }
+    
+    func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+        if viewController == self {
+            self.navigationController?.navigationBarHidden = true
         }
     }
 }
