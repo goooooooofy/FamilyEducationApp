@@ -214,9 +214,20 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         if result.count != 0 {
             self.tableViewFraulein.reloadData()
         }
-        
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.layer.transform = CATransform3DMakeScale(0.9, 0.9, 1)
+        UIView.animateWithDuration(0.7) { () -> Void in
+            cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
+        }
     }
 }
+
+
+
+
+
 
 
 
