@@ -259,15 +259,6 @@
                                     <constraint firstAttribute="height" constant="5" id="bDN-uU-zhb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JjB-7K-239">
-                                <rect key="frame" x="201" y="236" width="240" height="128"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="T6y-ne-F23"/>
-                                    <constraint firstAttribute="width" constant="240" id="m0l-5a-A6V"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -276,10 +267,8 @@
                             <constraint firstItem="U3q-Af-fbU" firstAttribute="width" secondItem="Elk-PC-bJR" secondAttribute="width" id="4cb-BE-7Fd"/>
                             <constraint firstItem="U3q-Af-fbU" firstAttribute="top" secondItem="Elk-PC-bJR" secondAttribute="bottom" constant="-2" id="GVX-Qo-Sk0"/>
                             <constraint firstItem="U3q-Af-fbU" firstAttribute="centerX" secondItem="Elk-PC-bJR" secondAttribute="centerX" id="OOM-Gb-cau"/>
-                            <constraint firstItem="JjB-7K-239" firstAttribute="centerY" secondItem="fw9-k7-I0K" secondAttribute="centerY" id="ZuL-lu-kZY"/>
                             <constraint firstItem="U3q-Af-fbU" firstAttribute="leading" secondItem="fw9-k7-I0K" secondAttribute="leading" id="bcG-nz-s3n"/>
                             <constraint firstItem="RHT-r6-K4N" firstAttribute="leading" secondItem="fw9-k7-I0K" secondAttribute="leading" id="g9W-u7-DTt"/>
-                            <constraint firstItem="JjB-7K-239" firstAttribute="centerX" secondItem="fw9-k7-I0K" secondAttribute="centerX" id="gqh-El-H6Q"/>
                             <constraint firstItem="RHT-r6-K4N" firstAttribute="top" secondItem="FPM-TN-sy7" secondAttribute="bottom" id="iXx-od-Dzn"/>
                             <constraint firstItem="U3q-Af-fbU" firstAttribute="height" secondItem="Elk-PC-bJR" secondAttribute="height" id="nba-gp-Uuy"/>
                             <constraint firstAttribute="trailing" secondItem="RHT-r6-K4N" secondAttribute="trailing" id="pcw-RI-BxE"/>
