@@ -20,10 +20,9 @@ class CannotLoginViiewController: UIViewController {
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.title = "帮助中心"
-//        self.navigationController?.toolbarHidden = false
     }
  
-   
+    
     
     
 }
