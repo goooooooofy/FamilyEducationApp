@@ -343,6 +343,20 @@
                                     <action selector="systemSetting:" destination="fth-R5-ROZ" eventType="touchUpInside" id="22x-8v-Gdf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cs5-3q-uG4">
+                                <rect key="frame" x="200" y="341" width="200" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3f8-vh-z3s"/>
+                                    <constraint firstAttribute="width" constant="200" id="U9K-LF-cHP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="实名认证" image="realName.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKF-z9-rVR">
                                 <rect key="frame" x="150" y="135" width="300" height="330"/>
                                 <subviews>
@@ -374,20 +388,6 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrH-iu-7LY">
-                                        <rect key="frame" x="50" y="167" width="200" height="30"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="Duw-Rk-efz"/>
-                                            <constraint firstAttribute="height" constant="30" id="nCd-EY-9iu"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="历史活动" image="historyActivity.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touxiang" translatesAutoresizingMaskIntoConstraints="NO" id="aco-Dp-yAB">
                                         <rect key="frame" x="40" y="8" width="60" height="60"/>
                                         <animations/>
@@ -396,34 +396,6 @@
                                             <constraint firstAttribute="height" constant="60" id="y2N-9W-dNj"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nta-qr-Boi">
-                                        <rect key="frame" x="50" y="204" width="200" height="30"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="2sr-Ra-mHq"/>
-                                            <constraint firstAttribute="height" constant="30" id="OBR-NZ-Xdk"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="我的足迹" image="footprint.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cs5-3q-uG4">
-                                        <rect key="frame" x="50" y="243" width="200" height="30"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="3f8-vh-z3s"/>
-                                            <constraint firstAttribute="width" constant="200" id="U9K-LF-cHP"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="实名认证" image="realName.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="goofyy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrC-Rj-Tgy">
                                         <rect key="frame" x="110" y="8" width="150" height="21"/>
                                         <animations/>
@@ -443,7 +415,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0N-Sn-nKz">
-                                        <rect key="frame" x="50" y="281" width="200" height="30"/>
+                                        <rect key="frame" x="50" y="245" width="200" height="30"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="FuH-Qu-DO6"/>
@@ -460,32 +432,58 @@
                                             <segue destination="L0q-YT-oj1" kind="show" id="QT0-sd-OUx"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nta-qr-Boi">
+                                        <rect key="frame" x="50" y="167" width="200" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="2sr-Ra-mHq"/>
+                                            <constraint firstAttribute="height" constant="30" id="OBR-NZ-Xdk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="我的足迹" image="footprint.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzk-os-XUl">
+                                        <rect key="frame" x="50" y="284" width="200" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="KHj-UG-qGK"/>
+                                            <constraint firstAttribute="width" constant="200" id="Nq4-VZ-vze"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="注销" image="freeTimeTable.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="TUO-5X-Vv2" kind="showDetail" id="lyj-ke-Gpe"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="i0N-Sn-nKz" firstAttribute="centerX" secondItem="YrH-iu-7LY" secondAttribute="centerX" id="0WL-zK-0QM"/>
-                                    <constraint firstItem="nta-qr-Boi" firstAttribute="leading" secondItem="YrH-iu-7LY" secondAttribute="leading" id="2Cc-uA-U4c"/>
-                                    <constraint firstItem="YrH-iu-7LY" firstAttribute="centerX" secondItem="2RO-8m-4aQ" secondAttribute="centerX" id="3V6-3M-Ton"/>
-                                    <constraint firstItem="cs5-3q-uG4" firstAttribute="leading" secondItem="nta-qr-Boi" secondAttribute="leading" id="42v-FO-2Na"/>
-                                    <constraint firstItem="nta-qr-Boi" firstAttribute="top" secondItem="YrH-iu-7LY" secondAttribute="bottom" constant="8" id="59U-PG-gvb"/>
                                     <constraint firstItem="qrC-Rj-Tgy" firstAttribute="leading" secondItem="aco-Dp-yAB" secondAttribute="trailing" constant="10" id="AGg-eF-K7F"/>
                                     <constraint firstAttribute="height" constant="330" id="Cda-7w-SwR"/>
                                     <constraint firstItem="nta-qr-Boi" firstAttribute="leading" secondItem="i0N-Sn-nKz" secondAttribute="leading" id="Ebz-B9-SaP"/>
-                                    <constraint firstItem="cs5-3q-uG4" firstAttribute="top" secondItem="nta-qr-Boi" secondAttribute="bottom" constant="8" id="KLs-2W-qMb"/>
                                     <constraint firstItem="nN6-jJ-Etz" firstAttribute="centerX" secondItem="2RO-8m-4aQ" secondAttribute="centerX" id="LjY-jB-dtN"/>
                                     <constraint firstAttribute="bottom" secondItem="i0N-Sn-nKz" secondAttribute="bottom" constant="20" id="NJc-ji-7M8"/>
                                     <constraint firstAttribute="width" constant="300" id="O2x-PF-Wbx"/>
+                                    <constraint firstItem="Bzk-os-XUl" firstAttribute="centerX" secondItem="i0N-Sn-nKz" secondAttribute="centerX" id="RHT-Wf-r8Q"/>
                                     <constraint firstItem="aco-Dp-yAB" firstAttribute="top" secondItem="qKF-z9-rVR" secondAttribute="top" constant="8" id="SiT-2n-Q4m"/>
-                                    <constraint firstItem="cs5-3q-uG4" firstAttribute="leading" secondItem="i0N-Sn-nKz" secondAttribute="leading" id="Wiw-ZY-PPa"/>
-                                    <constraint firstItem="i0N-Sn-nKz" firstAttribute="top" secondItem="cs5-3q-uG4" secondAttribute="bottom" constant="8" id="ewu-nT-q68"/>
+                                    <constraint firstItem="nta-qr-Boi" firstAttribute="centerX" secondItem="2RO-8m-4aQ" secondAttribute="centerX" id="Soy-5Y-JiM"/>
+                                    <constraint firstItem="Bzk-os-XUl" firstAttribute="top" secondItem="i0N-Sn-nKz" secondAttribute="bottom" constant="9" id="fp7-gN-twK"/>
                                     <constraint firstItem="nN6-jJ-Etz" firstAttribute="top" secondItem="qKF-z9-rVR" secondAttribute="top" constant="90" id="gMu-S1-LS7"/>
                                     <constraint firstItem="eaE-oh-sWB" firstAttribute="top" secondItem="qrC-Rj-Tgy" secondAttribute="bottom" constant="9" id="hjq-KG-Fu0"/>
                                     <constraint firstItem="eaE-oh-sWB" firstAttribute="leading" secondItem="aco-Dp-yAB" secondAttribute="trailing" constant="10" id="ipw-EK-hZ3"/>
                                     <constraint firstItem="aco-Dp-yAB" firstAttribute="leading" secondItem="qKF-z9-rVR" secondAttribute="leading" constant="40" id="mfr-Sy-vqy"/>
                                     <constraint firstItem="2RO-8m-4aQ" firstAttribute="top" secondItem="nN6-jJ-Etz" secondAttribute="bottom" constant="8" id="nO0-an-Ste"/>
-                                    <constraint firstItem="YrH-iu-7LY" firstAttribute="top" secondItem="2RO-8m-4aQ" secondAttribute="bottom" constant="9" id="vvo-BT-M8p"/>
                                     <constraint firstItem="qrC-Rj-Tgy" firstAttribute="top" secondItem="qKF-z9-rVR" secondAttribute="top" constant="8" id="xk4-uc-isG"/>
+                                    <constraint firstItem="nta-qr-Boi" firstAttribute="top" secondItem="2RO-8m-4aQ" secondAttribute="bottom" constant="9" id="ych-IQ-LI5"/>
                                     <constraint firstAttribute="centerX" secondItem="nN6-jJ-Etz" secondAttribute="centerX" id="zEx-7e-yda"/>
                                 </constraints>
                                 <variation key="default">
@@ -501,6 +499,9 @@
                         <constraints>
                             <constraint firstItem="nk8-hr-2jo" firstAttribute="leading" secondItem="GS8-gc-m11" secondAttribute="leading" constant="10" id="4vf-nJ-q3v"/>
                             <constraint firstAttribute="centerY" secondItem="qKF-z9-rVR" secondAttribute="centerY" id="BSU-YQ-eb8"/>
+                            <constraint firstItem="cs5-3q-uG4" firstAttribute="top" secondItem="nta-qr-Boi" secondAttribute="bottom" constant="9" id="DK4-RN-Eua"/>
+                            <constraint firstItem="i0N-Sn-nKz" firstAttribute="top" secondItem="cs5-3q-uG4" secondAttribute="bottom" constant="9" id="pxt-RE-QM6"/>
+                            <constraint firstItem="cs5-3q-uG4" firstAttribute="leading" secondItem="nta-qr-Boi" secondAttribute="trailing" constant="-200" id="tqA-ea-4oC"/>
                             <constraint firstAttribute="bottom" secondItem="nk8-hr-2jo" secondAttribute="bottom" constant="10" id="vIj-GF-ATS"/>
                             <constraint firstAttribute="centerX" secondItem="qKF-z9-rVR" secondAttribute="centerX" id="zc3-Uf-Zag"/>
                         </constraints>
@@ -1138,7 +1139,6 @@
         <image name="footprint.png" width="25" height="25"/>
         <image name="freeTimeTable.png" width="25" height="25"/>
         <image name="headImage" width="220" height="220"/>
-        <image name="historyActivity.png" width="25" height="25"/>
         <image name="ic_menuL.png" width="14" height="10"/>
         <image name="left_message_back" width="32" height="55"/>
         <image name="message" width="20" height="20"/>
