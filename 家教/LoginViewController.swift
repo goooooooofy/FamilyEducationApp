@@ -28,8 +28,9 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
         self.navigationController?.navigationBarHidden = true
         self.navigationController?.toolbarHidden = true
         self.initView()
+         NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "timerAction", userInfo: nil, repeats: true)
 //        let time = NSTimer(timeInterval: 2, target: self, selector: "timerAction", userInfo: nil, repeats: true)
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+      
     }
     
     
@@ -83,14 +84,12 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
     
     func loginAction() {
         acitivityView.startAnimating()
+        
         let queue:dispatch_queue_t?
 //        dispatch_async(queue!) { () -> Void in
             let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
             let homePageNavigationController:UINavigationController = storyBoadrd.instantiateViewControllerWithIdentifier("homePage") as! UINavigationController
             self.presentViewController(homePageNavigationController, animated: true, completion: nil)
-
-//        }
-       //        sleep(3)
         
     }
     
@@ -104,6 +103,7 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
                     self.avaterImageView.layer.transform = CATransform3DMakeRotation(CGFloat(-M_PI_4), 0, 1, 0)
                 }
         }
+        
     }
     
     func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {

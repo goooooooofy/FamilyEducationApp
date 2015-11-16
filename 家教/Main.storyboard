@@ -191,6 +191,78 @@
             </objects>
             <point key="canvasLocation" x="3370" y="1027"/>
         </scene>
+        <!--注册新用户-->
+        <scene sceneID="m0l-aK-L7z">
+            <objects>
+                <viewController id="Q6U-k6-c5X" customClass="SignUpViewController" customModule="家教" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FPM-TN-sy7"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Pc-6p-ebI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fw9-k7-I0K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9L-wF-MCi">
+                                <rect key="frame" x="250" y="91" width="100" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="apE-G0-3HU"/>
+                                    <constraint firstAttribute="width" constant="100" id="x2m-Sp-9Z7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FNP-aa-6DW">
+                                <rect key="frame" x="250" y="150" width="100" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="CuG-gf-dJ6"/>
+                                    <constraint firstAttribute="height" constant="30" id="PNE-Ij-iBd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ixI-Pj-JHV">
+                                <rect key="frame" x="233" y="279" width="97" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PCv-BG-KDG"/>
+                                    <constraint firstAttribute="width" constant="100" id="Wff-ef-hKC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ldP-md-Wpu">
+                                <rect key="frame" x="233" y="212" width="97" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2Md-kn-43w"/>
+                                    <constraint firstAttribute="height" constant="30" id="n4c-7q-Von"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FNP-aa-6DW" firstAttribute="centerX" secondItem="fw9-k7-I0K" secondAttribute="centerX" id="Dfg-gJ-Gt0"/>
+                            <constraint firstItem="ixI-Pj-JHV" firstAttribute="top" secondItem="FPM-TN-sy7" secondAttribute="bottom" constant="215" id="HJO-gQ-XTR"/>
+                            <constraint firstItem="ldP-md-Wpu" firstAttribute="centerX" secondItem="fw9-k7-I0K" secondAttribute="centerX" id="HTA-LJ-QqI"/>
+                            <constraint firstItem="ldP-md-Wpu" firstAttribute="top" secondItem="FPM-TN-sy7" secondAttribute="bottom" constant="148" id="eRR-aX-xVc"/>
+                            <constraint firstItem="M9L-wF-MCi" firstAttribute="top" secondItem="FPM-TN-sy7" secondAttribute="bottom" constant="27" id="eS3-Vd-sql"/>
+                            <constraint firstItem="ixI-Pj-JHV" firstAttribute="centerX" secondItem="fw9-k7-I0K" secondAttribute="centerX" id="gil-Th-eZa"/>
+                            <constraint firstItem="M9L-wF-MCi" firstAttribute="centerX" secondItem="fw9-k7-I0K" secondAttribute="centerX" id="mN0-mH-v7P"/>
+                            <constraint firstItem="FNP-aa-6DW" firstAttribute="top" secondItem="FPM-TN-sy7" secondAttribute="bottom" constant="86" id="uEC-Yi-z84"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="注册新用户" id="l8G-se-V0p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4wF-ds-bhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2991" y="1859"/>
+        </scene>
         <!--Chat List View Controller-->
         <scene sceneID="tTR-X2-zpi">
             <objects>
@@ -611,8 +683,29 @@
                     <view key="view" contentMode="scaleToFill" id="cUz-a3-dVs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7n8-gQ-h03">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.25490196079999999" green="0.24313725489999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">一、检查宽带是否连接。
+检查方法：点击www.101xj.com。如果打不开，说明是宽带没有连接好或宽带有故障，如宽带有故障，请联系宽带服务商联系。
+二、如果宽带连接正常。
+关闭杀毒软件和防火墙（一般杀毒软件和防火墙在屏幕的右下角）。如果用户非电信用户，经过上述步骤仍无法解决，可以让用户先断开网络然后重新连接再试，或者在登陆窗口选择“其他线路一”或“其他线路二”。</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7n8-gQ-h03" firstAttribute="leading" secondItem="cUz-a3-dVs" secondAttribute="leading" id="QzJ-xM-ghY"/>
+                            <constraint firstItem="7n8-gQ-h03" firstAttribute="top" secondItem="0o8-VM-EFW" secondAttribute="bottom" id="SwA-Vl-S5a"/>
+                            <constraint firstAttribute="trailing" secondItem="7n8-gQ-h03" secondAttribute="trailing" id="cLQ-2e-Vvm"/>
+                            <constraint firstItem="KVS-gy-qRT" firstAttribute="top" secondItem="7n8-gQ-h03" secondAttribute="bottom" id="hmE-Yr-TR7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dgw-pJ-nux"/>
                 </viewController>
@@ -658,6 +751,9 @@
                                 <state key="normal" title="注册新用户">
                                     <color key="titleColor" red="0.28230518510000002" green="0.5321616535" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Q6U-k6-c5X" kind="push" id="RqT-ef-A9P"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>

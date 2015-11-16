@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -51,16 +52,45 @@
                         <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="messageCountImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="zZq-ZU-dlO">
+                        <rect key="frame" x="278" y="33" width="18" height="18"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="03q-Fz-qVA"/>
+                            <constraint firstAttribute="width" constant="18" id="uf7-A0-gOq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdm-Ta-nCW">
+                        <rect key="frame" x="281" y="36" width="12" height="12"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <animations/>
                 <constraints>
+                    <constraint firstItem="gdm-Ta-nCW" firstAttribute="centerY" secondItem="zZq-ZU-dlO" secondAttribute="centerY" id="7ST-Mt-CWI"/>
                     <constraint firstItem="Th2-FE-ZLb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="K0I-LI-9dW"/>
+                    <constraint firstItem="gdm-Ta-nCW" firstAttribute="leading" secondItem="zZq-ZU-dlO" secondAttribute="trailing" constant="-10" id="QbJ-L2-Q6X"/>
+                    <constraint firstItem="zZq-ZU-dlO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="23" id="RVk-eF-LLF"/>
                     <constraint firstItem="vD8-JY-KcH" firstAttribute="leading" secondItem="Th2-FE-ZLb" secondAttribute="trailing" constant="10" id="Ra5-0R-19P"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="zZq-ZU-dlO" secondAttribute="bottom" id="U1j-HG-kXL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="zZq-ZU-dlO" secondAttribute="trailing" constant="10" id="X0j-KL-iF0"/>
                     <constraint firstItem="5zi-ot-ltf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="amW-K5-qoe"/>
                     <constraint firstItem="vD8-JY-KcH" firstAttribute="top" secondItem="5zi-ot-ltf" secondAttribute="bottom" constant="3" id="kie-Ms-96D"/>
                     <constraint firstItem="Th2-FE-ZLb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lyH-Me-doe"/>
+                    <constraint firstItem="zZq-ZU-dlO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="276" id="p6D-WN-mcK"/>
+                    <constraint firstItem="gdm-Ta-nCW" firstAttribute="centerX" secondItem="zZq-ZU-dlO" secondAttribute="centerX" id="tAe-Y8-OBc"/>
                     <constraint firstItem="5zi-ot-ltf" firstAttribute="leading" secondItem="Th2-FE-ZLb" secondAttribute="trailing" constant="10" id="tbe-zZ-z4A"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="RVk-eF-LLF"/>
+                        <exclude reference="p6D-WN-mcK"/>
+                        <exclude reference="QbJ-L2-Q6X"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <animations/>
             <connections>
@@ -68,11 +98,13 @@
                 <outlet property="chatNickName" destination="5zi-ot-ltf" id="DBR-ke-qHB"/>
                 <outlet property="chatRecentMessage" destination="vD8-JY-KcH" id="B1g-hC-iwp"/>
                 <outlet property="chatRecentTime" destination="wdz-w3-y4r" id="OTW-jf-9ew"/>
+                <outlet property="messageImageView" destination="zZq-ZU-dlO" id="IhX-Ud-STv"/>
             </connections>
             <point key="canvasLocation" x="250" y="208"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="messageCountImage.png" width="24" height="24"/>
         <image name="touxiang" width="590" height="590"/>
     </resources>
 </document>

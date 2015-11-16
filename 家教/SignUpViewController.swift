@@ -1,15 +1,15 @@
 //
-//  CannotLoginViiewController.swift
+//  SignUpViewController.swift
 //  家教
 //
-//  Created by goofygao on 15/11/15.
+//  Created by goofygao on 15/11/16.
 //  Copyright © 2015年 goofyy. All rights reserved.
 //
 
 import UIKit
 
-class CannotLoginViiewController: UIViewController {
-
+class SignUpViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false
@@ -19,11 +19,6 @@ class CannotLoginViiewController: UIViewController {
         navBar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.title = "帮助中心"
-//        self.navigationController?.toolbarHidden = false
     }
- 
-   
-    
     
 }

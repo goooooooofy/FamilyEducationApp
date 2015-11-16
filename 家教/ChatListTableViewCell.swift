@@ -18,11 +18,21 @@ class ChatListTableViewCell: UITableViewCell {
     //最近一次消息的时间
     @IBOutlet weak var chatRecentTime: UILabel!
     
+    @IBOutlet weak var messageImageView: UIImageView!
+    //信息的条数
+    var messageNumerLabel = UILabel()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         //头像加蒙版
         chatAvaterImage.layer.cornerRadius = chatAvaterImage.frame.height/2
         chatAvaterImage.layer.masksToBounds = true
+        messageNumerLabel.center = messageImageView.center
+        messageNumerLabel.frame.size = CGSizeMake(15, 15)
+        messageNumerLabel.font = UIFont.systemFontOfSize(10)
+        messageNumerLabel.textAlignment = NSTextAlignment.Center
+        messageNumerLabel.text = "10"
+        self.messageImageView.addSubview(messageNumerLabel)
 //        self.
         // Initialization code
     }
