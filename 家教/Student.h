@@ -125,7 +125,7 @@
 
 @property (nonatomic,copy) NSString *stu_grade;
 
-@property (nonatomic,copy) NSNumber *stu_star;
+@property (nonatomic,assign) int stu_star;
 
 @property (nonatomic,copy) NSString *stu_edu;
 

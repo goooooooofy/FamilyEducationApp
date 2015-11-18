@@ -20,7 +20,7 @@ class ViewController: UIViewController,HttpProtocol{
     let reuseIdentifier = "ContentCell"
    
     //测试数据
-    let content = ["小学生辅导功课，帮助预习复习应试。初中生一样。高中帮忙灵活应付高考。带学生快乐开心地学习又有成果","英语水平在雅思七分以上或托福优秀，主要是口语和听力优秀，要最好最快的速度教会英语。","对小孩子有耐心，热爱教育行业，认真负责 。最好是擅长初中物理化学,检查学生的作业是否有批漏，订正，学生有不懂的题目帮学生解答。管好学生的纪律","1、有2年以上家教经验，有在培训机构从教经验者优先考虑\n2、熟悉初中或高中语文教学大纲、考试重难点 \n3、能够针对学生情况制定教学计划，独立编写教案 内容来自\n4、在授课期间适当组织测验活动，检验学生接受辅导的成效","辅导小学生作业，管理纪律，周一到五下午5：30~6：30有空的，喜欢和能与小朋友相处的。"]
+    
     let yaoqiu = ["大一大二学生","找英语老师","擅长初中物理化学","有家教经验","辅导作业"]
     let place = ["五邑大学对面","丰乐小区","鹤翔小区","礼乐镇万福小区","卜蜂莲花对面"]
     //cell行高缓存
@@ -161,20 +161,28 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
       func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CustomFrauleinViewCell
         
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.layer.masksToBounds = true
        
-        cell.StudentFrauleinTittle.text = self.content[indexPath.row]
-        cell.FrauleinPlace.text = self.content[indexPath.row]
+        cell.StudentFrauleinTittle.text = self.studentStatus?[indexPath.row].stu_name
+        cell.FrauleinPlace.text = self.studentStatus?[indexPath.row].stu_addr
          cell.FrauleinDetailContent.text = self.studentStatus?[indexPath.row].stu_intro!
-        cell.FrauleinLevel.getLevelStar(Int(arc4random_uniform(6)))
-    
+        if let _ = self.studentStatus?[indexPath.row].stu_star {
+             cell.FrauleinLevel.getLevelStar(Int((self.studentStatus?[indexPath.row].stu_star)!))
+        } else {
+            cell.FrauleinLevel.getLevelStar(Int(arc4random_uniform(6)))
+        }
+//        cell.FrauleinLevel.getLevelStar(Int((self.studentStatus?[indexPath.row].stu_star)!))
+        
         //把行高放进缓存
         cellHeightCache.setObject(cell.heightForCell("\(self.studentStatus?[indexPath.row].stu_intro)") + 2, forKey: indexPath.row)
+        
         return cell
+            
         
     }
     
