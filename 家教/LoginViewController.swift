@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController,UINavigationControllerDelegate {
+class LoginViewController: UIViewController,UINavigationControllerDelegate,UITextFieldDelegate {
 
     let avaterImageView = UIImageView()
     
@@ -22,14 +22,19 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
     
     var acitivityView = UIActivityIndicatorView()
     
+    var alertView = UIAlertView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginUserNameTextField.delegate = self
+        passwordTextField.delegate = self
         self.navigationController?.delegate = self
         self.navigationController?.navigationBarHidden = true
         self.navigationController?.toolbarHidden = true
         self.initView()
-         NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "timerAction", userInfo: nil, repeats: true)
 //        let time = NSTimer(timeInterval: 2, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+        
       
     }
     
@@ -83,13 +88,38 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
     }
     
     func loginAction() {
-        acitivityView.startAnimating()
+       
+        print(loginUserNameTextField.text)
+        if loginUserNameTextField.text == "" || passwordTextField.text == "" {
+            self.alertView = UIAlertView(title: "提示", message: "亲好像还没有登陆哦", delegate:  self, cancelButtonTitle: "OK")
+            alertView.show()
+        } else {
+             acitivityView.startAnimating()
+            
+            
+            let manager = AFHTTPRequestOperationManager()
+            manager.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
+            let params:NSDictionary = ["password":passwordTextField.text!,"username":loginUserNameTextField.text!]
+            print(params)
+            manager.POST("http://115.29.54.119:888/Post/login", parameters: params, success: { (operation, response) -> Void in
+                let responseDic = response as? NSDictionary
+                print(responseDic)
+                if(responseDic == nil) {
+                    self.alertView = UIAlertView(title: "提示", message: "亲好像还没注册哦", delegate:  self, cancelButtonTitle: "OK")
+                    self.alertView.show()
+                    self.acitivityView.stopAnimating()
+                } else {
+                    let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                    let homePageNavigationController:UINavigationController = storyBoadrd.instantiateViewControllerWithIdentifier("homePage") as! UINavigationController
+                    self.presentViewController(homePageNavigationController, animated: true, completion: nil)
+                }
+                
+                }) { (operation, error) -> Void in
+                    
+            }
+           
+        }
         
-        let queue:dispatch_queue_t?
-//        dispatch_async(queue!) { () -> Void in
-            let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-            let homePageNavigationController:UINavigationController = storyBoadrd.instantiateViewControllerWithIdentifier("homePage") as! UINavigationController
-            self.presentViewController(homePageNavigationController, animated: true, completion: nil)
         
     }
     
@@ -99,7 +129,7 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
              self.avaterImageView.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI_2), 0, 1, 0)
             }) { (bool:Bool) -> Void in
                 UIView.animateWithDuration(1) { () -> Void in
-                    print("heh")
+    
                     self.avaterImageView.layer.transform = CATransform3DMakeRotation(CGFloat(-M_PI_4), 0, 1, 0)
                 }
         }
@@ -110,6 +140,28 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
         if viewController == self {
             self.navigationController?.navigationBarHidden = true
         }
+    }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        
+        return true
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        loginUserNameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        loginUserNameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        loginUserNameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
 }
 
