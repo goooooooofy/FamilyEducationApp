@@ -85,6 +85,7 @@
 		FC94975B1BF7659800368E9F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC94975A1BF7659800368E9F /* LoginViewController.swift */; };
 		FC9B60D31BEF9888002812C0 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9B60D11BEF9888002812C0 /* 16.png */; };
 		FC9B60D41BEF9888002812C0 /* 18.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9B60D21BEF9888002812C0 /* 18.png */; };
+		FCAF4F821BFCA32C0087237E /* FamilyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF4F811BFCA32C0087237E /* FamilyInfoViewController.swift */; };
 		FCDF832C1BF07E350044E78B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDF831D1BF07C990044E78B /* Alamofire.framework */; };
 		FCDF832D1BF07E350044E78B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCDF831D1BF07C990044E78B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FCE0A0361BE1EED600257372 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE0A0351BE1EED600257372 /* setting.png */; };
@@ -311,6 +312,7 @@
 		FC94975A1BF7659800368E9F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FC9B60D11BEF9888002812C0 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
 		FC9B60D21BEF9888002812C0 /* 18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 18.png; sourceTree = "<group>"; };
+		FCAF4F811BFCA32C0087237E /* FamilyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyInfoViewController.swift; sourceTree = "<group>"; };
 		FCDF83121BF07C990044E78B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../../Downloads/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		FCE0A0351BE1EED600257372 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		FCE527CA1BFAFA19000A74FB /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -732,6 +734,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3F27941BD4F2BB00CE0737 /* ViewController.swift */,
+				FCAF4F811BFCA32C0087237E /* FamilyInfoViewController.swift */,
 				FC9497411BF72DCD00368E9F /* GetData.h */,
 				FC9497421BF72DCD00368E9F /* GetData.m */,
 				FC1458A21BD7588200F74DE9 /* HomeTabBarViewController.swift */,
@@ -1335,6 +1338,7 @@
 				FC3F27C81BD4F2EA00CE0737 /* GuillotineMenuTransitionAnimation.swift in Sources */,
 				FC3F27931BD4F2BB00CE0737 /* AppDelegate.swift in Sources */,
 				FC4F72781BF452F6001D8FF9 /* Parents.m in Sources */,
+				FCAF4F821BFCA32C0087237E /* FamilyInfoViewController.swift in Sources */,
 				FC1458D71BD784AF00F74DE9 /* RealName ViewController.swift in Sources */,
 				FC1458B91BD76DFD00F74DE9 /* ChatListViewController.swift in Sources */,
 				FCE58A321BF315FD002894AD /* AFURLSessionManager.m in Sources */,

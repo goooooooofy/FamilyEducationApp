@@ -146,7 +146,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2538" y="337"/>
+            <point key="canvasLocation" x="2537" y="296"/>
+        </scene>
+        <!--Family Info View Controller-->
+        <scene sceneID="crT-IP-Dnm">
+            <objects>
+                <viewController storyboardIdentifier="familyInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bo8-ha-UtO" customClass="FamilyInfoViewController" customModule="家教" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fga-aG-drJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ibK-gV-70P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dIP-Cd-UrG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.25490196079999999" green="0.24313725489999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GPP-F3-IPl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3U7-G1-QbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3231" y="206"/>
         </scene>
         <!--发招聘-->
         <scene sceneID="1jy-E9-CLo">

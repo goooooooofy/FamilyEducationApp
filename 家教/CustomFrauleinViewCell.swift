@@ -8,9 +8,13 @@
 
 import UIKit
 
-
+protocol CustomFrauleinViewCellDelegate {
+    func getRowNumber(dict:NSDictionary)
+}
 
 class CustomFrauleinViewCell: UITableViewCell {
+    
+    var delegate:CustomFrauleinViewCellDelegate?
     //头像
     @IBOutlet weak var avaterImage: UIImageView!
     //家教标题
@@ -52,15 +56,13 @@ class CustomFrauleinViewCell: UITableViewCell {
         commentButton.layer.borderWidth = 1
         commentButton.layer.borderColor = UIColor(white: 0.5, alpha: 0.1).CGColor
         likeButton.layer.borderWidth = 1
-        likeButton.layer.borderColor = UIColor(white: 0.5, alpha: 0.1).CGColor
-
-        
-        
+        likeButton.layer.borderColor = UIColor(white: 0.5, alpha: 0.1).CGColor        
     }
     
+
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-       
+//        self.delegate?.getRowNumber(<#T##dict: NSDictionary##NSDictionary#>)
     }
     //获取高度
     func heightForCell(status:String)-> CGFloat{

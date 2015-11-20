@@ -39,7 +39,7 @@
 /**
  *  索引用户表对应的id
  */
-@property (nonatomic,copy) NSString *stu_id;
+@property (nonatomic,assign) int stu_id;
 /**
  *  用户昵称
  */
@@ -59,7 +59,7 @@
 /**
  *  发布人年龄
  */
-@property (nonatomic,copy) NSString *stu_age;
+@property (nonatomic,assign) int stu_age;
 /**
  *  发布人联系方式
  */
@@ -95,11 +95,11 @@
 /**
  *  发布的价格区间 开始
  */
-@property (nonatomic,copy) NSString *stu_bcost;
+@property (nonatomic,assign) int stu_bcost;
 /**
  *  发布的价格区间 结束
  */
-@property (nonatomic,copy) NSString *stu_lcost;
+@property (nonatomic,assign) int stu_lcost;
 /**
  *  发布的需要的义工时间
  */
@@ -129,7 +129,7 @@
 
 @property (nonatomic,copy) NSString *stu_edu;
 
-@property (nonatomic,copy) NSString *real_sign;
+@property (nonatomic,assign) int real_sign;
 
 @property (nonatomic,copy) NSString *stu_freHis;
 

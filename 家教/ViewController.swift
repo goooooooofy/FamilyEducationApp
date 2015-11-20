@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 
+
 class ViewController: UIViewController,HttpProtocol{
     
     @IBOutlet weak var searchStudent: UIButton!
@@ -18,17 +19,14 @@ class ViewController: UIViewController,HttpProtocol{
     let requestHttp = HttpRequest()
     
     let reuseIdentifier = "ContentCell"
-   
-    //测试数据
-    
-    let yaoqiu = ["大一大二学生","找英语老师","擅长初中物理化学","有家教经验","辅导作业"]
-    let place = ["五邑大学对面","丰乐小区","鹤翔小区","礼乐镇万福小区","卜蜂莲花对面"]
     //cell行高缓存
     var cellHeightCache = NSCache()
     var dataCount = 5
+    var transformValuesDictionary:NSMutableDictionary = NSMutableDictionary()
     //展示家教信息的TableView
     @IBOutlet weak var tableViewFraulein: UITableView!
     @IBOutlet var barButton: UIButton!
+    let defaultValue = NSUserDefaults.standardUserDefaults()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +37,7 @@ class ViewController: UIViewController,HttpProtocol{
         requestHttp.loadNewData(1)
         requestHttp.loadNewData(2)
         requestHttp.loadNewData(3)
+        self.tableViewFraulein.reloadData()
         
 }
 
@@ -86,6 +85,7 @@ class ViewController: UIViewController,HttpProtocol{
         header.lastUpdatedTimeLabel?.textColor = UIColor(white: 1, alpha: 0.9)
         
         self.tableViewFraulein.header = header
+         self.tableViewFraulein.header.beginRefreshing()
         self.initTabBar()
     }
     
@@ -122,9 +122,9 @@ class ViewController: UIViewController,HttpProtocol{
     
 
     func headerRefreshGetNewInfo() {
-        self.tableViewFraulein.header.endRefreshing()
+//        self.tableViewFraulein.header.endRefreshing()
         requestHttp.loadNewData(2)
-        self.tableViewFraulein.reloadData()
+//        self.tableViewFraulein.reloadData()
     }
     //MARK: - 用来加载找教师数据 - tabbar
     func searchTeachAction() {
@@ -140,9 +140,6 @@ class ViewController: UIViewController,HttpProtocol{
     }
 
 }
-
-
-
 //MARK: - tableview添加代理方法
 
 extension ViewController: UITableViewDelegate,UITableViewDataSource {
@@ -163,6 +160,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
       func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CustomFrauleinViewCell
+      
         
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.contentView.layer.cornerRadius = 10
@@ -186,10 +184,47 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+       
+        let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let familyStoryBoard:FamilyInfoViewController = storyBoadrd.instantiateViewControllerWithIdentifier("familyInfo") as! FamilyInfoViewController
+        self.navigationController?.pushViewController(familyStoryBoard, animated: true)
+//        let archivedObject = NSKeyedArchiver.archivedDataWithRootObject([Student]())
+//        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        defaultValue.setObject("\(self.studentStatus![indexPath.row].stu_id)", forKey: "stu_id")
+        defaultValue.setObject(self.studentStatus![indexPath.row].username, forKey: "username")
+        defaultValue.setObject(self.studentStatus![indexPath.row].stu_name, forKey: "stu_name")
+        defaultValue.setObject(self.studentStatus![indexPath.row].stu_sign, forKey: "stu_sign")
+        defaultValue.setObject("\(self.studentStatus![indexPath.row].stu_sex)", forKey: "stu_sex")
+        defaultValue.setObject("\(self.studentStatus![indexPath.row].stu_age)", forKey: "stu_age")
+        defaultValue.setObject(self.studentStatus![indexPath.row].stu_num, forKey: "stu_num")
+        defaultValue.setObject(self.studentStatus![indexPath.row].stu_addr, forKey: "stu_addr")
+//        defaultValue.setObject(self.studentStatus![indexPath.row].stu_edu, forKey: "stu_edu")
+//        defaultValue.setObject(self.studentStatus![indexPath.row].stu_major, forKey: "stu_major")
+        defaultValue.setObject(self.studentStatus![indexPath.row].stu_course, forKey: "stu_course")
+        defaultValue.setObject(self.studentStatus![indexPath.row].stu_intro, forKey: "stu_intro")
+        defaultValue.setObject(self.studentStatus![indexPath.row].stu_pic, forKey: "stu_pic")
+        defaultValue.setObject("\(self.studentStatus![indexPath.row].stu_collect)", forKey: "stu_collect")
+        defaultValue.setObject("\(self.studentStatus![indexPath.row].stu_bcost)", forKey: "stu_bcost")
+        defaultValue.setObject("\(self.studentStatus![indexPath.row].stu_lcost)", forKey: "stu_lcost")
+        defaultValue.setObject(self.studentStatus![indexPath.row].volTime, forKey: "volTime")
+        defaultValue.setObject(self.studentStatus![indexPath.row].free_time, forKey: "free_time")
+////        defaultValue.setObject(self.studentStatus![indexPath.row].lfree_time, forKey: "lfree_time")
+        defaultValue.setObject("\(self.studentStatus![indexPath.row].stu_collect)", forKey: "stu_collect")
+        defaultValue.setObject("\(self.studentStatus![indexPath.row].stu_star)", forKey: "stu_star")
+        defaultValue.setObject("\(self.studentStatus![indexPath.row].real_sign)", forKey: "real_sign")
+//        defaultValue.setObject(self.studentStatus![indexPath.row].volTime, forKey: "volTime")
+        defaultValue.synchronize()
     }
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    
+//    kind
+    
+        func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if let rowHeight = cellHeightCache.objectForKey(indexPath.row) as? CGFloat {
             
             return rowHeight
@@ -219,7 +254,9 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         }
         let cell = tableViewFraulein.dequeueReusableCellWithIdentifier(reuseIdentifier) as! CustomFrauleinViewCell
         cellHeightCache.setObject(cell.heightForCell("\(self.studentStatus?[((self.studentStatus?.count)! - 1)].stu_intro)"), forKey: (self.studentStatus?.count)! - 1)
-        if result.count != 0 {
+        if self.studentStatus?.count > 3 {
+            print("++++++++++++++++++++")
+            self.tableViewFraulein.header.endRefreshing()
             self.tableViewFraulein.reloadData()
         }
     }
@@ -230,6 +267,8 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
             cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
         }
     }
+    
+    
 }
 
 
