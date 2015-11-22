@@ -10,11 +10,13 @@ import UIKit
 
 class RealNameViewController: UIViewController {
 
-    let label = UILabel(frame: CGRectMake(DeviceData.width/2, DeviceData.height/2, 100, 100))
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.randColor(1)
-        label.text = "实名认证"
+        self.title = "实名认证"
+        let navBar = self.navigationController?.navigationBar
+        navBar?.barTintColor = UIColor(red: 65.0 / 255.0, green: 62.0 / 255.0, blue: 79.0 / 255.0, alpha: 1)
+        navBar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // Do any additional setup after loading the view.
     }
 
@@ -24,14 +26,5 @@ class RealNameViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }

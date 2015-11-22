@@ -48,7 +48,32 @@ class GuillotineMenuViewController: UIViewController {
 
     }
     
-  
+  //realNameRenZhen
+    @IBAction func realNameRenZheng(sender: UIButton) {
+        print("hello")
+        let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let realNameRenZhenStoryboard:UINavigationController = storyBoadrd.instantiateViewControllerWithIdentifier("realNameRenZhen") as! UINavigationController
+        self.bgView.removeFromSuperview()
+        self.settingButton.removeFromSuperview()
+        self.menuButton.removeFromSuperview()
+        
+        // self.navigationController?.presentViewController(systemSettingStoryBoard, animated: true, completion: nil)
+        self.presentViewController(realNameRenZhenStoryboard, animated: true) { () -> Void in
+            var i = 0
+            //内存管理-处理视图叠加导致内存暴增
+            let window = UIApplication.sharedApplication().keyWindow?.subviews
+            if let _ = window {
+                for var view:UIView in (window)! {
+                    if i != (window?.count)! - 1 {
+                        view.removeFromSuperview()
+                    }
+                    i++
+                }
+            }
+        }
+
+        
+    }
     
     @IBAction func systemSetting(sender: UIButton) {
         

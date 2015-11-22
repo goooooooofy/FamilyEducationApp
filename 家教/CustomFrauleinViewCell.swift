@@ -56,7 +56,8 @@ class CustomFrauleinViewCell: UITableViewCell {
         commentButton.layer.borderWidth = 1
         commentButton.layer.borderColor = UIColor(white: 0.5, alpha: 0.1).CGColor
         likeButton.layer.borderWidth = 1
-        likeButton.layer.borderColor = UIColor(white: 0.5, alpha: 0.1).CGColor        
+        likeButton.layer.borderColor = UIColor(white: 0.5, alpha: 0.1).CGColor
+        collectButton.addTarget(self, action: "collectionAction:", forControlEvents: UIControlEvents.TouchDown)
     }
     
 
@@ -72,6 +73,21 @@ class CustomFrauleinViewCell: UITableViewCell {
         self.layoutIfNeeded()
         //返回最最下方控件的最大Y值，就是高度啦
         return  CGRectGetMaxY(barView.frame)
+    }
+    
+    func collectionAction(sender:UIButton) {
+        let animationImage = UIImageView()
+       animationImage.image = UIImage(named: "collect_selecte.png")
+        animationImage.center = sender.center
+        animationImage.bounds.size = CGSizeMake(20, 20)
+        sender.addSubview(animationImage)
+        UIView.animateWithDuration(1.5, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+            animationImage.center.x = sender.center.x - 15
+            animationImage.center.y = sender.center.y - 15
+            animationImage.bounds.size = CGSizeMake(40, 40)
+            animationImage.alpha = 0
+            }, completion: nil)
+        
     }
     
    
