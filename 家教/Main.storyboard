@@ -30,7 +30,7 @@
                                         </constraints>
                                         <state key="normal" image="tabbar_compose_icon_add"/>
                                         <connections>
-                                            <segue destination="Jw2-nS-1tD" kind="push" id="szv-e2-SjV"/>
+                                            <action selector="announceFamilyInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhF-du-SDp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qam-HI-bnT">
@@ -177,10 +177,10 @@
                         <viewControllerLayoutGuide type="bottom" id="3eS-gy-YFo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dcu-EJ-tOi">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkm-TW-Mh4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lkm-TW-Mh4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -260,7 +260,7 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Elk-PC-bJR" firstAttribute="leading" secondItem="RHT-r6-K4N" secondAttribute="leading" id="1Ea-DE-1Hv"/>
                                     <constraint firstItem="Elk-PC-bJR" firstAttribute="top" secondItem="RHT-r6-K4N" secondAttribute="top" id="6n7-0g-FZ0"/>

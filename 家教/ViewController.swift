@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 
-class ViewController: UIViewController,HttpProtocol{
+class ViewController: UIViewController,HttpProtocol,UIGestureRecognizerDelegate{
     
     @IBOutlet weak var searchStudent: UIButton!
     @IBOutlet weak var searchTeacher: UIButton!
@@ -27,6 +27,8 @@ class ViewController: UIViewController,HttpProtocol{
     @IBOutlet weak var tableViewFraulein: UITableView!
     @IBOutlet var barButton: UIButton!
     let defaultValue = NSUserDefaults.standardUserDefaults()
+    let maskView = UIView()
+    var singleTap = UITapGestureRecognizer()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -269,6 +271,76 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     
+    @IBAction func announceFamilyInfo(sender: UIButton) {
+        
+        
+        maskView.frame = CGRectMake(0, 0, DeviceData.width, DeviceData.height)
+        maskView.backgroundColor = UIColor.whiteColor()
+        
+        let searchFamilyButton = UIButton()
+        let announceFamilyButton = UIButton()
+        let annoceYiJiaoFamilyButton = UIButton()
+        let searchYiJiaoFamilyButton = UIButton()
+        
+        searchFamilyButton.center = sender.center
+        searchFamilyButton.frame.size = CGSizeZero
+        searchFamilyButton.backgroundColor = UIColor.randColor(1)
+        
+        announceFamilyButton.center = sender.center
+        announceFamilyButton.frame.size = CGSizeZero
+        announceFamilyButton.backgroundColor = UIColor.randColor(1)
+        
+        annoceYiJiaoFamilyButton.center = sender.center
+        annoceYiJiaoFamilyButton.frame.size = CGSizeZero
+        annoceYiJiaoFamilyButton.backgroundColor = UIColor.randColor(1)
+        
+        searchYiJiaoFamilyButton.center = sender.center
+        searchYiJiaoFamilyButton.frame.size = CGSizeZero
+        searchYiJiaoFamilyButton.backgroundColor = UIColor.randColor(1)
+        maskView.frame.size = CGSizeZero
+        maskView.center = CGPointMake(DeviceData.width/2, DeviceData.height)
+        searchFamilyButton.tag = 100
+        announceFamilyButton.tag = 101
+        annoceYiJiaoFamilyButton.tag = 102
+        searchYiJiaoFamilyButton.tag = 103
+        searchFamilyButton.addTarget(self, action: "addMessageAction:", forControlEvents: UIControlEvents.TouchDown)
+        announceFamilyButton.addTarget(self, action: "addMessageAction:", forControlEvents: UIControlEvents.TouchDown)
+        annoceYiJiaoFamilyButton.addTarget(self, action: "addMessageAction:", forControlEvents: UIControlEvents.TouchDown)
+        searchYiJiaoFamilyButton.addTarget(self, action: "addMessageAction:", forControlEvents: UIControlEvents.TouchDown)
+        maskView.addSubview(searchFamilyButton)
+        maskView.addSubview(announceFamilyButton)
+        maskView.addSubview(annoceYiJiaoFamilyButton)
+        maskView.addSubview(searchYiJiaoFamilyButton)
+        singleTap.delegate = self
+        singleTap.cancelsTouchesInView = false
+        singleTap = UITapGestureRecognizer(target: self, action: "singleTapAction")
+        singleTap.numberOfTapsRequired = 1
+                maskView.addGestureRecognizer(singleTap)
+        
+        
+        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                self.maskView.frame = (self.navigationController?.view.frame)!
+                self.navigationController?.view.addSubview(self.maskView)
+                searchFamilyButton.frame = CGRectMake(DeviceData.width/6, DeviceData.height - 100, 50, 50)
+                announceFamilyButton.frame = CGRectMake(DeviceData.width * 2/6, DeviceData.height - 100, 50, 50)
+                annoceYiJiaoFamilyButton.frame = CGRectMake(DeviceData.width * 3/6, DeviceData.height - 100, 50, 50)
+                searchYiJiaoFamilyButton.frame = CGRectMake(DeviceData.width * 4/6, DeviceData.height - 100, 50, 50)
+            }, completion: nil)
+    }
+    
+    
+    func addMessageAction(sender:UIButton) {
+        self.maskView.removeFromSuperview()
+        if sender.tag == 100 || sender.tag == 101 {
+            self.navigationController?.pushViewController(FindFamilyAndVolunController(), animated: false)
+        }
+    }
+    
+    func singleTapAction() {
+        UIView.animateWithDuration(0.7, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+            self.maskView.removeFromSuperview()
+            }, completion: nil)
+    }
 }
 
 

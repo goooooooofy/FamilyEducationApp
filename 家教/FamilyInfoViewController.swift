@@ -14,7 +14,7 @@ class FamilyInfoViewController: UIViewController {
     let personalInfoLabelUserName = UILabel()
     let personalInfoLabelStuID = UILabel()
     var avaterImageView = UIImageView()
-    
+//    let personalInfoLabel
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,9 +49,10 @@ class FamilyInfoViewController: UIViewController {
         personalInfoLabelStuID.text = "用户ID: " + "\(defaultValue.valueForKey("stu_id")!)"
         personalInfoLabelStuID.textColor = UIColor.whiteColor()
         personalInfoLabelStuID.font = UIFont.systemFontOfSize(15)
-
         self.view.addSubview(personalInfoLabelStuID)
     }
+    
+    
     
     
 }
