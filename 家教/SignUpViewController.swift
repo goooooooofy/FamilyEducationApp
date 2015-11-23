@@ -14,7 +14,6 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var emailSignButton: UIButton!
     
-    @IBOutlet weak var proViewLine: UIView!
     
     var registerView: UIView = UIView()
     
@@ -39,12 +38,26 @@ class SignUpViewController: UIViewController {
     var timer = NSTimer?()
     
     var second = 60
+    
+    var alertView = UIAlertView()
+    
+    let submitRegisterButton = UIButton()
+    
+    let chooseTeacherOrStudent = UITextField()
+    
+    var identtityButtonTag = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
         
     }
     
+    
+    /**
+     界面初始化
+     
+     - returns: no return value
+     */
     func initView() {
        
         self.navigationController?.navigationBarHidden = false
@@ -56,9 +69,8 @@ class SignUpViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         phoneSignButton.addTarget(self, action: "phoneSignAction:", forControlEvents: UIControlEvents.TouchDown)
         emailSignButton.addTarget(self, action: "emailSianAction:", forControlEvents: UIControlEvents.TouchDown)
-    print(CGRectGetMaxY(proViewLine.bounds))
-        registerView.frame = CGRectMake(0, CGRectGetMaxY(proViewLine.frame), DeviceData.width * 2 , DeviceData.height - CGRectGetMaxY(proViewLine.frame))
-        registerView.backgroundColor = UIColor.grayColor()
+        registerView.frame = CGRectMake(0, 105, DeviceData.width * 2 , DeviceData.height - CGRectGetMaxY(phoneSignButton.frame))
+        registerView.backgroundColor = UIColor(red: 65.0 / 255.0, green: 62.0 / 255.0, blue: 79.0 / 255.0, alpha: 1)
         self.view.addSubview(registerView)
         
         phoneTextField.frame = CGRectMake(40, 40, DeviceData.width - 80, 30)
@@ -89,6 +101,7 @@ class SignUpViewController: UIViewController {
         passwordFirstText.font = UIFont.systemFontOfSize(14)
         passwordFirstText.keyboardType = UIKeyboardType.EmailAddress
         passwordFirstText.returnKeyType = UIReturnKeyType.Next
+        passwordFirstText.secureTextEntry = true
         self.registerView.addSubview(passwordFirstText)
         
         passwordSecondText.frame = CGRectMake(40, 160, DeviceData.width - 80, 30)
@@ -99,9 +112,10 @@ class SignUpViewController: UIViewController {
         passwordSecondText.font = UIFont.systemFontOfSize(14)
         passwordSecondText.keyboardType = UIKeyboardType.EmailAddress
         passwordSecondText.returnKeyType = UIReturnKeyType.Next
+         passwordSecondText.secureTextEntry = true
         self.registerView.addSubview(passwordSecondText)
 
-        verificationCodeText.frame = CGRectMake(40, 200, DeviceData.width - 140, 30)
+        verificationCodeText.frame = CGRectMake(40, 200, DeviceData.width - 200, 30)
         verificationCodeText.placeholder = "输入验证码"
         verificationCodeText.textColor = UIColor.blackColor()
         verificationCodeText.borderStyle = UITextBorderStyle.RoundedRect
@@ -111,7 +125,9 @@ class SignUpViewController: UIViewController {
         verificationCodeText.returnKeyType = UIReturnKeyType.Next
         self.registerView.addSubview(verificationCodeText)
         
-        getVerificationCodeButton.frame = CGRectMake(CGRectGetMaxX(verificationCodeText.frame) + 10, CGRectGetMinY(verificationCodeText.frame), 80, 30)
+        getVerificationCodeButton.frame = CGRectMake(CGRectGetMaxX(verificationCodeText.frame) + 10, CGRectGetMinY(verificationCodeText.frame), 110, 30)
+        getVerificationCodeButton.layer.cornerRadius = 5
+        getVerificationCodeButton.layer.masksToBounds = true
         getVerificationCodeButton.backgroundColor = UIColor.blueColor()
         getVerificationCodeButton.setTitle("获取验证码", forState: UIControlState.Normal)
         getVerificationCodeButton.titleLabel?.font = UIFont.systemFontOfSize(13)
@@ -119,42 +135,115 @@ class SignUpViewController: UIViewController {
         getVerificationCodeButton.addTarget(self, action: "getVerificationCodeAction:", forControlEvents: UIControlEvents.TouchDown)
         self.registerView.addSubview(getVerificationCodeButton)
 
-        agreeProtocolButton.frame = CGRectMake(40, 240, 20, 20)
-        agreeProtocolButton.setImage(UIImage(named: "new_feature_share_false"), forState: UIControlState.Normal)
-        agreeProtocolButton.setImage(UIImage(named: "new_feature_share_true"), forState: UIControlState.Highlighted)
-        self.registerView.addSubview(agreeProtocolButton)
+//        agreeProtocolButton.frame = CGRectMake(40, 240, 20, 20)
+//        agreeProtocolButton.setImage(UIImage(named: "new_feature_share_false"), forState: UIControlState.Normal)
+//        agreeProtocolButton.addTarget(self, action: "agreeProtocolAction:", forControlEvents: UIControlEvents.TouchDown)
+//        self.registerView.addSubview(agreeProtocolButton)
+//        
+//        agreeTittleLabel.frame = CGRectMake(65, 240, 100, 21)
+//        agreeTittleLabel.text = "同意协议 "
+//        self.registerView.addSubview(agreeTittleLabel)
+        phoneSignButton.enabled = true
         
-        agreeTittleLabel.frame = CGRectMake(65, 240, 100, 21)
-        agreeTittleLabel.text = "同意协议 "
-        self.registerView.addSubview(agreeTittleLabel)
+        alertView = UIAlertView(title: "提示", message: "请选择你注册的类型", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "老师", "家长")
+        alertView.targetForAction("alertAction", withSender: self)
+        
+        chooseTeacherOrStudent.frame = CGRectMake(CGRectGetMinX(verificationCodeText.frame), CGRectGetMaxY(verificationCodeText.frame) + 15, DeviceData.width - 80, 30)
+        
+        chooseTeacherOrStudent.keyboardType = UIKeyboardType.NumberPad
+//        chooseTeacherOrStudent.textColor = UIColor.whiteColor()
+        chooseTeacherOrStudent.borderStyle = UITextBorderStyle.RoundedRect
+        chooseTeacherOrStudent.font = UIFont.systemFontOfSize(14)
+        chooseTeacherOrStudent.delegate = self
+        chooseTeacherOrStudent.tag = 400
+        chooseTeacherOrStudent.placeholder = "你是老师还是家教"
+        self.registerView.addSubview(chooseTeacherOrStudent)
+
+        submitRegisterButton.frame = CGRectMake(CGRectGetMinX(verificationCodeText.frame), CGRectGetMaxY(chooseTeacherOrStudent.frame) + 15, DeviceData.width - 80, 35)
+        submitRegisterButton.setImage(UIImage(named: "bt_setr_submit.png"), forState: UIControlState.Normal)
+        submitRegisterButton.addTarget(self, action: "submitRegisterAction:", forControlEvents: UIControlEvents.TouchDown)
+        self.registerView.addSubview(submitRegisterButton)
+        identtityButtonTag = 10
+        phoneSignButton.setTitleColor(UIColor(white: 1, alpha: 0.8), forState: UIControlState.Normal)
+        phoneSignButton.backgroundColor = UIColor(red: 0.23, green: 0.34, blue: 0.54, alpha: 1)
     }
     
     /**
-    *  buttonAction  animation
-    */
+     手机注册button
+     
+     - parameter sender: button self
+     */
     func phoneSignAction(sender:UIButton) {
-        sender.tintColor = UIColor.blueColor()
+        emailSignButton.backgroundColor = UIColor.clearColor()
+        sender.backgroundColor = UIColor(red: 0.23, green: 0.34, blue: 0.54, alpha: 1)
+        emailSignButton.setTitleColor(UIColor(white: 0, alpha: 0.8), forState: UIControlState.Normal)
+        sender.setTitleColor(UIColor(white: 1, alpha: 0.8), forState: UIControlState.Normal)
+        phoneTextField.keyboardType = UIKeyboardType.NumberPad
         UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            self.proViewLine.frame = CGRectMake(0, self.proViewLine.frame.origin.y, DeviceData.width/2, 5)
+            
+            self.registerView.bounds.origin.x -= DeviceData.width
+            self.nickNameTextFied.center.x -= DeviceData.width
+            self.passwordFirstText.center.x -= DeviceData.width
+            self.passwordSecondText.center.x -= DeviceData.width
+            self.getVerificationCodeButton.center.x -= DeviceData.height
+            self.phoneTextField.center.x -= DeviceData.width
+            self.phoneTextField.placeholder = "请输入你的手机号码"
+            self.chooseTeacherOrStudent.center.x -= DeviceData.width
+            self.chooseTeacherOrStudent.center.y += 45
+            self.submitRegisterButton.center.x -= DeviceData.width
+            self.submitRegisterButton.center.y += 45
             }, completion: nil)
-        self.registerView.bounds.origin.x -= DeviceData.width
         
+        sender.enabled = false
+        emailSignButton.enabled = true
+        identtityButtonTag = sender.tag
     }
     
+    /**
+     邮箱注册BUTTON
+     
+     - parameter sender: button self
+     */
     func emailSianAction(sender:UIButton) {
-        sender.tintColor = UIColor.blueColor()
+        sender.backgroundColor = UIColor(red: 0.23, green: 0.34, blue: 0.54, alpha: 1)
+        phoneSignButton.setTitleColor(UIColor(white: 0, alpha: 0.8), forState: UIControlState.Normal)
+        sender.setTitleColor(UIColor(white: 1, alpha: 0.8), forState: UIControlState.Normal)
+        phoneTextField.keyboardType = UIKeyboardType.EmailAddress
+        phoneSignButton.backgroundColor = UIColor.clearColor()
         UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            self.proViewLine.frame = CGRectMake(DeviceData.width/2, self.proViewLine.frame.origin.y, DeviceData.width/2, 5)
+            
+            self.registerView.bounds.origin.x += DeviceData.width
+            self.nickNameTextFied.center.x += DeviceData.width
+            self.passwordFirstText.center.x += DeviceData.width
+            self.passwordSecondText.center.x += DeviceData.width
+            self.getVerificationCodeButton.center.x += DeviceData.height
+            self.phoneTextField.center.x += DeviceData.width
+            self.phoneTextField.placeholder = "请输入你的邮箱"
+            self.chooseTeacherOrStudent.center.x += DeviceData.width
+            self.chooseTeacherOrStudent.center.y -= 45
+            self.submitRegisterButton.center.x += DeviceData.width
+            self.submitRegisterButton.center.y -= 45
+
+
             }, completion: nil)
-        self.registerView.bounds.origin.x += DeviceData.width
-//         self.collectionView.reloadData()
+       
+        sender.enabled = false
+        phoneSignButton.enabled = true
+        identtityButtonTag = sender.tag
     }
-    
+    /**
+     获取验证码 BUTTON
+     
+     - parameter sender: button self
+     */
     func getVerificationCodeAction(sender:UIButton) {
         sender.enabled = false
        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "timerAction", userInfo: nil, repeats: true)
         }
     
+    /**
+     验证码点击后倒计时效果
+     */
     func timerAction() {
         if second == 1 {
             timer = nil
@@ -165,11 +254,54 @@ class SignUpViewController: UIViewController {
             getVerificationCodeButton.backgroundColor = UIColor(hue: 1, saturation: 0.23, brightness: 0.54, alpha: 0.8)
             getVerificationCodeButton.setTitle("\(second)" + "秒后重发", forState: UIControlState.Normal)
         }
-        
-        
+    }
+    /**
+     同意协议 button
+     
+     - parameter sender: button self
+     */
+    func agreeProtocolAction(sender:UIButton) {
+        sender.setImage(UIImage(named: "new_feature_share_true"), forState: UIControlState.Normal)
+    }
+    /**
+     提交当前表单到服务器
+     
+     - parameter sender: 提交 - button self
+     */
+    
+    func submitRegisterAction(sender:UIButton) {
+        print(identtityButtonTag)
+    }
+    
+    /**
+     注销第一响应者
+     
+     - parameter touches: 点击的透彻
+     - parameter event:   点击事件
+     */
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.passwordFirstText.resignFirstResponder()
+        self.passwordSecondText.resignFirstResponder()
+        self.phoneTextField.resignFirstResponder()
+        self.verificationCodeText.resignFirstResponder()
+        self.nickNameTextFied.resignFirstResponder()
         
     }
 }
 
-
+extension SignUpViewController: UIAlertViewDelegate,UITextFieldDelegate {
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        self.alertView.show()
+        return false
+    }
+    
+    func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
+        if buttonIndex == 1 {
+            self.chooseTeacherOrStudent.text = "老师"
+            
+        } else if buttonIndex == 2{
+            self.chooseTeacherOrStudent.text = "家长"
+        }
+    }
+}
     

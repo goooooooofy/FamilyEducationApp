@@ -17,7 +17,6 @@
 		FC1458D31BD783C900F74DE9 /* FreeTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1458D21BD783C900F74DE9 /* FreeTimeTableViewController.swift */; };
 		FC1458D51BD783FA00F74DE9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1458D41BD783FA00F74DE9 /* UIColorExtension.swift */; };
 		FC1458D71BD784AF00F74DE9 /* RealName ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1458D61BD784AF00F74DE9 /* RealName ViewController.swift */; };
-		FC1458D91BD784D900F74DE9 /* FootMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1458D81BD784D900F74DE9 /* FootMarkViewController.swift */; };
 		FC1567651C0168F1004A9047 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1567641C0168F1004A9047 /* CustomTextField.swift */; };
 		FC162F571BF5854F0017DD8A /* navigationbar_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC162F551BF5854F0017DD8A /* navigationbar_back@2x.png */; };
 		FC162F581BF5854F0017DD8A /* navigationbar_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC162F561BF5854F0017DD8A /* navigationbar_back@3x.png */; };
@@ -210,7 +209,6 @@
 		FC1458D21BD783C900F74DE9 /* FreeTimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeTimeTableViewController.swift; sourceTree = "<group>"; };
 		FC1458D41BD783FA00F74DE9 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		FC1458D61BD784AF00F74DE9 /* RealName ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealName ViewController.swift"; sourceTree = "<group>"; };
-		FC1458D81BD784D900F74DE9 /* FootMarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootMarkViewController.swift; sourceTree = "<group>"; };
 		FC1567641C0168F1004A9047 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		FC162F551BF5854F0017DD8A /* navigationbar_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_back@2x.png"; sourceTree = "<group>"; };
 		FC162F561BF5854F0017DD8A /* navigationbar_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_back@3x.png"; sourceTree = "<group>"; };
@@ -509,38 +507,6 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		FC1458C61BD782DC00F74DE9 /* FootMark(我的足迹) */ = {
-			isa = PBXGroup;
-			children = (
-				FC1458C91BD7830A00F74DE9 /* Model */,
-				FC1458C81BD782FD00F74DE9 /* Controller */,
-				FC1458C71BD782F900F74DE9 /* View */,
-			);
-			name = "FootMark(我的足迹)";
-			sourceTree = "<group>";
-		};
-		FC1458C71BD782F900F74DE9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		FC1458C81BD782FD00F74DE9 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FC1458D81BD784D900F74DE9 /* FootMarkViewController.swift */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		FC1458C91BD7830A00F74DE9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		FC1458CA1BD7831300F74DE9 /* RealName(实名认证) */ = {
 			isa = PBXGroup;
 			children = (
@@ -780,7 +746,6 @@
 				FC49E4931BEA0D4200A865FC /* SystemSetting设置 */,
 				FC1458CE1BD7833900F74DE9 /* FreeTimeTable(空闲表) */,
 				FC1458CA1BD7831300F74DE9 /* RealName(实名认证) */,
-				FC1458C61BD782DC00F74DE9 /* FootMark(我的足迹) */,
 				FC1458C21BD7829500F74DE9 /* HistoryActivity(历史活动) */,
 				FC1458BE1BD7826000F74DE9 /* Collection(我的收藏) */,
 				FC1458BA1BD7820700F74DE9 /* ProfileSetting(资料设置) */,
@@ -1313,7 +1278,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC9497431BF72DCD00368E9F /* GetData.m in Sources */,
-				FC1458D91BD784D900F74DE9 /* FootMarkViewController.swift in Sources */,
 				FC2206B91BF223FD004698B5 /* MJPropertyKey.m in Sources */,
 				FC2206BD1BF223FD004698B5 /* NSObject+MJKeyValue.m in Sources */,
 				FC3F279B1BD4F2BB00CE0737 /* __.xcdatamodeld in Sources */,

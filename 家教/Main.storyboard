@@ -226,11 +226,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHT-r6-K4N">
                                 <rect key="frame" x="0.0" y="64" width="600" height="35"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elk-PC-bJR">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="33"/>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elk-PC-bJR">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="33" id="5u8-MD-99v"/>
+                                            <constraint firstAttribute="height" constant="35" id="5u8-MD-99v"/>
                                             <constraint firstAttribute="width" constant="46" id="HGO-sH-sMt"/>
                                         </constraints>
                                         <state key="normal" title="手机注册">
@@ -242,12 +242,12 @@
                                             </mask>
                                         </variation>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lf3-om-pMg">
-                                        <rect key="frame" x="301" y="0.0" width="299" height="33"/>
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lf3-om-pMg">
+                                        <rect key="frame" x="301" y="0.0" width="299" height="35"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="aYd-ze-ehj"/>
-                                            <constraint firstAttribute="height" constant="33" id="aZ3-OT-cDa"/>
+                                            <constraint firstAttribute="height" constant="35" id="aZ3-OT-cDa"/>
                                         </constraints>
                                         <state key="normal" title="邮箱注册">
                                             <color key="titleColor" red="0.25490196079999999" green="0.24313725489999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -271,39 +271,20 @@
                                     <constraint firstItem="Lf3-om-pMg" firstAttribute="leading" secondItem="Elk-PC-bJR" secondAttribute="trailing" constant="1" id="yle-Gq-A1w"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-Af-fbU">
-                                <rect key="frame" x="0.0" y="95" width="300" height="5"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.73213644211108864" green="0.37045273031943882" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="5" id="bDN-uU-zhb"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="U3q-Af-fbU" firstAttribute="width" secondItem="Elk-PC-bJR" secondAttribute="width" id="4cb-BE-7Fd"/>
-                            <constraint firstItem="U3q-Af-fbU" firstAttribute="top" secondItem="Elk-PC-bJR" secondAttribute="bottom" constant="-2" id="GVX-Qo-Sk0"/>
-                            <constraint firstItem="U3q-Af-fbU" firstAttribute="centerX" secondItem="Elk-PC-bJR" secondAttribute="centerX" id="OOM-Gb-cau"/>
-                            <constraint firstItem="U3q-Af-fbU" firstAttribute="leading" secondItem="fw9-k7-I0K" secondAttribute="leading" id="bcG-nz-s3n"/>
                             <constraint firstItem="RHT-r6-K4N" firstAttribute="leading" secondItem="fw9-k7-I0K" secondAttribute="leading" id="g9W-u7-DTt"/>
                             <constraint firstItem="RHT-r6-K4N" firstAttribute="top" secondItem="FPM-TN-sy7" secondAttribute="bottom" id="iXx-od-Dzn"/>
-                            <constraint firstItem="U3q-Af-fbU" firstAttribute="height" secondItem="Elk-PC-bJR" secondAttribute="height" id="nba-gp-Uuy"/>
                             <constraint firstAttribute="trailing" secondItem="RHT-r6-K4N" secondAttribute="trailing" id="pcw-RI-BxE"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="nba-gp-Uuy"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="注册新用户" id="l8G-se-V0p"/>
                     <connections>
                         <outlet property="emailSignButton" destination="Lf3-om-pMg" id="mP5-L9-6lv"/>
                         <outlet property="phoneSignButton" destination="Elk-PC-bJR" id="Gkp-aq-lCl"/>
-                        <outlet property="proViewLine" destination="U3q-Af-fbU" id="3ru-ok-e7t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wF-ds-bhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -576,7 +557,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3326" y="-405"/>
+            <point key="canvasLocation" x="3546" y="-639"/>
         </scene>
         <!--Real Name View Controller-->
         <scene sceneID="J60-rq-hM9">
@@ -665,7 +646,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="e93-z0-Dqn">
-                        <barButtonItem key="leftBarButtonItem" image="navigationbar_back" id="BVf-4W-722"/>
+                        <barButtonItem key="leftBarButtonItem" image="navigationbar_back" id="BVf-4W-722">
+                            <connections>
+                                <segue destination="HV9-Uq-kvX" kind="showDetail" id="BG8-7Q-aSt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="getIDcardBackPicture" destination="nUJ-Ka-zwX" id="ZmP-E2-1Iu"/>
@@ -1324,6 +1309,6 @@
         <image name="touxiang" width="590" height="590"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="S3w-7p-T0v"/>
+        <segue reference="BG8-7Q-aSt"/>
     </inferredMetricsTieBreakers>
 </document>
