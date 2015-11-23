@@ -104,7 +104,7 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate,UITex
             print(params)
             manager.POST("http://115.29.54.119:888/Post/login", parameters: params, success: { (operation, response) -> Void in
                 let responseDic = response as? NSDictionary
-                let accessToken:String = (responseDic!["access_token"] as? String)!
+                let accessToken:String? = responseDic?["access_token"] as? String
                 self.defaultValue.setValue(accessToken, forKey: "access_token")
                 print(accessToken)
                 if(responseDic == nil) {

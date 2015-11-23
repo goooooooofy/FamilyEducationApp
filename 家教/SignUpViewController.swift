@@ -46,6 +46,8 @@ class SignUpViewController: UIViewController {
     let chooseTeacherOrStudent = UITextField()
     
     var identtityButtonTag = 0
+    /// 需要post的数据
+    var postDictionary = NSMutableDictionary()
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -154,6 +156,7 @@ class SignUpViewController: UIViewController {
 //        chooseTeacherOrStudent.textColor = UIColor.whiteColor()
         chooseTeacherOrStudent.borderStyle = UITextBorderStyle.RoundedRect
         chooseTeacherOrStudent.font = UIFont.systemFontOfSize(14)
+        chooseTeacherOrStudent.text = "家长"
         chooseTeacherOrStudent.delegate = self
         chooseTeacherOrStudent.tag = 400
         chooseTeacherOrStudent.placeholder = "你是老师还是家教"
@@ -271,6 +274,55 @@ class SignUpViewController: UIViewController {
     
     func submitRegisterAction(sender:UIButton) {
         print(identtityButtonTag)
+        /**
+        *  手机注册
+        */
+        if passwordSecondText.text != passwordFirstText.text {
+            UIAlertView(title: "提示", message: "两次密码输入不一致", delegate: nil, cancelButtonTitle: "返回").show()
+        } else
+        if nickNameTextFied.text == "" || phoneTextField.text == "" {
+            UIAlertView(title: "提示", message: "请正确填写表格", delegate: nil, cancelButtonTitle: "返回").show()
+        } else
+
+        if identtityButtonTag == 10 {
+            
+            
+            if verificationCodeText.text == "" {
+                UIAlertView(title: "提示", message: "请正确填写验证码", delegate: nil, cancelButtonTitle: "返回").show()
+            } else {
+                
+            }
+            
+        } else {
+            
+            if chooseTeacherOrStudent.text == "老师" {
+                postDictionary = ["username":nickNameTextFied.text!,"password":passwordFirstText.text!,"email":phoneTextField.text!,"type":1]
+            } else {
+                postDictionary = ["username":nickNameTextFied.text!,"password":passwordFirstText.text!,"email":phoneTextField.text!,"type":2]
+            }
+            /// 创建AFNetWorking管理者
+            let manager = AFHTTPRequestOperationManager()
+            manager.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
+            
+            manager.POST("http://115.29.54.119:888/Get/reg", parameters: postDictionary, success: { (operation, response) -> Void in
+                let responseDic = response as? NSDictionary
+                let result = responseDic!["userid"]
+                if let _ = responseDic!["userid"] {
+                    UIAlertView(title: "注册消息", message: "恭喜你注册成功ID为\(responseDic!["userid"]!)", delegate: nil, cancelButtonTitle: "完成").show()
+                } else {
+                    UIAlertView(title: "注册消息", message: "注册失败,用户名或邮箱重复", delegate: nil, cancelButtonTitle: "完成").show()
+                }
+            
+                
+                
+                }) { (operation, error) -> Void in
+                    
+            }
+            
+            
+        }
+        
+        
     }
     
     /**
@@ -296,7 +348,9 @@ extension SignUpViewController: UIAlertViewDelegate,UITextFieldDelegate {
     }
     
     func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
+        
         if buttonIndex == 1 {
+            
             self.chooseTeacherOrStudent.text = "老师"
             
         } else if buttonIndex == 2{
