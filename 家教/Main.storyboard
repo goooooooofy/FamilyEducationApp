@@ -474,7 +474,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="我的足迹" image="footprint.png">
+                                        <state key="normal" title="历史活动" image="footprint.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -589,10 +589,90 @@
                     <view key="view" contentMode="scaleToFill" id="pfj-mw-IcK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入你的身份证号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Snd-YK-T9Y">
+                                <rect key="frame" x="151" y="104" width="300" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="556-rX-PkG"/>
+                                    <constraint firstAttribute="height" constant="30" id="o2Q-fF-hRX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUJ-Ka-zwX">
+                                <rect key="frame" x="320" y="194" width="100" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="0wL-Xw-y4g"/>
+                                    <constraint firstAttribute="height" constant="100" id="aJk-2d-Dby"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="身份证背面照" backgroundImage="camera.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getIDcardPictureAction:" destination="pct-TS-QDv" eventType="touchUpInside" id="inh-Ak-JU9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkD-aR-r3d">
+                                <rect key="frame" x="175" y="334" width="250" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Fz9-KN-Z19"/>
+                                    <constraint firstAttribute="height" constant="40" id="OfN-xX-DGb"/>
+                                </constraints>
+                                <state key="normal" image="bt_setr_submit.png"/>
+                                <connections>
+                                    <action selector="uploadAction:" destination="pct-TS-QDv" eventType="touchUpInside" id="tUD-IH-lvR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="50" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nm0-92-nWx">
+                                <rect key="frame" x="180" y="194" width="100" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="pHC-dG-voU"/>
+                                    <constraint firstAttribute="width" constant="100" id="vaS-Lh-c83"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="身份证正面照" backgroundImage="camera.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getIDcardPictureAction:" destination="pct-TS-QDv" eventType="touchUpInside" id="Ntb-Fh-DtJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.25490196079999999" green="0.24313725489999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nm0-92-nWx" firstAttribute="centerX" secondItem="pfj-mw-IcK" secondAttribute="centerX" constant="-70" id="5Um-Ha-Qvq"/>
+                            <constraint firstItem="Snd-YK-T9Y" firstAttribute="top" secondItem="9ex-Vm-TaK" secondAttribute="bottom" constant="40" id="BEY-CV-SfM"/>
+                            <constraint firstItem="nUJ-Ka-zwX" firstAttribute="top" secondItem="Snd-YK-T9Y" secondAttribute="bottom" constant="60" id="E8r-g3-IXA"/>
+                            <constraint firstItem="Snd-YK-T9Y" firstAttribute="centerX" secondItem="pfj-mw-IcK" secondAttribute="centerX" id="HrC-F1-yCB"/>
+                            <constraint firstItem="nm0-92-nWx" firstAttribute="leading" secondItem="pfj-mw-IcK" secondAttribute="leading" constant="30" id="LR1-tS-6uK"/>
+                            <constraint firstItem="nm0-92-nWx" firstAttribute="top" secondItem="Snd-YK-T9Y" secondAttribute="bottom" constant="60" id="PiP-50-q8E"/>
+                            <constraint firstItem="mkD-aR-r3d" firstAttribute="centerX" secondItem="pfj-mw-IcK" secondAttribute="centerX" id="SUZ-z4-Bc5"/>
+                            <constraint firstItem="nUJ-Ka-zwX" firstAttribute="centerX" secondItem="pfj-mw-IcK" secondAttribute="centerX" constant="70" id="VBk-lW-SHf"/>
+                            <constraint firstItem="mkD-aR-r3d" firstAttribute="top" secondItem="nUJ-Ka-zwX" secondAttribute="bottom" constant="40" id="Wu4-TD-Ryr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LR1-tS-6uK"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="e93-z0-Dqn"/>
+                    <navigationItem key="navigationItem" id="e93-z0-Dqn">
+                        <barButtonItem key="leftBarButtonItem" image="navigationbar_back" id="BVf-4W-722"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="getIDcardBackPicture" destination="nUJ-Ka-zwX" id="ZmP-E2-1Iu"/>
+                        <outlet property="getIDcardfrontPicture" destination="nm0-92-nWx" id="cA7-Yq-NdH"/>
+                        <outlet property="personalIDcard" destination="Snd-YK-T9Y" id="t8r-cJ-PxT"/>
+                        <outlet property="uploadButton" destination="mkD-aR-r3d" id="mjo-0S-G0Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AFc-TM-p2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1224,6 +1304,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bt_setr_submit.png" width="462" height="66"/>
+        <image name="camera.png" width="96" height="96"/>
         <image name="chat_take_picture" width="72" height="72"/>
         <image name="chat_voice_record" width="72" height="72"/>
         <image name="collect.png" width="25" height="25"/>

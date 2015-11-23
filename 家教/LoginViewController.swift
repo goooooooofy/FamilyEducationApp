@@ -24,6 +24,7 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate,UITex
     
     var alertView = UIAlertView()
     
+    let defaultValue = NSUserDefaults()
     override func viewDidLoad() {
         super.viewDidLoad()
         loginUserNameTextField.delegate = self
@@ -89,36 +90,38 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate,UITex
     
     func loginAction() {
        
-//        print(loginUserNameTextField.text)
-//        if loginUserNameTextField.text == "" || passwordTextField.text == "" {
-//            self.alertView = UIAlertView(title: "提示", message: "亲好像还没有登陆哦", delegate:  self, cancelButtonTitle: "OK")
-//            alertView.show()
-//        } else {
-//             acitivityView.startAnimating()
-//            
-//            
-//            let manager = AFHTTPRequestOperationManager()
-//            manager.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
-//            let params:NSDictionary = ["password":passwordTextField.text!,"username":loginUserNameTextField.text!]
-//            print(params)
-//            manager.POST("http://115.29.54.119:888/Post/login", parameters: params, success: { (operation, response) -> Void in
-//                let responseDic = response as? NSDictionary
-//                print(responseDic)
-//                if(responseDic == nil) {
-//                    self.alertView = UIAlertView(title: "提示", message: "亲好像还没注册哦", delegate:  self, cancelButtonTitle: "OK")
-//                    self.alertView.show()
-//                    self.acitivityView.stopAnimating()
-//                } else {
+        print(loginUserNameTextField.text)
+        if loginUserNameTextField.text == "" || passwordTextField.text == "" {
+            self.alertView = UIAlertView(title: "提示", message: "亲好像还没有登陆哦", delegate:  self, cancelButtonTitle: "OK")
+            alertView.show()
+        } else {
+             acitivityView.startAnimating()
+            
+            
+            let manager = AFHTTPRequestOperationManager()
+            manager.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
+            let params:NSDictionary = ["password":passwordTextField.text!,"username":loginUserNameTextField.text!]
+            print(params)
+            manager.POST("http://115.29.54.119:888/Post/login", parameters: params, success: { (operation, response) -> Void in
+                let responseDic = response as? NSDictionary
+                let accessToken:String = (responseDic!["access_token"] as? String)!
+                self.defaultValue.setValue(accessToken, forKey: "access_token")
+                print(accessToken)
+                if(responseDic == nil) {
+                    self.alertView = UIAlertView(title: "提示", message: "亲好像还没注册哦", delegate:  self, cancelButtonTitle: "OK")
+                    self.alertView.show()
+                    self.acitivityView.stopAnimating()
+                } else {
                     let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
                     let homePageNavigationController:UINavigationController = storyBoadrd.instantiateViewControllerWithIdentifier("homePage") as! UINavigationController
                     self.presentViewController(homePageNavigationController, animated: true, completion: nil)
-//                }
-//                
-//                }) { (operation, error) -> Void in
-//                    
-//            }
-//           
-//        }
+                }
+                
+                }) { (operation, error) -> Void in
+                    
+            }
+           
+        }
         
         
     }
