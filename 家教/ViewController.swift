@@ -170,11 +170,16 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
             cell.collectButton.setTitle("\(studentData.stu_collect!)", forState: UIControlState.Normal)
             cell.StudentFrauleinTittle.text = studentData.stu_name!
             cell.FrauleinPlace.text = studentData.stu_addr
-            
-//            cell.FrauleinDetailContent.text = studentStatus?[indexPath.row].stu_intro!
-            
-            
+            cell.FrauleinWantMoney.text = "\(studentData.stu_bcost)" + " ~ \(studentData.stu_lcost)元"
+            cell.FrauleinDetailContent.text = studentData.stu_intro
+            cell.FrauleinPlace.text = "\(studentData.stu_addr)"
+            cell.recentFrauleinTime.text = "最近家教" + "\(studentData.volTime)次"
             cell.FrauleinLevel.getLevelStar(Int(studentData.stu_star))
+            if studentData.stu_sex == "男" {
+                cell.FrauleinStudentSex.image = UIImage(named: "boy.png")
+            } else {
+                cell.FrauleinStudentSex.image = UIImage(named: "girl.png")
+            }
             
         }
         

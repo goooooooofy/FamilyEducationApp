@@ -55,7 +55,7 @@
 /**
  *  发布人性别
  */
-@property (nonatomic,assign) int stu_sex;
+@property (nonatomic,copy) NSString *stu_sex;
 /**
  *  发布人年龄
  */

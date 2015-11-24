@@ -42,35 +42,24 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最近家教一次" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCY-qV-bRv">
-                        <rect key="frame" x="78" y="53" width="100" height="15"/>
+                        <rect key="frame" x="78" y="53" width="80" height="15"/>
                         <animations/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="2zd-Cy-m8Q"/>
+                            <constraint firstAttribute="width" constant="80" id="2zd-Cy-m8Q"/>
                             <constraint firstAttribute="height" constant="15" id="luF-iH-hbi"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MKF-Bi-jbg">
-                        <rect key="frame" x="226" y="8" width="21" height="21"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boy.png" translatesAutoresizingMaskIntoConstraints="NO" id="MKF-Bi-jbg">
+                        <rect key="frame" x="286" y="12" width="15" height="15"/>
                         <animations/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="21" id="047-pU-Wzy"/>
-                            <constraint firstAttribute="height" constant="21" id="Ws1-S4-C2a"/>
+                            <constraint firstAttribute="width" constant="15" id="047-pU-Wzy"/>
+                            <constraint firstAttribute="height" constant="15" id="Ws1-S4-C2a"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" 五邑大学对面" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfM-E7-Zoo">
-                        <rect key="frame" x="207" y="50" width="100" height="21"/>
-                        <animations/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="100" id="qas-zo-2wu"/>
-                            <constraint firstAttribute="height" constant="21" id="uF3-nn-XU6"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="小学英语初一初二、初三、物理英语化学生物、高中数理化，走遍天下都不怕" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akp-Nr-dC8">
                         <rect key="frame" x="10" y="73" width="300" height="34"/>
                         <animations/>
@@ -137,6 +126,22 @@
                             <constraint firstAttribute="trailing" secondItem="FZA-4n-Q4Y" secondAttribute="trailing" id="zK7-Me-t6e"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 五邑大学对面" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfM-E7-Zoo">
+                        <rect key="frame" x="158" y="50" width="148" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="qas-zo-2wu"/>
+                            <constraint firstAttribute="height" constant="21" id="uF3-nn-XU6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qas-zo-2wu"/>
+                            </mask>
+                        </variation>
+                    </label>
                 </subviews>
                 <animations/>
                 <constraints>
@@ -152,16 +157,19 @@
                     <constraint firstItem="JRa-cH-jMH" firstAttribute="leading" secondItem="YDE-do-psF" secondAttribute="leading" constant="15" id="T62-ZY-bqK"/>
                     <constraint firstItem="akp-Nr-dC8" firstAttribute="leading" secondItem="YDE-do-psF" secondAttribute="leading" constant="10" id="UMm-to-VYh"/>
                     <constraint firstItem="MKF-Bi-jbg" firstAttribute="leading" secondItem="qlN-Eq-JhI" secondAttribute="trailing" constant="14" id="Wmb-wl-5bw"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="MKF-Bi-jbg" secondAttribute="trailing" constant="10" id="ZIz-Tq-mZe"/>
                     <constraint firstItem="qlN-Eq-JhI" firstAttribute="leading" secondItem="1yv-p6-PJk" secondAttribute="trailing" constant="10" id="cTT-Hh-NPc"/>
+                    <constraint firstItem="NfM-E7-Zoo" firstAttribute="leading" secondItem="uCY-qV-bRv" secondAttribute="trailing" id="dos-9f-JH5"/>
                     <constraint firstItem="uCY-qV-bRv" firstAttribute="leading" secondItem="1yv-p6-PJk" secondAttribute="trailing" constant="10" id="fU0-QS-Dtn"/>
                     <constraint firstAttribute="trailingMargin" secondItem="NfM-E7-Zoo" secondAttribute="trailing" constant="5" id="fd6-HY-sah"/>
-                    <constraint firstItem="MKF-Bi-jbg" firstAttribute="top" secondItem="YDE-do-psF" secondAttribute="top" constant="8" id="m1e-hN-QQ7"/>
+                    <constraint firstItem="MKF-Bi-jbg" firstAttribute="top" secondItem="YDE-do-psF" secondAttribute="top" constant="12" id="m1e-hN-QQ7"/>
                     <constraint firstAttribute="trailing" secondItem="cTZ-xM-oqI" secondAttribute="trailing" id="m51-aa-pBj"/>
                     <constraint firstItem="uCY-qV-bRv" firstAttribute="top" secondItem="FCZ-41-dgW" secondAttribute="bottom" constant="2" id="rwk-3y-f2g"/>
                     <constraint firstItem="cTZ-xM-oqI" firstAttribute="leading" secondItem="YDE-do-psF" secondAttribute="leading" id="tvS-AQ-HLX"/>
                     <constraint firstItem="NfM-E7-Zoo" firstAttribute="centerY" secondItem="uCY-qV-bRv" secondAttribute="centerY" id="vSs-IC-245"/>
                     <constraint firstItem="FCZ-41-dgW" firstAttribute="leading" secondItem="1yv-p6-PJk" secondAttribute="trailing" constant="8" id="vUB-sM-44F"/>
                     <constraint firstAttribute="trailingMargin" secondItem="qlN-Eq-JhI" secondAttribute="trailing" constant="100" id="wfh-hC-S2J"/>
+                    <constraint firstItem="NfM-E7-Zoo" firstAttribute="leading" secondItem="YDE-do-psF" secondAttribute="leadingMargin" id="x7f-1S-BDV"/>
                     <constraint firstItem="akp-Nr-dC8" firstAttribute="top" secondItem="1yv-p6-PJk" secondAttribute="bottom" constant="5" id="xte-nY-o73"/>
                     <constraint firstItem="qlN-Eq-JhI" firstAttribute="top" secondItem="YDE-do-psF" secondAttribute="top" constant="8" id="y0Z-1V-UeZ"/>
                 </constraints>
@@ -170,6 +178,8 @@
                         <exclude reference="Lzm-C7-yux"/>
                         <exclude reference="MDm-h7-rMH"/>
                         <exclude reference="Nnd-N8-bKi"/>
+                        <exclude reference="x7f-1S-BDV"/>
+                        <exclude reference="Wmb-wl-5bw"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
@@ -192,6 +202,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="boy.png" width="23" height="25"/>
         <image name="cellCollect.png" width="15" height="14"/>
         <image name="cellComment.png" width="15" height="15"/>
         <image name="cell_share.png" width="16" height="16"/>
