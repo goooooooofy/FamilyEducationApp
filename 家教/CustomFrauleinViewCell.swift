@@ -76,6 +76,8 @@ class CustomFrauleinViewCell: UITableViewCell {
     }
     
     func collectionAction(sender:UIButton) {
+        let timeS:Int = Int((sender.titleLabel?.text)!)! + 1
+        sender.setTitle("\(timeS)", forState: UIControlState.Normal)
         let animationImage = UIImageView()
        animationImage.image = UIImage(named: "collect_selecte.png")
         animationImage.center = sender.center
@@ -87,8 +89,14 @@ class CustomFrauleinViewCell: UITableViewCell {
             animationImage.bounds.size = CGSizeMake(40, 40)
             animationImage.alpha = 0
             }, completion: nil)
-        
+        sender.enabled = false
     }
     
+    @IBAction func shareAction(sender: UIButton) {
+        let alertSheet = UIActionSheet(title: "请选择要分享的平台", delegate: nil, cancelButtonTitle: "取消分享", destructiveButtonTitle: nil, otherButtonTitles: "QQ空间", "微信","新浪微博")
+        alertSheet.showInView(self.contentView)
+        
+        
+    }
    
 }

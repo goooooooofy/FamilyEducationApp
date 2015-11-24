@@ -92,14 +92,6 @@
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTZ-xM-oqI">
                         <rect key="frame" x="0.0" y="127" width="320" height="30"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAL-N8-bFU">
-                                <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="UQe-24-h5z"/>
-                                </constraints>
-                                <state key="normal" image="cellCollect.png"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-0h-YV7">
                                 <rect key="frame" x="106" y="0.0" width="107" height="30"/>
                                 <animations/>
@@ -114,7 +106,21 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="iVT-dg-OlO"/>
                                 </constraints>
-                                <state key="normal" image="cellLike.png"/>
+                                <state key="normal" image="cell_share.png"/>
+                                <connections>
+                                    <action selector="shareAction:" destination="MT8-aJ-Can" eventType="touchUpInside" id="S8C-Ns-rFz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAL-N8-bFU">
+                                <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UQe-24-h5z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" image="cellCollect.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <animations/>
@@ -188,7 +194,7 @@
     <resources>
         <image name="cellCollect.png" width="15" height="14"/>
         <image name="cellComment.png" width="15" height="15"/>
-        <image name="cellLike.png" width="15" height="15"/>
+        <image name="cell_share.png" width="16" height="16"/>
         <image name="touxiang" width="590" height="590"/>
     </resources>
 </document>

@@ -64,10 +64,12 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate,UITex
         loginUserNameTextField.textAlignment = NSTextAlignment.Center
         loginUserNameTextField.keyboardType = UIKeyboardType.EmailAddress
         loginUserNameTextField.font = UIFont.systemFontOfSize(14)
+        loginUserNameTextField.text = "goofyyivan"
         self.view.addSubview(loginUserNameTextField)
         
         passwordTextField.frame = CGRectMake(40, 250, DeviceData.width - 80, 30)
         passwordTextField.placeholder = "密码"
+        passwordTextField.text = "123456"
         passwordTextField.borderStyle = UITextBorderStyle.None
         passwordTextField.textAlignment = NSTextAlignment.Center
         passwordTextField.font = UIFont.systemFontOfSize(14)

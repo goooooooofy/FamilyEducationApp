@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let loginboard:UINavigationController = storyBoadrd.instantiateViewControllerWithIdentifier("loginNavigation") as! UINavigationController
+        window?.rootViewController = loginboard
+        
+        window?.makeKeyAndVisible()
 //        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         // Override point for customization after application launch.
         //self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)

@@ -34,7 +34,6 @@ class HttpRequest:NSObject{
                 
                 
             }
-            print(self.studentStatus?[0].stu_intro)
             self.delegate?.didReceiveResults(self.studentStatus!)
             
             }) { (operation, error) -> Void in

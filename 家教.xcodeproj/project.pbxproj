@@ -35,6 +35,9 @@
 		FC2BA38A1BD8AB81004F6B47 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2BA3881BD8AB81004F6B47 /* ChatListTableViewCell.swift */; };
 		FC2BA38B1BD8AB81004F6B47 /* ChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2BA3891BD8AB81004F6B47 /* ChatListTableViewCell.xib */; };
 		FC2E56321BF0F3FE0046FC01 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2E56311BF0F3FE0046FC01 /* Student.m */; };
+		FC357C0A1C036E900093E046 /* collect.png in Resources */ = {isa = PBXBuildFile; fileRef = FC357C091C036E900093E046 /* collect.png */; };
+		FC357C121C036F4D0093E046 /* cell_share.png in Resources */ = {isa = PBXBuildFile; fileRef = FC357C111C036F4D0093E046 /* cell_share.png */; };
+		FC357C141C036F870093E046 /* cell_share24px.png in Resources */ = {isa = PBXBuildFile; fileRef = FC357C131C036F870093E046 /* cell_share24px.png */; };
 		FC3F27931BD4F2BB00CE0737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27921BD4F2BB00CE0737 /* AppDelegate.swift */; };
 		FC3F27951BD4F2BB00CE0737 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27941BD4F2BB00CE0737 /* ViewController.swift */; };
 		FC3F279B1BD4F2BB00CE0737 /* __.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC3F27991BD4F2BB00CE0737 /* __.xcdatamodeld */; };
@@ -240,6 +243,9 @@
 		FC2BA3891BD8AB81004F6B47 /* ChatListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatListTableViewCell.xib; sourceTree = "<group>"; };
 		FC2E56301BF0F3FE0046FC01 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		FC2E56311BF0F3FE0046FC01 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		FC357C091C036E900093E046 /* collect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collect.png; sourceTree = "<group>"; };
+		FC357C111C036F4D0093E046 /* cell_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_share.png; sourceTree = "<group>"; };
+		FC357C131C036F870093E046 /* cell_share24px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_share24px.png; sourceTree = "<group>"; };
 		FC3F278F1BD4F2BB00CE0737 /* 家教.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "家教.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3F27921BD4F2BB00CE0737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3F27941BD4F2BB00CE0737 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -684,8 +690,11 @@
 				FC3F27D31BD4F34400CE0737 /* ic_menuRotatedL@3x.png */,
 				FC14589C1BD74FBB00F74DE9 /* message.png */,
 				FC9B60D11BEF9888002812C0 /* 16.png */,
+				FC357C111C036F4D0093E046 /* cell_share.png */,
+				FC357C131C036F870093E046 /* cell_share24px.png */,
 				FC9B60D21BEF9888002812C0 /* 18.png */,
 				FC1458AC1BD7624300F74DE9 /* cellCollect.png */,
+				FC357C091C036E900093E046 /* collect.png */,
 				FC6E29D61BE329990016CEF9 /* kechengbiaoBg.png */,
 				FC1458AD1BD7624300F74DE9 /* cellComment.png */,
 				FCE0A0351BE1EED600257372 /* setting.png */,
@@ -1228,12 +1237,14 @@
 			files = (
 				FC1458AF1BD7624300F74DE9 /* cellCollect.png in Resources */,
 				FC3F27CC1BD4F32600CE0737 /* Main.storyboard in Resources */,
+				FC357C121C036F4D0093E046 /* cell_share.png in Resources */,
 				FC94974C1BF75E2000368E9F /* bg_login.png in Resources */,
 				FC9B60D41BEF9888002812C0 /* 18.png in Resources */,
 				FCE527CB1BFAFA19000A74FB /* 2.png in Resources */,
 				FC162F571BF5854F0017DD8A /* navigationbar_back@2x.png in Resources */,
 				FC45AC4A1BF9100E000BB194 /* messageCountImage.png in Resources */,
 				FC3F27F01BD50E1700CE0737 /* CustomFrauleinViewCell.xib in Resources */,
+				FC357C0A1C036E900093E046 /* collect.png in Resources */,
 				FCD4C2DB1C020B3A00BDA552 /* collect_selecte.png in Resources */,
 				FCD4C2D21C01FCFB00BDA552 /* bt_setr_submit.png in Resources */,
 				FC3F27A01BD4F2BB00CE0737 /* LaunchScreen.storyboard in Resources */,
@@ -1251,6 +1262,7 @@
 				FCD4C2E31C021F5800BDA552 /* camera.png in Resources */,
 				FC6C99A01C00C9440096ADE7 /* bg_setr.png in Resources */,
 				FC1458B11BD7624300F74DE9 /* cellLike.png in Resources */,
+				FC357C141C036F870093E046 /* cell_share24px.png in Resources */,
 				FC162F581BF5854F0017DD8A /* navigationbar_back@3x.png in Resources */,
 				FC6E29D71BE329990016CEF9 /* kechengbiaoBg.png in Resources */,
 			);
@@ -1486,9 +1498,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/家教/libraries/extends/QQSDK",
+					"$(PROJECT_DIR)/家教/libraries",
+				);
 				INFOPLIST_FILE = "家教/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/家教/libraries/extends/SinaWeiboSDK",
+					"$(PROJECT_DIR)/家教/libraries/extends/WeChatSDK",
+				);
 				MACH_O_TYPE = mh_execute;
 				PRODUCT_BUNDLE_IDENTIFIER = "goofyy.com.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1502,9 +1524,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/家教/libraries/extends/QQSDK",
+					"$(PROJECT_DIR)/家教/libraries",
+				);
 				INFOPLIST_FILE = "家教/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/家教/libraries/extends/SinaWeiboSDK",
+					"$(PROJECT_DIR)/家教/libraries/extends/WeChatSDK",
+				);
 				MACH_O_TYPE = mh_execute;
 				PRODUCT_BUNDLE_IDENTIFIER = "goofyy.com.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";

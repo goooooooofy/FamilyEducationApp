@@ -44,10 +44,15 @@ class SignUpViewController: UIViewController {
     let submitRegisterButton = UIButton()
     
     let chooseTeacherOrStudent = UITextField()
+    let manager = AFHTTPRequestOperationManager()
+    
+
     
     var identtityButtonTag = 0
     /// 需要post的数据
     var postDictionary = NSMutableDictionary()
+    
+    var defalutValue = NSUserDefaults()
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -169,6 +174,7 @@ class SignUpViewController: UIViewController {
         identtityButtonTag = 10
         phoneSignButton.setTitleColor(UIColor(white: 1, alpha: 0.8), forState: UIControlState.Normal)
         phoneSignButton.backgroundColor = UIColor(red: 0.23, green: 0.34, blue: 0.54, alpha: 1)
+         phoneSignButton.enabled = false
     }
     
     /**
@@ -193,13 +199,16 @@ class SignUpViewController: UIViewController {
             self.phoneTextField.placeholder = "请输入你的手机号码"
             self.chooseTeacherOrStudent.center.x -= DeviceData.width
             self.chooseTeacherOrStudent.center.y += 45
+            self.verificationCodeText.center.x += DeviceData.width
             self.submitRegisterButton.center.x -= DeviceData.width
             self.submitRegisterButton.center.y += 45
             }, completion: nil)
         
         sender.enabled = false
         emailSignButton.enabled = true
+        print(sender.tag)
         identtityButtonTag = sender.tag
+       
     }
     
     /**
@@ -222,6 +231,7 @@ class SignUpViewController: UIViewController {
             self.getVerificationCodeButton.center.x += DeviceData.height
             self.phoneTextField.center.x += DeviceData.width
             self.phoneTextField.placeholder = "请输入你的邮箱"
+            self.verificationCodeText.center.x -= DeviceData.width
             self.chooseTeacherOrStudent.center.x += DeviceData.width
             self.chooseTeacherOrStudent.center.y -= 45
             self.submitRegisterButton.center.x += DeviceData.width
@@ -242,8 +252,33 @@ class SignUpViewController: UIViewController {
     func getVerificationCodeAction(sender:UIButton) {
         sender.enabled = false
        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+        if phoneTextField.text == "" {
+            
+        } else {
+            
+            manager.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
+            let mobileDictionary:NSDictionary = ["mobile":phoneTextField.text!]
+            manager.POST("http://115.29.54.119:888/Get/getAuth", parameters: mobileDictionary, success: { (operation, response) -> Void in
+                let responseDic = response as? NSDictionary
+                let result = responseDic!["userid"]
+                
+                if let _ = responseDic!["userid"] {
+                    UIAlertView(title: "提示", message: "验证码已经发送\(responseDic!["authCode"])", delegate: nil, cancelButtonTitle: "完成").show()
+                    self.defalutValue.setObject(responseDic!["userid"], forKey: "sign_userid")
+                    self.defalutValue.setObject(responseDic!["authCode"], forKey: "sign_authCode")
+                } else {
+                    UIAlertView(title: "提示", message: "验证码发送失败", delegate: nil, cancelButtonTitle: "完成").show()
+                }
+                
+                
+                
+                }) { (operation, error) -> Void in
+                    
+            }
         }
-    
+  
+    }
+
     /**
      验证码点击后倒计时效果
      */
@@ -273,7 +308,7 @@ class SignUpViewController: UIViewController {
      */
     
     func submitRegisterAction(sender:UIButton) {
-        print(identtityButtonTag)
+       
         /**
         *  手机注册
         */
@@ -282,30 +317,66 @@ class SignUpViewController: UIViewController {
         } else
         if nickNameTextFied.text == "" || phoneTextField.text == "" {
             UIAlertView(title: "提示", message: "请正确填写表格", delegate: nil, cancelButtonTitle: "返回").show()
-        } else
+        }
 
         if identtityButtonTag == 10 {
             
-            
-            if verificationCodeText.text == "" {
+            print("dfsfsd")
+            if verificationCodeText.text! == "" || verificationCodeText.text != defalutValue.valueForKey("sign_authCode") as? String {
                 UIAlertView(title: "提示", message: "请正确填写验证码", delegate: nil, cancelButtonTitle: "返回").show()
             } else {
+//                21459121print(responseDic)
+                print("手机注册")
+                if let userid_sign = defalutValue.valueForKey("sign_userid") {
+                    print("go go go ")
+                    if chooseTeacherOrStudent.text == "老师" {
+                        postDictionary = ["username":nickNameTextFied.text!,"password":passwordFirstText.text!,"type":0,"authCode":verificationCodeText.text!,"mobile":phoneTextField.text!,"userid":userid_sign]
+                        
+                        
+                    } else {
+                        postDictionary = ["username":nickNameTextFied.text!,"password":passwordFirstText.text!,"type":1,"authCode":verificationCodeText.text!,"mobile":phoneTextField.text!,"userId":userid_sign]
+                    }
+                    
+                    manager.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
+                    manager.POST("http://115.29.54.119:888/Get/regByNum", parameters: postDictionary, success: { (operation, response) -> Void in
+                        let responseDic = response as? NSDictionary
+                        let result = responseDic!["userid"]
+                       
+                        if let _ = responseDic!["userid"] {
+                            UIAlertView(title: "注册消息", message: "恭喜你注册成功ID为\(responseDic!["userid"]!)", delegate: nil, cancelButtonTitle: "完成").show()
+                        } else {
+                            UIAlertView(title: "注册消息", message: "注册失败,用户名或手机已注册", delegate: nil, cancelButtonTitle: "完成").show()
+                        }
+                        
+                        
+                        
+                        }) { (operation, error) -> Void in
+                     UIAlertView(title: "注册消息", message: "注册失败,用户名或手机已注册", delegate: nil, cancelButtonTitle: "完成").show()
+                    }
+
+                }
                 
+                
+                
+
             }
             
         } else {
             
             if chooseTeacherOrStudent.text == "老师" {
-                postDictionary = ["username":nickNameTextFied.text!,"password":passwordFirstText.text!,"email":phoneTextField.text!,"type":1]
+                postDictionary = ["username":nickNameTextFied.text!,"password":passwordFirstText.text!,"email":phoneTextField.text!,"type":0]
+                
+                
+                
+                
             } else {
-                postDictionary = ["username":nickNameTextFied.text!,"password":passwordFirstText.text!,"email":phoneTextField.text!,"type":2]
+                postDictionary = ["username":nickNameTextFied.text!,"password":passwordFirstText.text!,"email":phoneTextField.text!,"type":1]
             }
             /// 创建AFNetWorking管理者
-            let manager = AFHTTPRequestOperationManager()
             manager.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
-            
             manager.POST("http://115.29.54.119:888/Get/reg", parameters: postDictionary, success: { (operation, response) -> Void in
                 let responseDic = response as? NSDictionary
+                
                 let result = responseDic!["userid"]
                 if let _ = responseDic!["userid"] {
                     UIAlertView(title: "注册消息", message: "恭喜你注册成功ID为\(responseDic!["userid"]!)", delegate: nil, cancelButtonTitle: "完成").show()

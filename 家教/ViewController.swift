@@ -162,20 +162,25 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
       func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CustomFrauleinViewCell
-      
-        
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.layer.masksToBounds = true
-       
-        cell.StudentFrauleinTittle.text = self.studentStatus?[indexPath.row].stu_name
-        cell.FrauleinPlace.text = self.studentStatus?[indexPath.row].stu_addr
-         cell.FrauleinDetailContent.text = self.studentStatus?[indexPath.row].stu_intro!
-        if let _ = self.studentStatus?[indexPath.row].stu_star {
-             cell.FrauleinLevel.getLevelStar(Int((self.studentStatus?[indexPath.row].stu_star)!))
-        } else {
-            cell.FrauleinLevel.getLevelStar(Int(arc4random_uniform(6)))
+        
+        if let studentData = studentStatus?[indexPath.row] {
+            cell.collectButton.setTitle("\(studentData.stu_collect!)", forState: UIControlState.Normal)
+            cell.StudentFrauleinTittle.text = studentData.stu_name!
+            cell.FrauleinPlace.text = studentData.stu_addr
+            
+//            cell.FrauleinDetailContent.text = studentStatus?[indexPath.row].stu_intro!
+            
+            
+//            //cell.FrauleinLevel.getLevelStar(Int(studentData.stu_star))
+            
         }
+        
+        
+      
+       
 //        cell.FrauleinLevel.getLevelStar(Int((self.studentStatus?[indexPath.row].stu_star)!))
         
         //把行高放进缓存
@@ -257,7 +262,6 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         let cell = tableViewFraulein.dequeueReusableCellWithIdentifier(reuseIdentifier) as! CustomFrauleinViewCell
         cellHeightCache.setObject(cell.heightForCell("\(self.studentStatus?[((self.studentStatus?.count)! - 1)].stu_intro)"), forKey: (self.studentStatus?.count)! - 1)
         if self.studentStatus?.count > 3 {
-            print("++++++++++++++++++++")
             self.tableViewFraulein.header.endRefreshing()
             self.tableViewFraulein.reloadData()
         }
