@@ -89,12 +89,12 @@ class FreeTimeTableViewController: UIViewController {
         }
         
         
-        self.createClass(4, whichClass: 1, courseName: "信号与系统@北主楼")
-        self.createClass(3, whichClass: 2, courseName: "信号与系统@北主楼")
-        self.createClass(1, whichClass: 1, courseName: "信号与系统@北主楼")
-        self.createClass(5, whichClass: 4, courseName: "信号与系统@北主楼")
-        self.createClass(4, whichClass: 3, courseName: "信号与系统@北主楼")
-        self.createClass(7, whichClass: 2, courseName: "信号与系统@北主楼")
+        self.createClass(4, whichClass: 1, courseName: "信号与系统@北主楼203")
+        self.createClass(3, whichClass: 2, courseName: "计算机网络@北主楼301")
+        self.createClass(1, whichClass: 1, courseName: "高等数学@北主楼303")
+        self.createClass(5, whichClass: 4, courseName: "大学英语@黄浩川301")
+        self.createClass(4, whichClass: 3, courseName: "linux系统@北主楼604")
+        self.createClass(7, whichClass: 2, courseName: "信号与系统@北主楼203")
     }
     
     /**

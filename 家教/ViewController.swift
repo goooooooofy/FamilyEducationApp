@@ -174,7 +174,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
 //            cell.FrauleinDetailContent.text = studentStatus?[indexPath.row].stu_intro!
             
             
-//            //cell.FrauleinLevel.getLevelStar(Int(studentData.stu_star))
+            cell.FrauleinLevel.getLevelStar(Int(studentData.stu_star))
             
         }
         
