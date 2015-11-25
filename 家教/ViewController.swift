@@ -287,26 +287,50 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         maskView.backgroundColor = UIColor.whiteColor()
         
         let searchFamilyButton = UIButton()
+        let searchFamilyTitle = UILabel()
         let announceFamilyButton = UIButton()
+        let announceFamilyTitle = UILabel()
         let annoceYiJiaoFamilyButton = UIButton()
+        let annoceYiJiaoFamilyTitle = UILabel()
         let searchYiJiaoFamilyButton = UIButton()
+        let searchYiJiaoFamilyTitle = UILabel()
         
         searchFamilyButton.center = sender.center
         searchFamilyButton.frame.size = CGSizeZero
-        searchFamilyButton.backgroundColor = UIColor.randColor(1)
+        searchFamilyButton.setImage(UIImage(named: "tabbar_compose_idea"), forState: UIControlState.Normal)
+        
+        searchFamilyTitle.text = "找家教"
+        searchFamilyTitle.font = UIFont.systemFontOfSize(12)
+        self.maskView.addSubview(searchFamilyTitle)
+//        searchFamilyButton.backgroundColor = UIColor.randColor(1)
         
         announceFamilyButton.center = sender.center
         announceFamilyButton.frame.size = CGSizeZero
-        announceFamilyButton.backgroundColor = UIColor.randColor(1)
+        announceFamilyButton.setImage(UIImage(named: "tabbar_compose_idea"), forState: UIControlState.Normal)
+        announceFamilyTitle.text = "招家教"
+        announceFamilyTitle.font = UIFont.systemFontOfSize(12)
+        self.maskView.addSubview(announceFamilyTitle)
+        
+//        announceFamilyButton.backgroundColor = UIColor.randColor(1)
         
         annoceYiJiaoFamilyButton.center = sender.center
         annoceYiJiaoFamilyButton.frame.size = CGSizeZero
-        annoceYiJiaoFamilyButton.backgroundColor = UIColor.randColor(1)
+        annoceYiJiaoFamilyButton.setImage(UIImage(named: "tabbar_compose_idea"), forState: UIControlState.Normal)
+        annoceYiJiaoFamilyTitle.text = "招义教"
+        annoceYiJiaoFamilyTitle.font = UIFont.systemFontOfSize(12)
+        self.maskView.addSubview(annoceYiJiaoFamilyTitle)
+//        annoceYiJiaoFamilyButton.backgroundColor = UIColor.randColor(1)
         
         searchYiJiaoFamilyButton.center = sender.center
         searchYiJiaoFamilyButton.frame.size = CGSizeZero
-        searchYiJiaoFamilyButton.backgroundColor = UIColor.randColor(1)
+        searchYiJiaoFamilyButton.setImage(UIImage(named: "tabbar_compose_idea"), forState: UIControlState.Normal)
+        searchYiJiaoFamilyTitle.text = "找义教"
+        searchYiJiaoFamilyTitle.font = UIFont.systemFontOfSize(12)
+        self.maskView.addSubview(searchYiJiaoFamilyTitle)
+
+//        searchYiJiaoFamilyButton.backgroundColor = UIColor.randColor(1)
         maskView.frame.size = CGSizeZero
+        
         maskView.center = CGPointMake(DeviceData.width/2, DeviceData.height)
         searchFamilyButton.tag = 100
         announceFamilyButton.tag = 101
@@ -331,9 +355,13 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
                 self.maskView.frame = (self.navigationController?.view.frame)!
                 self.navigationController?.view.addSubview(self.maskView)
                 searchFamilyButton.frame = CGRectMake(DeviceData.width/6, DeviceData.height - 100, 50, 50)
+                searchFamilyTitle.frame = CGRectMake(CGRectGetMinX(searchFamilyButton.frame) + 5, CGRectGetMaxY(searchFamilyButton.frame) + 5, 50, 21)
                 announceFamilyButton.frame = CGRectMake(DeviceData.width * 2/6, DeviceData.height - 100, 50, 50)
+            announceFamilyTitle.frame = CGRectMake(CGRectGetMinX(announceFamilyButton.frame) + 5, CGRectGetMaxY(announceFamilyButton.frame) + 5, 50, 21)
                 annoceYiJiaoFamilyButton.frame = CGRectMake(DeviceData.width * 3/6, DeviceData.height - 100, 50, 50)
+                annoceYiJiaoFamilyTitle.frame = CGRectMake(CGRectGetMinX(annoceYiJiaoFamilyButton.frame) + 5, CGRectGetMaxY(annoceYiJiaoFamilyButton.frame) + 5, 50, 21)
                 searchYiJiaoFamilyButton.frame = CGRectMake(DeviceData.width * 4/6, DeviceData.height - 100, 50, 50)
+            searchYiJiaoFamilyTitle.frame = CGRectMake(CGRectGetMinX(searchYiJiaoFamilyButton.frame) + 5, CGRectGetMaxY(annoceYiJiaoFamilyButton.frame) + 5, 50, 21)
             }, completion: nil)
     }
     
