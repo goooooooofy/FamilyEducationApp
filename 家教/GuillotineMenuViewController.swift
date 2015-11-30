@@ -100,6 +100,56 @@ class GuillotineMenuViewController: UIViewController {
 
         
     }
+    @IBAction func historyAction(sender: UIButton) {
+        let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let freeStoryBoard:UINavigationController = storyBoadrd.instantiateViewControllerWithIdentifier("historyNavigation") as! UINavigationController
+        self.bgView.removeFromSuperview()
+        self.settingButton.removeFromSuperview()
+        self.menuButton.removeFromSuperview()
+        self.presentViewController(freeStoryBoard, animated: true) { () -> Void in
+            var i = 0
+            //内存管理-处理视图叠加导致内存暴增
+            let window = UIApplication.sharedApplication().keyWindow?.subviews
+            if let _ = window {
+                for var view:UIView in (window)! {
+                    if i != (window?.count)! - 1 {
+                        view.removeFromSuperview()
+                    }
+                    i++
+                }
+            }
+        }
+        
+        
+    }
+    
+    /**
+       资料设置action
+        profileSetting navigation -id
+     - parameter sender: sender
+     */
+    @IBAction func profileSetting(sender: UIButton) {
+        
+        let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let freeStoryBoard:UINavigationController = storyBoadrd.instantiateViewControllerWithIdentifier("profileSetting") as! UINavigationController
+        self.bgView.removeFromSuperview()
+        self.settingButton.removeFromSuperview()
+        self.menuButton.removeFromSuperview()
+        self.presentViewController(freeStoryBoard, animated: true) { () -> Void in
+            var i = 0
+            //内存管理-处理视图叠加导致内存暴增
+            let window = UIApplication.sharedApplication().keyWindow?.subviews
+            if let _ = window {
+                for var view:UIView in (window)! {
+                    if i != (window?.count)! - 1 {
+                        view.removeFromSuperview()
+                    }
+                    i++
+                }
+            }
+        }
+        
+    }
     @IBAction func FreeTimeAction(sender: UIButton) {
 
         let storyBoadrd = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
@@ -122,6 +172,8 @@ class GuillotineMenuViewController: UIViewController {
             }
         
     }
+    //historyNavigation
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }

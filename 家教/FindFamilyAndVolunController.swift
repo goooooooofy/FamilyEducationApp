@@ -12,6 +12,7 @@ class FindFamilyAndVolunController: UIViewController,UITextViewDelegate,UIAlertV
     
     let introuduceSelfTextView = UITextView()
     
+    
     let textFieldBG = UIImageView()
     
     let residueWordNumber = UILabel()
@@ -267,6 +268,10 @@ extension FindFamilyAndVolunController:UIPickerViewDelegate,UITextFieldDelegate,
         return pickTittleArray.count
     }
     
+    func textFieldDidEndEditing(textField: UITextField) {
+        self.chooseFamilyOrVolunPick.hidden = true
+    }
+    
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.chooseFamilyOrVolunText.resignFirstResponder()
@@ -283,5 +288,7 @@ extension FindFamilyAndVolunController:UIPickerViewDelegate,UITextFieldDelegate,
         self.chooseFamilyOrVolunText.resignFirstResponder()
         self.chooseGroupTypeText.resignFirstResponder()
     }
+    
+    
     
 }

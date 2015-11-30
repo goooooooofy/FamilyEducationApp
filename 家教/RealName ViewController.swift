@@ -80,7 +80,8 @@ class RealNameViewController: UIViewController,UIImagePickerControllerDelegate,U
     func imagePickerController(picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         print(buttonIdentify)
             //查看info对象
-            print(info)
+            print(info["UIImagePickerControllerReferenceURL"])
+        print(info)
             //获取选择的原图
             let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         if buttonIdentify == 50 {
