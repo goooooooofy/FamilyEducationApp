@@ -21,6 +21,7 @@ class CustomTextField: UITextField {
 
     override func drawPlaceholderInRect(rect: CGRect) {
         super.drawPlaceholderInRect(rect)
+        //KVC  KVO   OBSERVER
         self.setValue(UIColor.whiteColor().CGColor, forKeyPath: "placeholderLabel.textColor")
     }
 }

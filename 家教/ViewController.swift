@@ -297,8 +297,9 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         
         searchFamilyButton.center = sender.center
         searchFamilyButton.frame.size = CGSizeZero
-        searchFamilyButton.setImage(UIImage(named: "tabbar_compose_idea"), forState: UIControlState.Normal)
-        
+        searchFamilyButton.setImage(UIImage(named: "add-1.png"), forState: UIControlState.Normal)
+        searchFamilyButton.layer.cornerRadius = 10
+        searchFamilyButton.layer.masksToBounds = true
         searchFamilyTitle.text = "找家教"
         searchFamilyTitle.font = UIFont.systemFontOfSize(12)
         self.maskView.addSubview(searchFamilyTitle)
@@ -306,8 +307,10 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         
         announceFamilyButton.center = sender.center
         announceFamilyButton.frame.size = CGSizeZero
-        announceFamilyButton.setImage(UIImage(named: "tabbar_compose_idea"), forState: UIControlState.Normal)
+        announceFamilyButton.setImage(UIImage(named: "add-2.png"), forState: UIControlState.Normal)
         announceFamilyTitle.text = "招家教"
+        announceFamilyButton.layer.cornerRadius = 10
+        announceFamilyButton.layer.masksToBounds = true
         announceFamilyTitle.font = UIFont.systemFontOfSize(12)
         self.maskView.addSubview(announceFamilyTitle)
         
@@ -315,7 +318,9 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         
         annoceYiJiaoFamilyButton.center = sender.center
         annoceYiJiaoFamilyButton.frame.size = CGSizeZero
-        annoceYiJiaoFamilyButton.setImage(UIImage(named: "tabbar_compose_idea"), forState: UIControlState.Normal)
+        annoceYiJiaoFamilyButton.setImage(UIImage(named: "add-3.png"), forState: UIControlState.Normal)
+        annoceYiJiaoFamilyButton.layer.cornerRadius = 10
+        annoceYiJiaoFamilyButton.layer.masksToBounds = true
         annoceYiJiaoFamilyTitle.text = "招义教"
         annoceYiJiaoFamilyTitle.font = UIFont.systemFontOfSize(12)
         self.maskView.addSubview(annoceYiJiaoFamilyTitle)
@@ -323,7 +328,9 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         
         searchYiJiaoFamilyButton.center = sender.center
         searchYiJiaoFamilyButton.frame.size = CGSizeZero
-        searchYiJiaoFamilyButton.setImage(UIImage(named: "tabbar_compose_idea"), forState: UIControlState.Normal)
+        searchYiJiaoFamilyButton.setImage(UIImage(named: "add-4.png"), forState: UIControlState.Normal)
+        annoceYiJiaoFamilyButton.layer.cornerRadius = 10
+        searchYiJiaoFamilyButton.layer.masksToBounds = true
         searchYiJiaoFamilyTitle.text = "找义教"
         searchYiJiaoFamilyTitle.font = UIFont.systemFontOfSize(12)
         self.maskView.addSubview(searchYiJiaoFamilyTitle)
@@ -368,9 +375,9 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     
     func addMessageAction(sender:UIButton) {
         self.maskView.removeFromSuperview()
-        if sender.tag == 100 || sender.tag == 101 {
+//        if sender.tag == 100 || sender.tag == 101 {
             self.navigationController?.pushViewController(FindFamilyAndVolunController(), animated: false)
-        }
+//        }
     }
     
     func singleTapAction() {

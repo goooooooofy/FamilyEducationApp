@@ -16,7 +16,7 @@ class CustomAlertView: UIView {
         self.layer.cornerRadius = 2
         self.layer.masksToBounds = true
         self.backgroundColor = UIColor(white: 0, alpha: 0.4)
-        
+//        UIColor(red: <#T##CGFloat#>, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
     }
 
     required init?(coder aDecoder: NSCoder) {
