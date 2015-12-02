@@ -105,6 +105,7 @@
 		FC986B211C02B671009DC63F /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC986B201C02B671009DC63F /* CustomAlertView.swift */; };
 		FC9B60D31BEF9888002812C0 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9B60D11BEF9888002812C0 /* 16.png */; };
 		FC9B60D41BEF9888002812C0 /* 18.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9B60D21BEF9888002812C0 /* 18.png */; };
+		FCA6488B1C0ECEFC00F94F47 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6488A1C0ECEFC00F94F47 /* SearchViewController.swift */; };
 		FCAF4F821BFCA32C0087237E /* FamilyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF4F811BFCA32C0087237E /* FamilyInfoViewController.swift */; };
 		FCC604841C04D4DC00CD8EC4 /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC604821C04D4DB00CD8EC4 /* boy.png */; };
 		FCC604851C04D4DC00CD8EC4 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC604831C04D4DC00CD8EC4 /* girl.png */; };
@@ -334,6 +335,7 @@
 		FC986B201C02B671009DC63F /* CustomAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		FC9B60D11BEF9888002812C0 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
 		FC9B60D21BEF9888002812C0 /* 18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 18.png; sourceTree = "<group>"; };
+		FCA6488A1C0ECEFC00F94F47 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FCAF4F811BFCA32C0087237E /* FamilyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyInfoViewController.swift; sourceTree = "<group>"; };
 		FCC604821C04D4DB00CD8EC4 /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
 		FCC604831C04D4DC00CD8EC4 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
@@ -753,6 +755,7 @@
 			children = (
 				FC3F27941BD4F2BB00CE0737 /* ViewController.swift */,
 				FC23E1E51BFEDDF00097BD00 /* FindFamilyAndVolunController.swift */,
+				FCA6488A1C0ECEFC00F94F47 /* SearchViewController.swift */,
 				FCAF4F811BFCA32C0087237E /* FamilyInfoViewController.swift */,
 				FC9497411BF72DCD00368E9F /* GetData.h */,
 				FC9497421BF72DCD00368E9F /* GetData.m */,
@@ -1155,7 +1158,7 @@
 				TargetAttributes = {
 					FC3F278E1BD4F2BB00CE0737 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 645DK53N5L;
+						DevelopmentTeam = 8834V5NS5J;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -1339,6 +1342,7 @@
 				FC1458B31BD763C500F74DE9 /* HomeTabBarView.swift in Sources */,
 				FC3F27C71BD4F2EA00CE0737 /* GuillotineMenuSegue.swift in Sources */,
 				FC2206B51BF223FD004698B5 /* MJDictionaryCache.m in Sources */,
+				FCA6488B1C0ECEFC00F94F47 /* SearchViewController.swift in Sources */,
 				FC5121461BD6097700DF1EC2 /* UIScrollView+MJRefresh.m in Sources */,
 				FC1458D51BD783FA00F74DE9 /* UIColorExtension.swift in Sources */,
 				FC8053DF1C0C04D1006D5C37 /* FreeTimeSettingViewController.swift in Sources */,
@@ -1529,7 +1533,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: haishen hao (UH57PUPY6R)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1555,7 +1559,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: haishen hao (UH57PUPY6R)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

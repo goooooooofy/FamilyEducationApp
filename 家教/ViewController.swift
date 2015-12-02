@@ -17,6 +17,7 @@ class ViewController: UIViewController,HttpProtocol,UIGestureRecognizerDelegate{
     @IBOutlet weak var addButton: UIButton!
     var studentStatus:NSMutableArray?
     let requestHttp = HttpRequest()
+    @IBOutlet weak var searchAWorkButton: UIButton!
     
     let reuseIdentifier = "ContentCell"
     //cell行高缓存
@@ -254,6 +255,10 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         
     }
  
+    @IBAction func searchAWorkAction(sender: UIButton) {
+        
+        
+    }
     
     func didReceiveResults(result: NSMutableArray) {
         if studentStatus?.count == nil {

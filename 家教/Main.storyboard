@@ -147,6 +147,10 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <animations/>
                                     <state key="normal" image="search_bar.png"/>
+                                    <connections>
+                                        <action selector="searchAWorkAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CCZ-g3-k7W"/>
+                                        <segue destination="YZh-3C-gDh" kind="push" id="z7j-9e-4Ye"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -155,6 +159,7 @@
                     <connections>
                         <outlet property="addButton" destination="Dkl-g8-3rA" id="Hj0-zP-57G"/>
                         <outlet property="barButton" destination="ixD-Qa-kYA" id="XZq-mp-Aay"/>
+                        <outlet property="searchAWorkButton" destination="yxP-Us-dtB" id="0cF-ss-ale"/>
                         <outlet property="searchStudent" destination="5Gc-Ia-qlO" id="A2R-Q4-mac"/>
                         <outlet property="searchTeacher" destination="qam-HI-bnT" id="0pc-X1-9XF"/>
                         <outlet property="tableViewFraulein" destination="cCm-OK-LdN" id="UKq-2d-858"/>
@@ -225,7 +230,108 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="js8-ZW-Nhs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3370" y="1027"/>
+            <point key="canvasLocation" x="3253" y="834"/>
+        </scene>
+        <!--查询-->
+        <scene sceneID="mtu-Ch-4ZM">
+            <objects>
+                <viewController id="YZh-3C-gDh" customClass="SearchViewController" customModule="家教" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xBt-38-7Nt"/>
+                        <viewControllerLayoutGuide type="bottom" id="sFt-Fe-t5h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t5J-qb-kEF">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="选择性别" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="28U-mP-ckm">
+                                <rect key="frame" x="200" y="40" width="200" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="433-nI-928"/>
+                                    <constraint firstAttribute="height" constant="30" id="ffx-P5-HXA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="选择年龄" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9V-Gb-aOf">
+                                <rect key="frame" x="200" y="114" width="200" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gal-vR-SJm"/>
+                                    <constraint firstAttribute="width" constant="200" id="qQZ-qT-DJ7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="最低薪水" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VC4-VR-IsZ">
+                                <rect key="frame" x="200" y="184" width="80" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Nsh-WE-fYn"/>
+                                    <constraint firstAttribute="width" constant="80" id="RZx-nQ-7Sg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="最高薪水" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nnw-w2-BSF">
+                                <rect key="frame" x="320" y="184" width="80" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Q8g-uM-pB2"/>
+                                    <constraint firstAttribute="width" constant="80" id="pEZ-hQ-I6s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97A-cD-ehx">
+                                <rect key="frame" x="200" y="245" width="200" height="35"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="iWL-6Z-rSe"/>
+                                    <constraint firstAttribute="height" constant="35" id="zqA-GV-rVK"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="bt_setr_submit.png"/>
+                                <connections>
+                                    <action selector="searchConditionAction:" destination="YZh-3C-gDh" eventType="touchUpInside" id="FMo-BD-5mh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.25490196079999999" green="0.24313725489999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="97A-cD-ehx" firstAttribute="centerX" secondItem="h9V-Gb-aOf" secondAttribute="centerX" id="Bnb-ae-g4g"/>
+                            <constraint firstItem="28U-mP-ckm" firstAttribute="top" secondItem="xBt-38-7Nt" secondAttribute="bottom" constant="40" id="JUt-Pv-W3I"/>
+                            <constraint firstItem="28U-mP-ckm" firstAttribute="centerX" secondItem="t5J-qb-kEF" secondAttribute="centerX" id="JYE-hn-0kZ"/>
+                            <constraint firstItem="h9V-Gb-aOf" firstAttribute="top" secondItem="28U-mP-ckm" secondAttribute="bottom" constant="44" id="NHt-qP-w8k"/>
+                            <constraint firstItem="VC4-VR-IsZ" firstAttribute="top" secondItem="h9V-Gb-aOf" secondAttribute="bottom" constant="40" id="T1i-BU-qeJ"/>
+                            <constraint firstItem="Nnw-w2-BSF" firstAttribute="trailing" secondItem="h9V-Gb-aOf" secondAttribute="trailing" id="TZb-6b-nCV"/>
+                            <constraint firstItem="Nnw-w2-BSF" firstAttribute="top" secondItem="h9V-Gb-aOf" secondAttribute="bottom" constant="40" id="akM-dN-69U"/>
+                            <constraint firstItem="VC4-VR-IsZ" firstAttribute="leading" secondItem="h9V-Gb-aOf" secondAttribute="leading" id="bEx-xd-77f"/>
+                            <constraint firstItem="h9V-Gb-aOf" firstAttribute="centerX" secondItem="28U-mP-ckm" secondAttribute="centerX" id="fsu-po-OEj"/>
+                            <constraint firstItem="VC4-VR-IsZ" firstAttribute="centerX" secondItem="h9V-Gb-aOf" secondAttribute="centerX" id="hmQ-h3-btt"/>
+                            <constraint firstItem="97A-cD-ehx" firstAttribute="top" secondItem="VC4-VR-IsZ" secondAttribute="bottom" constant="31" id="xUg-go-na5"/>
+                            <constraint firstItem="VC4-VR-IsZ" firstAttribute="centerX" secondItem="t5J-qb-kEF" secondAttribute="centerX" id="y5r-Yh-dbC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hmQ-h3-btt"/>
+                                <exclude reference="y5r-Yh-dbC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="查询" id="ngU-bj-ZrK"/>
+                    <connections>
+                        <outlet property="searchConditionAge" destination="h9V-Gb-aOf" id="GtI-6Z-2be"/>
+                        <outlet property="searchConditionMoneyEnd" destination="Nnw-w2-BSF" id="qxd-Ov-3L3"/>
+                        <outlet property="searchConditionMoneyStart" destination="VC4-VR-IsZ" id="MWz-PP-n11"/>
+                        <outlet property="searchConditionSex" destination="28U-mP-ckm" id="ZNl-DK-mZJ"/>
+                        <outlet property="searchConditionSubmit" destination="97A-cD-ehx" id="uXv-BJ-4wz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5C-T3-YbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3820" y="1054"/>
         </scene>
         <!--注册新用户-->
         <scene sceneID="m0l-aK-L7z">
