@@ -106,6 +106,8 @@
 		FC9B60D31BEF9888002812C0 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9B60D11BEF9888002812C0 /* 16.png */; };
 		FC9B60D41BEF9888002812C0 /* 18.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9B60D21BEF9888002812C0 /* 18.png */; };
 		FCA6488B1C0ECEFC00F94F47 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6488A1C0ECEFC00F94F47 /* SearchViewController.swift */; };
+		FCA648961C0EE41700F94F47 /* LoadAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA648941C0EE41700F94F47 /* LoadAlert.swift */; };
+		FCA648971C0EE41700F94F47 /* LoadAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCA648951C0EE41700F94F47 /* LoadAlert.xib */; };
 		FCAF4F821BFCA32C0087237E /* FamilyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF4F811BFCA32C0087237E /* FamilyInfoViewController.swift */; };
 		FCC604841C04D4DC00CD8EC4 /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC604821C04D4DB00CD8EC4 /* boy.png */; };
 		FCC604851C04D4DC00CD8EC4 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC604831C04D4DC00CD8EC4 /* girl.png */; };
@@ -336,6 +338,8 @@
 		FC9B60D11BEF9888002812C0 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
 		FC9B60D21BEF9888002812C0 /* 18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 18.png; sourceTree = "<group>"; };
 		FCA6488A1C0ECEFC00F94F47 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FCA648941C0EE41700F94F47 /* LoadAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadAlert.swift; path = MJRefresh/LoadAlert.swift; sourceTree = "<group>"; };
+		FCA648951C0EE41700F94F47 /* LoadAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadAlert.xib; path = MJRefresh/LoadAlert.xib; sourceTree = "<group>"; };
 		FCAF4F811BFCA32C0087237E /* FamilyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyInfoViewController.swift; sourceTree = "<group>"; };
 		FCC604821C04D4DB00CD8EC4 /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
 		FCC604831C04D4DC00CD8EC4 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
@@ -832,6 +836,8 @@
 		FC3F27E71BD503C400CE0737 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FCA648941C0EE41700F94F47 /* LoadAlert.swift */,
+				FCA648951C0EE41700F94F47 /* LoadAlert.xib */,
 				FCE58A161BF315FD002894AD /* AFNetworking */,
 				FC22069D1BF223FD004698B5 /* MJExtension */,
 				FCDF83121BF07C990044E78B /* Alamofire.xcodeproj */,
@@ -1302,6 +1308,7 @@
 				FC7005371C0CA31F00C183C6 /* profile-Like.png in Resources */,
 				FC357C141C036F870093E046 /* cell_share24px.png in Resources */,
 				FC162F581BF5854F0017DD8A /* navigationbar_back@3x.png in Resources */,
+				FCA648971C0EE41700F94F47 /* LoadAlert.xib in Resources */,
 				FC6E29D71BE329990016CEF9 /* kechengbiaoBg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1381,6 +1388,7 @@
 				FC3F27C81BD4F2EA00CE0737 /* GuillotineMenuTransitionAnimation.swift in Sources */,
 				FC3F27931BD4F2BB00CE0737 /* AppDelegate.swift in Sources */,
 				FC4F72781BF452F6001D8FF9 /* Parents.m in Sources */,
+				FCA648961C0EE41700F94F47 /* LoadAlert.swift in Sources */,
 				FCAF4F821BFCA32C0087237E /* FamilyInfoViewController.swift in Sources */,
 				FC8053D61C0BED1A006D5C37 /* HistoryActivityViewController.swift in Sources */,
 				FC1458D71BD784AF00F74DE9 /* RealName ViewController.swift in Sources */,

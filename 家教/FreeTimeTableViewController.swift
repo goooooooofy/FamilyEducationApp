@@ -18,12 +18,12 @@ class FreeTimeTableViewController: UIViewController {
 
   //MARK: -初始化当前视图
     func initView() {
-        self.view.backgroundColor = UIColor(red: 65.0 / 255.0, green: 62.0 / 255.0, blue: 79.0 / 255.0, alpha: 1)
+//        self.view.backgroundColor = UIColor(red: 65.0 / 255.0, green: 62.0 / 255.0, blue: 79.0 / 255.0, alpha: 1)
         let navBar = self.navigationController?.navigationBar
         navBar?.barTintColor = UIColor(red: 65.0 / 255.0, green: 62.0 / 255.0, blue: 79.0 / 255.0, alpha: 1)
         navBar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "kechengbiaoBg.png")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "kechengbiaoBg.png")!)
         /**
         *   画线
         */
@@ -79,8 +79,9 @@ class FreeTimeTableViewController: UIViewController {
         for i in 1...7 {
             //一天第几节课标记
             let weekLabel = UILabel()
+            let weekArray = ["星期一","星期二","星期三","星期四","星期五","星期六","星期日"]
             weekLabel.font = UIFont.systemFontOfSize(10)
-            weekLabel.text = "1              星期四"
+            weekLabel.text = "1              \(weekArray[i - 1])"
             weekLabel.numberOfLines = 0
             weekLabel.textColor = UIColor.whiteColor()
             weekLabel.frame = CGRectMake(30 + ((DeviceData.width - 30)/7) * CGFloat(Double(i) - 0.95), 55, 40, 40)
@@ -95,6 +96,8 @@ class FreeTimeTableViewController: UIViewController {
         self.createClass(5, whichClass: 4, courseName: "大学英语@黄浩川301")
         self.createClass(4, whichClass: 3, courseName: "linux系统@北主楼604")
         self.createClass(7, whichClass: 2, courseName: "信号与系统@北主楼203")
+        self.createClass(2, whichClass: 1, courseName:  "密码学@北主楼203")
+        self.createClass(2, whichClass: 3, courseName:  "信号与系统@北主楼203")
     }
     
     /**

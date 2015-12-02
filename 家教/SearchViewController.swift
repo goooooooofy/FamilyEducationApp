@@ -47,7 +47,26 @@ class SearchViewController: UIViewController,UITextFieldDelegate,UIAlertViewDele
     }
     
     @IBAction func searchConditionAction(sender: UIButton) {
+        if searchConditionAge.text == "" && searchConditionMoneyEnd.text == "" &&
+            searchConditionMoneyStart.text == "" && searchConditionSex.text == "" {
+               UIAlertView(title: "提示", message: "请填写查询信息", delegate: nil, cancelButtonTitle: "返回").show()
+        } else {
+            var alertView = LoadAlert()
+            alertView = LoadAlert.instantiateFromNib()
+            alertView.center = CGPointMake(self.view.frame.width/2, self.view.frame.height/2)
+            self.view.addSubview(alertView)
+            let queue:dispatch_queue_t = dispatch_queue_create("my.concurrent.queue", DISPATCH_QUEUE_CONCURRENT)
+            dispatch_async(queue, { () -> Void in
+                NSThread.sleepForTimeInterval(2)
+                alertView.removeFromSuperview()
+                print("hello")
+//                self.navigationController?.popViewControllerAnimated(true)
+            })
+            
+            
+        }
         
+       
         
     }
     
