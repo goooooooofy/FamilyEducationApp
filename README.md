@@ -6,7 +6,7 @@ Model存放对应功能模块的数据模型
 View存放对应功能界面的View视图和重定义视图
 Controller存放对应功能视图的视图控制器。
 
-![frame](https://github.com/mgoofyy/FamilyEducationApp/tree/master/img/frame.png)
+![frame](https://github.com/mgoofyy/FamilyEducationApp/blob/master/img/frame.png)
 ####项目展示图片
 启动图片
 ![launch](https://github.com/mgoofyy/FamilyEducationApp/blob/master/img/launch.gif)
