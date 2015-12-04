@@ -77,7 +77,7 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate,UITex
         passwordTextField.secureTextEntry = true
         self.view.addSubview(passwordTextField)
         
-        loginButton.frame = CGRectMake(20, 300, DeviceData.width - 40, 45)
+        loginButton.frame = CGRectMake(20, 300, DeviceData.width - 40, 50)
         loginButton.setBackgroundImage(UIImage(named: "bt_login.png"), forState: UIControlState.Normal)
         loginButton.addTarget(self, action: "loginAction", forControlEvents: UIControlEvents.TouchDown)
         self.view.addSubview(loginButton)

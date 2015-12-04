@@ -172,9 +172,10 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
             cell.StudentFrauleinTittle.text = studentData.stu_name!
             cell.FrauleinPlace.text = studentData.stu_addr
             cell.FrauleinWantMoney.text = "\(studentData.stu_bcost)" + " ~ \(studentData.stu_lcost)元"
-            cell.FrauleinDetailContent.text = studentData.stu_intro
             cell.FrauleinPlace.text = "\(studentData.stu_addr)"
             cell.recentFrauleinTime.text = "最近家教" + "\(studentData.volTime)次"
+            //把行高放进缓存
+            cellHeightCache.setObject(cell.heightForCell("\(studentData.stu_intro)") + 2, forKey: indexPath.row)
             cell.FrauleinLevel.getLevelStar(Int(studentData.stu_star))
             if studentData.stu_sex == "男" {
                 cell.FrauleinStudentSex.image = UIImage(named: "boy.png")
@@ -183,15 +184,6 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
             }
             
         }
-        
-        
-      
-       
-//        cell.FrauleinLevel.getLevelStar(Int((self.studentStatus?[indexPath.row].stu_star)!))
-        
-        //把行高放进缓存
-        cellHeightCache.setObject(cell.heightForCell("\(self.studentStatus?[indexPath.row].stu_intro)") + 2, forKey: indexPath.row)
-        
         return cell
             
         
@@ -242,9 +234,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
             
             return rowHeight
         }
-        
-        let rowHeight = cellHeightCache.objectForKey(indexPath.row) as? CGFloat
-        
+    
         return 100
     }
     

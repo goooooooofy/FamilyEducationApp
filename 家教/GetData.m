@@ -60,7 +60,6 @@
         
         // 把数组中的元素添加进去
         [self.statuses addObjectsFromArray:statuses];
-        NSLog(@"_______",statuses);
         
         // 刷新表格
 //        [self.tableView reloadData];

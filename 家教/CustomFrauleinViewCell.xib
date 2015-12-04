@@ -198,7 +198,7 @@
                 <outlet property="likeButton" destination="FZA-4n-Q4Y" id="rFd-Rj-9ij"/>
                 <outlet property="recentFrauleinTime" destination="uCY-qV-bRv" id="ChN-cR-4FI"/>
             </connections>
-            <point key="canvasLocation" x="460.5" y="333"/>
+            <point key="canvasLocation" x="300.5" y="136"/>
         </tableViewCell>
     </objects>
     <resources>
