@@ -5,7 +5,8 @@
 Model存放对应功能模块的数据模型
 View存放对应功能界面的View视图和重定义视图
 Controller存放对应功能视图的视图控制器。
-![GitHub set up](https://github.com/mgoofyy/FamilyEducationApp/tree/master/img/frame.png)
+
+![frame](https://github.com/mgoofyy/FamilyEducationApp/tree/master/img/frame.png)
 ####项目展示图片
 启动图片
 ![launch](https://github.com/mgoofyy/FamilyEducationApp/blob/master/img/launch.gif)
@@ -37,6 +38,7 @@ Controller存放对应功能视图的视图控制器。
 * 自定义聊天
 	UUChat StoryBoard布局。之前github一个大牛写的。可以直接拿来用的。用的时候把UUchat拖过去和storyBoard文件拖过去。做好关联即可
 	图片展示
+
 ![cell](https://github.com/mgoofyy/FamilyEducationApp/blob/master/img/customchat.png)
 * 自定义课程表视图
 	这个是用贝塞尔曲线画出来的。当然也会有其他的方法。小编goofyy就抛砖引玉啦。大家尽管自己根据自己的想法尽管做。
